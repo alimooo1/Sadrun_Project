@@ -1,0 +1,41 @@
+//Common screen sizes
+//Mobile: 360 x 640
+//Mobile: 375 x 667
+//Mobile: 360 x 720 
+//iPhone X: 375 x 812
+//Pixel 2: 411 x 731
+//Tablet: 768 x 1024
+//Laptop: 1366 x 768 
+//High-res laptop or desktop: 1920 x 1080
+
+$breakpoint-xsmall: 320px;
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+$breakpoint-extra-large: 1300px;
+
+@mixin min-width($breakpoint) {
+  @if ($breakpoint ==xsmall) {
+    @media (min-width: $breakpoint-xsmall) {
+      @content;
+    }
+  } @else if ($breakpoint ==small) {
+    @media (min-width: $breakpoint-small) {
+      @content;
+    }
+  } @else if ($breakpoint ==medium) {
+    @media (min-width: $breakpoint-medium) {
+      @content;
+    }
+  } @else if ($breakpoint ==large) {
+    @media (min-width: $breakpoint-large) {
+      @content;
+    }
+  } @else if ($breakpoint ==xlarge) {
+    @media (min-width: $breakpoint-extra-large) {
+      @content;
+    }
+  } @else {
+    @error "UNKNOWN MEDIA BREAKPOINT #{$breakpoint}";
+  }
+}
