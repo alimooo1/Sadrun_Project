@@ -1,6 +1,8 @@
 import React from "react";
-import "./QA.module.scss";
+import styles from "./QA.module.scss";
 
 export default function QA() {
-  return <section className="QA"></section>;
+  return <section className={styles.QA}>
+
+  </section>;
 }
