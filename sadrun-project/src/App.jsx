@@ -1,10 +1,10 @@
 import React from "react";
-import CreateBtnComponent from "./components/Creat Btn Component/CreateBtnComponent";
-import CreateArticleCard from "./components/Creat article card/CreateArticleCard";
+
+import CreatTeacherCard from "./components/CreatTeacherCard";
 
 function App() {
   return <div className="App">
-    <CreateArticleCard/>
+    <CreatTeacherCard/>
   </div>;
 }
 
