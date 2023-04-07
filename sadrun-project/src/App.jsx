@@ -1,5 +1,5 @@
 import React from "react";
-import CreateBtnComponent from "./components/Creat Btn Component/CreateBtnComponent";
+import "./sass/_fonts.scss"
 import CreateArticleCard from "./components/Creat article card/CreateArticleCard";
 
 function App() {

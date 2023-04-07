@@ -1,12 +1,56 @@
 .conteiner{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+   direction: rtl;
+}
+.head{
+    display: flex;
+    align-items: center;
+    margin-bottom:50px ;
+}
+.title{
+    width:490px;
+    height: 120px;
+    box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+}
+.title h2{
+    color:#5A0BA9;
+    font-size: 25px;
+    font-weight: 500;
+}
+.heIcon{
+    position: relative;
+    right: 90px;
+    top: 40px;
+}
+.sheIcon{
+    position: relative;
+    left: 85px;
+    top: 38px;
+}
+.sheIcon_img{
+    height:180px ;
+}
+.heIcon_img{
+    height: 180px;
+
+}
+
+.conteiner_Article{
+    display: flex;
     gap: 43px;
-    direction: rtl;
+    
     
 }
 .news,.articles{
+    display: flex;
+    flex-direction: column;
     width: 662px;
-    /* border: 1px solid #ccc; */
     border-radius: 25px;
     padding:  0 1rem ;
     background: #FFFFFF;
@@ -15,16 +59,19 @@
 .news_title,.articles_title{
     border-radius: 14px;
     background: #ffff;
-    width: 70px;
-    height: 50px;
+    width: 75px;
+    height: 55px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
+    position: relative;
+    left: 30px;
+    margin-bottom: 10px;
 }
 .image_article{
-    width:82px ;
-    height:58px ;
+    width:93px ;
+    height:66px ;
     
 }
 
@@ -33,9 +80,10 @@
     align-items: center;
     gap:40px;
     color:rgba(0,0,0,0.5 ) ;
-    font-size:15px ;
-    padding-bottom:15px;
-    padding-top: 15px;
+    font-size:17px ;
+    padding-block:15px ;
+    /* padding-bottom:15px;
+     padding-top:15px ; */
     
 
 
@@ -44,9 +92,29 @@
   border: 2px solid #67008F ;  
   border-radius: 15px;
   padding: 9px 23px;
-  float: left;
+  align-self: flex-end;
   cursor: pointer;
   background-color:#ffff;
-  margin-bottom: 25px;
-  
+  margin-bottom: 18px;
+  font-size: 15px;
+}
+.Newsletters{
+    margin-top: 45px;
+}
+.add_Newsletters{
+    width: 500px;
+    height: 70px;
+    border-radius: 21px;
+    border: 1px solid #8e8d8d;
+    outline:none;
+    padding-right: 20px;
+    font-size: 17px;
+}
+.add_Newsletters::placeholder{
+    color: #67008F;
+    font-size: 17px;
+    font-family: 'vazirmatn-Regular';
+}
+.add_Newsletters:focus{
+    border: 2px solid #5A0BA9;
 }
