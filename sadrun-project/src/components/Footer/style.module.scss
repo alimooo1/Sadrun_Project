@@ -1,0 +1,74 @@
+@import "../../sass/mixins";
+
+.footer {
+  // border: solid red;
+  position: absolute;
+  padding: 32px 0 32px 0;
+  bottom: 0;
+  width: 100%;
+}
+.row {
+  //   border: solid black;
+  width: 1264px;
+  margin: auto;
+  display: flex;
+  //   justify-content: space-between;
+
+  div {
+    border: solid;
+    width: 33.33%;
+  }
+}
+
+.info {
+  display: flex;
+  @include typography(vazirmatn-Regular, 0.9rem, rgba(0, 0, 0, 0.8));
+
+  .about_us {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact_us {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .phone_num{
+    direction: ltr;
+  }
+}
+
+.follow_us_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+
+  .follow_us_logos {
+    border: solid red;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    img{
+      display: block;
+      height: 35px
+    }
+  }
+  .follow_us_text {
+    @include typography(vazirmatn-Regular, 1rem, #67008f);
+    border: solid;
+    text-align: center;
+  }
+}
+
+.enamad_pic {
+  // background-color: blue;
+  display: flex;
+  justify-content: flex-end;
+  img {
+    display: inline-block;
+    height: 140px;
+  }
+}
