@@ -14,10 +14,14 @@
   top: 70px;
   z-index: -1;
   overflow: hidden;
+  pointer-events: none;
   img {
     width: 113%;
     position: relative;
     left: 6%;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
   }
 }
 

@@ -12,7 +12,13 @@ import youtube_logo from "./assets/youtube.svg";
 
 export default function Footer() {
   return (
-    <div className={styles.footer}>
+    <div
+      className={styles.footer}
+      onDrag={(e) => {
+        e.preventDefault();
+      }}
+      
+    >
       <div className={styles.graph}>
         <img src={graph} alt="" />
       </div>
