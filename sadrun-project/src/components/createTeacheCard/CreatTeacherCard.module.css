@@ -1,0 +1,131 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 460px;
+    height: 129px;
+    box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
+    line-height: 40px;
+    margin-bottom: 60px;
+    border-radius: 25px;
+}
+.title h2{
+    color:#5A0BA9;
+    font-size: 30px;
+    font-weight: 400;
+}
+.title p{
+    color: rgba(90, 11, 169, 0.6);
+    font-size: 18px;
+}
+
+.teacher_item{
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
+    width: 550px;
+    height: 200px;
+    gap: 20px;
+    border-radius: 25px;
+    margin-bottom: 90px;
+    
+}
+.teacher_imag{
+    width:170px ;
+    height:170px ;
+    position:relative;
+    left: 40px;
+}
+.teacher_text{
+    height:150px ;
+    width: 650px;
+
+}
+.teacher_text h2{
+    margin-bottom: 10px;
+    font-size: 25px;
+    position: relative;
+    right: 50px;
+    font-weight: 400;
+    color:rgba(0, 0, 0, 0.8) ;
+
+}
+.teacher_text .teacher_item_head {
+    margin-bottom: 10px;
+    color: rgba(0,0,0,0.7 );
+    font-size: 20px;
+    position: relative;
+    right: 12px;
+}
+.teacher_text .teacher_item_text{
+    color: rgba(0, 0, 0, 0.501961) ;
+    font-size: 15px;
+    line-height: 20px;
+
+}
+
+.icon_path{
+    position: relative;
+    right:315px;
+    bottom: 138px;
+}
+.icon{
+    position: absolute;
+    z-index: 1;
+    width: 210px;
+    height: 200px;
+    left: 0;
+    top: 5px;
+}
+.path1{
+position: absolute;
+width: 300px;
+height: 300px;
+left: 0;
+}
+
+.path2{
+    position: absolute;
+    right:190px;
+    bottom: 120px;
+}
+.path2_img{
+    width: 200px;
+    height: 200px;
+
+}
+.teachrs{
+    display: flex;
+    gap: 40px;
+    
+}
+.teachers_item{
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
+    border-radius: 25px;
+    width: 270px;
+    gap:50px
+}
+.teachers_item img{
+    width: 110px;
+    height: 100px;
+    position: relative;
+    bottom: 13px;
+    right: 15px;
+}
+.teachers_item_text{
+    line-height:30px ;
+}
+.teachers_item_text :nth-child(even){
+    color: rgba(0, 0, 0, 0.501961); ;
+}
+
