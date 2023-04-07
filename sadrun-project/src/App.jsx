@@ -4,7 +4,6 @@ import CreatTeacherCard from "./components/createTeacheCard/CreatTeacherCard";
 
 function App() {
   return <div className="App">
-   
     <CreatTeacherCard/>
   </div>;
 }
