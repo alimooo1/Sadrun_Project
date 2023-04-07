@@ -15,10 +15,6 @@ const router = createBrowserRouter([
         index: true,
         element: <App />,
       },
-      {
-        path: "/qa",
-        element: <QA />,
-      },
     ],
   },
 ]);
