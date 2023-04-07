@@ -1,28 +1,40 @@
 @import "../../sass/mixins";
 
 .footer {
-  // border: solid red;
+  display: flex;
+  flex-direction: column;
   position: absolute;
   padding: 32px 0 32px 0;
   bottom: 0;
   width: 100%;
 }
+.graph {
+  width: 100%;
+  position: relative;
+  top: 70px;
+  z-index: -1;
+  overflow: hidden;
+  img {
+    width: 113%;
+    position: relative;
+    left: 6%;
+  }
+}
+
 .row {
-  //   border: solid black;
-  width: 1264px;
+  width: 92%;
   margin: auto;
   display: flex;
   //   justify-content: space-between;
 
   div {
-    border: solid;
     width: 33.33%;
   }
 }
 
 .info {
   display: flex;
-  @include typography(vazirmatn-Regular, 0.9rem, rgba(0, 0, 0, 0.8));
+  @include typography(vazirmatn-Bold, 0.9rem, rgba(0, 0, 0, 0.8));
 
   .about_us {
     display: flex;
@@ -32,9 +44,12 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+    padding: 20px 10px;
+    gap: 10px;
   }
-  .phone_num{
+  .phone_num {
     direction: ltr;
+    @include typography(Shabnam-Bold, 1.1rem, rgba(0, 0, 0, 0.8));
   }
 }
 
@@ -42,23 +57,22 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 5px;
+  padding-top: 15px;
+  gap: 15px;
 
   .follow_us_logos {
-    border: solid red;
     display: flex;
-    gap: 3px;
+    gap: 8px;
     align-items: center;
     width: 100%;
     justify-content: center;
-    img{
+    img {
       display: block;
-      height: 35px
+      height: 30px;
     }
   }
   .follow_us_text {
-    @include typography(vazirmatn-Regular, 1rem, #67008f);
-    border: solid;
+    @include typography(vazirmatn-bold, 1rem, #67008f);
     text-align: center;
   }
 }
@@ -67,8 +81,12 @@
   // background-color: blue;
   display: flex;
   justify-content: flex-end;
+  // border: solid;
+  // background-color: #666;
   img {
     display: inline-block;
     height: 140px;
+    position: relative;
+    left: -20px;
   }
 }

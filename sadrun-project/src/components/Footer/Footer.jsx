@@ -1,6 +1,7 @@
 import React from "react";
 import "../../sass/fonts.scss";
 import styles from "./style.module.scss";
+import graph from "./assets/footer_graph.svg";
 import eNamad_1 from "./assets/enamad-2.png";
 import eNamad_2 from "./assets/enamad-1.png";
 import facebook_logo from "./assets/facebook.svg";
@@ -12,6 +13,9 @@ import youtube_logo from "./assets/youtube.svg";
 export default function Footer() {
   return (
     <div className={styles.footer}>
+      <div className={styles.graph}>
+        <img src={graph} alt="" />
+      </div>
       <div className={styles.row}>
         <div className={styles.info}>
           <div className={styles.about_us}>
