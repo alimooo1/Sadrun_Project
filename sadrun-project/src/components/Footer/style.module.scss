@@ -1,0 +1,96 @@
+@import "../../sass/mixins";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 32px 0 32px 0;
+  bottom: 0;
+  width: 100%;
+}
+.graph {
+  width: 100%;
+  position: relative;
+  top: 70px;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  img {
+    width: 113%;
+    position: relative;
+    left: 6%;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+
+.row {
+  width: 92%;
+  margin: auto;
+  display: flex;
+  //   justify-content: space-between;
+
+  div {
+    width: 33.33%;
+  }
+}
+
+.info {
+  display: flex;
+  @include typography(vazirmatn-Bold, 0.9rem, rgba(0, 0, 0, 0.8));
+
+  .about_us {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact_us {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px 10px;
+    gap: 10px;
+  }
+  .phone_num {
+    direction: ltr;
+    @include typography(Shabnam-Bold, 1.1rem, rgba(0, 0, 0, 0.8));
+  }
+}
+
+.follow_us_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 15px;
+  gap: 15px;
+
+  .follow_us_logos {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    img {
+      display: block;
+      height: 30px;
+    }
+  }
+  .follow_us_text {
+    @include typography(vazirmatn-bold, 1rem, #67008f);
+    text-align: center;
+  }
+}
+
+.enamad_pic {
+  // background-color: blue;
+  display: flex;
+  justify-content: flex-end;
+  // border: solid;
+  // background-color: #666;
+  img {
+    display: inline-block;
+    height: 140px;
+    position: relative;
+    left: -20px;
+  }
+}
