@@ -1,34 +1,41 @@
 .conteiner{
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 8px;
 }
+
 .shopping_cart,.search{
-background-color: #EEE6F6;
-/* padding:10px 10px; */
-width: 30px;
-height: 30px;
-
-border-radius: 50px;
-border: none;
-color: #722eb4;
-cursor: pointer;
-display:flex;
-align-items: center;
-justify-content: center;
-
+    background-color: #EEE6F6;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+    color: #722eb4;
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.shopping_cart{
+    margin-left:10px;
+}
+
+.searchIcon,.shoppinIcon{
+    width: 15px;
+    height: 15px;
+}
+
 .login{
     background-color: #EEE6F6;
     border: none;
-    /* padding:8px 20px ; */
     width: 60px;
     height: 30px;
     border-radius: 1rem;
     color: #722eb4;
     cursor: pointer;
-
 }
+
 .register{
     background: #EEE6F6;
     border: none;
@@ -37,14 +44,4 @@ justify-content: center;
     border-radius: 1rem;
     color: #722eb4;
     cursor: pointer;
-
-    
 }
-/* .search{
-    background-color: #d2aef8;
-    padding: 10px;
-    border-radius: 50px;
-    color: #722eb4;
-    border: none;
-
-} */
