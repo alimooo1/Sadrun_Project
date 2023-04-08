@@ -17,8 +17,7 @@ function CreatTeacherCard() {
     <div className={styles.container}>
         <div className={styles.title}>
             <h2>اساتید برتر</h2>
-            <p> استادای مهربون و دوستداشتنی</p>
-            
+            <p> استادای مهربون و دوستداشتنی</p>  
         </div>
         <div className={styles.teacher_item}>
             <img className={styles.teacher_imag} src={teacher1} alt="" />
@@ -30,7 +29,6 @@ function CreatTeacherCard() {
                 بهشهر , مدرس دوره های وب</p>
             </div>
             
-            
             <div>
                     <div className={styles.icon_path} >
                     <img className={styles.icon} src={icon} alt="" />
@@ -39,10 +37,6 @@ function CreatTeacherCard() {
             </div>
 
         </div>
-
-         {/* <div className={styles.path2}>
-            <img className={styles.path2_img} src={path2} alt="" />
-         </div> */}
 
         <div className={styles.teachrs}>
             <div className={styles.path2}>
