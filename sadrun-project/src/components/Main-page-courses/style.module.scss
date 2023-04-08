@@ -9,9 +9,10 @@
 }
 
 .title {
+  background-color: white;
   margin: auto;
   display: flex;
-  box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
+  box-shadow: 0px 0px 3px rgba(87, 87, 87, 0.160784);
   padding: 18px 70px;
   border-radius: 15px;
   flex-direction: column;
@@ -28,8 +29,8 @@
     z-index: -1;
     display: inline-block;
     position: absolute;
-    right: -40px;
-    top: -10px;
+    right: -42px;
+    top: 0px;
     width: 65px;
   }
 }
