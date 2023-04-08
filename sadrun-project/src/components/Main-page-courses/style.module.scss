@@ -14,16 +14,16 @@
   display: flex;
   box-shadow: 0px 0px 3px rgba(87, 87, 87, 0.160784);
   padding: 18px 70px;
-  border-radius: 15px;
+  border-radius: 17.5px;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   position: relative;
   h2 {
-    @include typography($secondary-font-family, 1.25rem, $text-accent-color);
+    @include typography($secondary-font-family, 28px, $text-accent-color);
   }
   span {
-    @include typography($primary-font-family, 0.75rem, $text-accent-color);
+    @include typography($primary-font-family, 15.5px, rgba(90, 11, 169, 0.6));
   }
   img {
     z-index: -1;
@@ -40,23 +40,42 @@
   display: flex;
   justify-content: space-between;
   justify-content: center;
+  gap: 40px;
+  padding-top: 35px;
 }
 .bigcard {
+  padding: 26px;
   width: 703px;
   display: flex;
   flex-direction: column;
-  border-radius: 15px;
+  border-radius: 17.5px;
   box-shadow: 0px 0px 3px rgba(87, 87, 87, 0.160784);
 
   .info {
+    display: flex;
+    justify-content: space-between;
+    .right_box {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 70%;
+      padding: 14px 15px 0 0;
+      gap: 20px;
+    }
+    .left_box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 17px 10px;
+      gap: 45px;
+    }
     h3 {
-      @include typography($secondary-font-family, 1.2rem, #434343);
+      @include typography($secondary-font-family, 24.5px, #434343);
     }
     p {
-      @include typography($primary-font-family, 0.7rem, $primary-txt-color);
+      @include typography($primary-font-family, 14px, $primary-txt-color);
     }
     span {
-      @include typography($primary-font-family, 0.8rem, $primary-txt-color);
+      @include typography($primary-font-family, 17.5px, $primary-txt-color);
     }
   }
 }
@@ -65,10 +84,26 @@
   width: 286px;
   display: flex;
   flex-direction: column;
-  border-radius: 15px;
+  border-radius: 17.5px;
   box-shadow: 0px 0px 3px rgba(87, 87, 87, 0.160784);
+  padding: 21px 24px;
+
+
+  img{
+    display: block;
+    width: 100%;
+  }
+
+  .btn{
+    margin: auto;
+  }
 }
 
-.button{
-  
+.btn {
+  border: 2px solid $text-accent-color;
+  border-radius: 17.5px; 
+  padding: 10px 22px;
+  cursor: pointer;
+  background-color: #ffff;
+  @include typography($primary-font-family, 14px, $text-accent-color);
 }

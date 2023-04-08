@@ -20,16 +20,16 @@ export default function MPCourses() {
           <img src={nodePic} alt="" />
 
           <div className={styles.info}>
-            <div>
+            <div className={styles.right_box}>
               <h3>نود جی اس : دوره کامل </h3>
               <p>
                 نود جی‌اس یا نود دات جی‌اس (به انگلیسی: Node.js) یک محیط اجراییِ
                 سمت سرورِ متن‌باز و چندسکویی برای زبان جاوااسکریپت است
               </p>
             </div>
-            <div>
+            <div className={styles.left_box}>
               <span>آرمین اسلامی</span>
-              <button>مشاهده دوره</button>
+              <button className={styles.btn}>مشاهده دوره</button>
             </div>
           </div>
         </div>
@@ -38,7 +38,7 @@ export default function MPCourses() {
           <img src={vsCodePic} alt="" />
           <img src={angularPic} alt="" />
           <img src={nestPic} alt="" />
-          <button className={styles.button}>مشاهده دوره</button>
+          <button className={styles.btn}>بیشتر</button>
         </div>
       </div>
     </div>
