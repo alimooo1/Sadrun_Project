@@ -6,7 +6,6 @@ import MPCourses from "./components/Main-page-courses/MPCourses";
 function App() {
   return (
     <div className="App">
-      <MPCourses/>
     </div>
   );
 }

@@ -6,6 +6,9 @@ import nodePic from "./assets/node.png";
 import vsCodePic from "./assets/vs-code.png";
 import angularPic from "./assets/angular.png";
 import nestPic from "./assets/nest.png";
+import man_1 from "./assets/man-1.svg";
+import man_2 from "./assets/man-2.svg";
+import hand from "./assets/hand.svg";
 
 export default function MPCourses() {
   return (
@@ -17,6 +20,7 @@ export default function MPCourses() {
       </div>
       <div className={styles.row}>
         <div className={styles.bigcard}>
+          <img src={man_1} alt="" className={styles.man_graph_1} />
           <img src={nodePic} alt="" />
 
           <div className={styles.info}>
@@ -35,6 +39,10 @@ export default function MPCourses() {
         </div>
 
         <div className={styles.smallcard}>
+          <div className={styles.man_2}>
+            <img src={man_2} alt="" className={styles.man_graph_2} />
+            <img src={hand} alt="" className={styles.hand_graph} />
+          </div>
           <img src={vsCodePic} alt="" />
           <img src={angularPic} alt="" />
           <img src={nestPic} alt="" />
