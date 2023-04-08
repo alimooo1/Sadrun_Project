@@ -38,4 +38,37 @@
 .row {
   width: 100%;
   display: flex;
+  justify-content: space-between;
+  justify-content: center;
+}
+.bigcard {
+  width: 703px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 0px 0px 3px rgba(87, 87, 87, 0.160784);
+
+  .info {
+    h3 {
+      @include typography($secondary-font-family, 1.2rem, #434343);
+    }
+    p {
+      @include typography($primary-font-family, 0.7rem, $primary-txt-color);
+    }
+    span {
+      @include typography($primary-font-family, 0.8rem, $primary-txt-color);
+    }
+  }
+}
+
+.smallcard {
+  width: 286px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 0px 0px 3px rgba(87, 87, 87, 0.160784);
+}
+
+.button{
+  
 }
