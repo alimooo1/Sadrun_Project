@@ -16,8 +16,6 @@
 
 
 .service_carts {
-  // @include position(absolute, $top: 36.5rem, $left: 51rem);
-  // transform: translate(-50%,-50%);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -30,7 +28,6 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  // padding: 3rem 4.5rem;
   @include size(20rem, 10rem);
 
   &:nth-child(1) {
@@ -57,7 +54,6 @@
 
   span {
     @include typography($secondary-font-family, 1.7rem, #fff);
-    //  padding-left: 0.1rem;
     font-weight: bold
   }
 }

@@ -10,7 +10,7 @@ import path2 from "./serviceCard-images/Path 620@2x.png";
 import puepleFlower2 from "./serviceCard-images/purpleFlower@2x.png";
 import purpleFlower from "./serviceCard-images/purpleFlower@2x.png";
 import girlFlowerSet from './serviceCard-images/girlFlowerSet .svg'
-const SreviceCard = () => {
+const ServiceCard = () => {
   return (
     <>
       <div className="container">
@@ -19,10 +19,10 @@ const SreviceCard = () => {
         <div className="girlFlowerSet">
           <img className="girlFlowerSet" src={girlFlowerSet} alt="girlFlowerSet" />
 
-         
+
         </div>
         <div className="service_carts">
-          
+
           <div className="cart">
             <img src={certificate} alt="certificate" />
             <span>مدرک معتبر </span>
@@ -54,4 +54,4 @@ const SreviceCard = () => {
   );
 };
 
-export default SreviceCard;
+export default ServiceCard;
