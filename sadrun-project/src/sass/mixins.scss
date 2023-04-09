@@ -1,5 +1,6 @@
 // button
-@mixin button-text($bg-color,
+@mixin button-text(
+  $bg-color,
   $text-color,
   $padding,
   $font-size,
@@ -21,16 +22,14 @@
   }
 }
 
+
 // typography
-@mixin typography($font-family,
-  $font-size,
-  $line-height,
-    $text-color) {
+@mixin typography($font-family, $font-size, $text-color) {
   font-family: $font-family;
   font-size: $font-size;
-  line-height: $line-height;
   color: $text-color;
 }
+
 
 // cart
 @mixin cart($background-color, $border-color, $text-color, $padding) {
@@ -44,30 +43,9 @@
 @mixin size($width, $height) {
   width: $width;
   height: $height;
-}
-
-@mixin position($position,
-  $top: null,
-  $right: null,
-  $bottom: null,
-  $left: null) {
+  border-radius: $border-radius;
+  object-fit: cover;
   position: $position;
-
-  @if $top !=null {
-    top: $top;
-  }
-
-  @if $right !=null {
-    right: $right;
-  }
-
-  @if $bottom !=null {
-    bottom: $bottom;
-  }
-
-  @if $left !=null {
-    left: $left;
-  }
 }
 
 //icon
