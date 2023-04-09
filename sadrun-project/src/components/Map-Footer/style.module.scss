@@ -1,13 +1,12 @@
 @import "../../sass/mixins";
 @import "../../sass/variables";
 
-
-.map_footer{
+.map_footer {
   width: 100%;
   position: absolute;
   bottom: 0;
 }
-.map{
+.map {
   box-sizing: border-box;
   width: 100%;
   // z-index: -1;
@@ -16,7 +15,10 @@
   top: 40px;
   // background-color: red;
 }
-
+.map_popup {
+  @include typography($primary-font-family, 0.8rem, rgba(0, 0, 0, 0.8));
+  background-color: white;
+}
 .footer {
   display: flex;
   z-index: 1;
@@ -29,6 +31,7 @@
   position: absolute;
   bottom: -20%;
   overflow: hidden;
+  pointer-events: none;
   img {
     width: 113%;
     position: relative;
@@ -39,6 +42,7 @@
   }
 }
 .white_graph {
+  pointer-events: none;
   z-index: 1;
   width: 100%;
   position: absolute;
@@ -59,7 +63,6 @@
   margin: auto;
   display: flex;
   z-index: 1;
-
 
   div {
     width: 33.33%;

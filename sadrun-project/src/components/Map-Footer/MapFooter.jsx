@@ -1,7 +1,9 @@
 import React from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { Icon } from "leaflet";
 import "../../sass/fonts.scss";
 import styles from "./style.module.scss";
+import markerIcon from "./assets/marker.svg";
 import graph from "./assets/footer_graph.svg";
 import whiteGraph from "./assets/white_graph.svg";
 import eNamad_1 from "./assets/enamad-2.png";
@@ -15,17 +17,33 @@ import youtube_logo from "./assets/youtube.svg";
 export default function MapFooter() {
   const mapStyle = { width: "100%", height: "100%", zIndex: "0" };
   const position = [34.545343965913055, 50.79106816184002];
+  const skater = new Icon({
+    iconUrl: `${markerIcon}`,
+    iconSize: [30, 43],
+    iconAnchor: [14, 45],
+    // popupAnchor: [140, 16],
+    popupAnchor: [0, -25],
+  });
 
   return (
     <section className={styles.map_footer}>
       <div className={styles.map}>
-        <MapContainer style={mapStyle} center={position} zoom={17}>
+        <MapContainer
+          style={mapStyle}
+          center={position}
+          zoom={17}
+          minZoom={15}
+          maxZoom={18}
+          zoomControl={false}
+        >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker position={position}>
-            <Popup >استان قم، قم، بلوار امامت، کارخانه نوآوری</Popup>
+          <Marker icon={skater} position={position} title="کارخانه نوآوری">
+            <Popup>
+              <div className={styles.map_popup}>استان قم، قم، بلوار امامت، کارخانه نوآوری</div>
+            </Popup>
           </Marker>
         </MapContainer>
         <div className={styles.white_graph}>
