@@ -1,0 +1,19 @@
+.blog{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 410px;
+}
+.image_blog{
+    width: 100px;
+    height: 70px;
+}
+.title{
+    font-weight: bold;
+    margin-bottom: 9px;
+
+
+}
+.text{
+    
+}
