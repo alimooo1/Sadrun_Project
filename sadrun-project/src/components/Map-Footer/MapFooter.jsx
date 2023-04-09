@@ -14,19 +14,19 @@ import youtube_logo from "./assets/youtube.svg";
 
 export default function MapFooter() {
   const mapStyle = { width: "100%", height: "100%", zIndex: "0" };
+  const position = [34.545343965913055, 50.79106816184002];
 
   return (
     <section className={styles.map_footer}>
       <div className={styles.map}>
-        <MapContainer
-          style={mapStyle}
-          center={[34.545343965913055, 50.79106816184002]}
-          zoom={17}
-        >
+        <MapContainer style={mapStyle} center={position} zoom={17}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+          <Marker position={position}>
+            <Popup >استان قم، قم، بلوار امامت، کارخانه نوآوری</Popup>
+          </Marker>
         </MapContainer>
         <div className={styles.white_graph}>
           <img src={whiteGraph} alt="" />
