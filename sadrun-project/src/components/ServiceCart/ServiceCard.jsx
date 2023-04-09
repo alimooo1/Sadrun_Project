@@ -13,7 +13,7 @@ import girlFlowerSet from './serviceCard-images/girlFlowerSet .svg'
 const ServiceCard = () => {
   return (
     <>
-      <div className="container">
+      <div className="service-container">
         <img className="path" src={path2} alt="path2" />
         <img className="boy" src={boy2} alt="boy2" />
         <div className="girlFlowerSet">
