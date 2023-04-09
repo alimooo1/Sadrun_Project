@@ -31,14 +31,16 @@ export default function MapFooter() {
         <MapContainer
           style={mapStyle}
           center={position}
-          zoom={17}
-          minZoom={15}
+          zoom={15}
+          minZoom={14}
           maxZoom={18}
           zoomControl={false}
         >
           <TileLayer
+          url='https://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}'
+          subdomains={['mt0','mt1','mt2','mt3']}
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <Marker icon={skater} position={position} title="کارخانه نوآوری">
             <Popup>
