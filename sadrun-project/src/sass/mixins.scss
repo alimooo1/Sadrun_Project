@@ -43,9 +43,7 @@
 @mixin size($width, $height) {
   width: $width;
   height: $height;
-  border-radius: $border-radius;
-  object-fit: cover;
-  position: $position;
+
 }
 
 //icon
@@ -55,4 +53,24 @@
   text-align: $text-align;
   display: inline-block;
   vertical-align: middle;
+}
+
+@mixin position ($position, $top: null, $right: null, $left: null, $bottom: null) {
+  position: $position;
+
+  @if($top !=null) {
+    top: $top;
+  }
+
+  @if($right !=null) {
+    right: $right;
+  }
+
+  @if($left !=null) {
+    left: $left;
+  }
+
+  @if($bottom !=null) {
+    bottom: $bottom;
+  }
 }
