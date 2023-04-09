@@ -55,7 +55,7 @@
   vertical-align: middle;
 }
 
-@mixin position ($position, $top: null, $right: null, $left: null, $bottom) {
+@mixin position ($position, $top: null, $right: null, $left: null, $bottom: null) {
   position: $position;
 
   @if($top !=null) {

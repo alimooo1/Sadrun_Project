@@ -60,7 +60,7 @@
 
 .path {
   @include size(35%, 48%);
-  // @include position(absolute, $top: -2rem, $left: 0);
+  @include position(absolute, $top: -2rem, $left: 0);
 }
 
 
@@ -69,11 +69,11 @@
 
 .girlFlowerSet {
   @include size(19rem, 25rem);
-  // @include position(absolute, $top: 12rem, $left: 0);
+  @include position(absolute, $top: 12rem, $left: 0);
 }
 
 .boy {
-  // @include position(absolute, $top: 2rem, $right: 0);
+  @include position(absolute, $top: 2rem, $right: 0);
   @include size(13rem, 18rem);
 
 }
@@ -88,12 +88,12 @@
   border-radius: 7px;
   @include size(15rem, 7.5rem);
   text-align: center;
-  // @include position(absolute, $top: 0, $right: 12rem);
+  @include position(absolute, $top: 0, $right: 12rem);
 
 }
 
 .puepleFlower2 {
   @include size(2rem, 3rem);
   transform: rotate(-20deg);
-  // @include position(absolute, $top: -2.5rem, $right: 19rem);
+  @include position(absolute, $top: -2.5rem, $right: 19rem);
 }
