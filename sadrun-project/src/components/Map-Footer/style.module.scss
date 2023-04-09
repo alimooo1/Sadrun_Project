@@ -10,14 +10,16 @@
 .map{
   box-sizing: border-box;
   width: 100%;
-  z-index: -1;
+  // z-index: -1;
   height: 45vh;
   position: relative;
   top: 40px;
-  background-color: red;
+  // background-color: red;
 }
+
 .footer {
   display: flex;
+  z-index: 1;
   flex-direction: column;
   padding: 32px 0 32px 0;
   width: 100%;
@@ -26,7 +28,6 @@
   width: 100%;
   position: absolute;
   bottom: -20%;
-  z-index: -1;
   overflow: hidden;
   img {
     width: 113%;
@@ -38,6 +39,7 @@
   }
 }
 .white_graph {
+  z-index: 1;
   width: 100%;
   position: absolute;
   top: -10%;
@@ -56,6 +58,8 @@
   width: 92%;
   margin: auto;
   display: flex;
+  z-index: 1;
+
 
   div {
     width: 33.33%;
