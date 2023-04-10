@@ -8,11 +8,11 @@
     justify-content: flex-start;
     align-items: center;
     color: #fff;
-    padding: 2rem 5rem;
+    padding: 2rem;
 }
 
 img {
-    @include size(7rem, 7rem)
+    @include size(3rem, 3rem)
 }
 
 .navigationItems {
@@ -27,7 +27,7 @@ img {
     }
 
     a {
-        @include typography($primary-font-family, 2rem, $text-accent-color);
+        @include typography($primary-font-family, 1rem, $text-accent-color);
             text-decoration: none;
         
             &:hover {
