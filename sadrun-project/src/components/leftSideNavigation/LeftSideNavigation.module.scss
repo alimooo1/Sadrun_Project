@@ -1,0 +1,50 @@
+.conteiner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'vazirmatn-Regular';
+}
+
+.shopping_cart,
+.search {
+    background-color: #dbc0f7;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+    color: #722eb4;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.shopping_cart {
+    margin-left: 10px;
+}
+
+.searchIcon,
+.shoppinIcon {
+    width: 15px;
+    height: 15px;
+}
+
+.login,
+.register {
+    color: #722eb4;
+    cursor: pointer;
+    font-family: 'vazirmatn-Regular';
+    width: 75px;
+    height: 32px;
+    border: none;
+    border-radius: 1rem;
+}
+
+.login {
+    background-color: #dbc0f7;
+}
+
+.register {
+    background-color: #f6f4f9;
+}
