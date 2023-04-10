@@ -13,7 +13,7 @@ function CreateBtnComponent() {
       <button className={styles.login}>ورود</button>
       <button className={styles.register}>ثبت نام</button>
       <button className={styles.shopping_cart}>
-        <img className={styles.shoppinIcon} src={shoppinIcon} alt="" />
+        <img className={styles.shoppinIcon} src={shoppinIcon} alt="shoppinIcon" />
       </button>
       
 
