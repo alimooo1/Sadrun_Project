@@ -1,2 +1,67 @@
 @import "../../sass/mixins";
 @import "../../sass/variables";
+
+.main_card {
+  width: 755px;
+  background-color: #fff;
+  box-shadow: 0px 0px 3px #575757;
+  border-radius: 20px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  img {
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+}
+
+.title {
+  @include typography($secondary-font-family, 27px, black);
+  text-align: center;
+}
+
+/*---- Style the tab ---- */
+.tab {
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+
+  /* Style the tab buttons */
+  button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background-color: #ddd;
+  }
+
+  .active_btn {
+    background-color: #F6F6F6;
+  }
+}
+
+/* Style the tab Links */
+.tablinks {
+  display: flex;
+}
+
+/* Style the tab content */
+.tabcontent div {
+  display: none;
+  padding: 6px 12px;
+  background-color: #F6F6F6;
+  border-radius: 15px;
+  height: 500px;
+}
+div.active_content {
+  display: block;
+}
