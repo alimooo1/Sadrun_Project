@@ -6,7 +6,6 @@ import CourseBenefits from "./components/CourseBenefits/CourseBenefits";
 function App() {
   return <div className="App">
     <CourseBenefits />
-    fff
   </div>;
 }
 
