@@ -1,0 +1,32 @@
+@import "../../sass/mixins.scss";
+@import "../../sass/global.scss";
+@import "../../sass/variables.scss";
+@import '../../sass/fonts.scss';
+
+.navigation {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    padding: 1.5rem 3rem;
+}
+
+img {
+    @include size(3.2rem, 3.2rem)
+}
+
+.navigation-items {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+    li {
+        padding: 1rem;
+        list-style: none;
+    }
+
+    a {
+        @include typography($primary-font-family, 1.3rem, $text-accent-color)
+    }
+}
