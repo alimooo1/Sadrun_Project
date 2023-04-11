@@ -4,9 +4,7 @@ import ServiceCard from "./components/ServiceCart/ServiceCard";
 import StarRating from "./components/StarRating/StarRating";
 
 function App() {
-  return <div className="App">
-    <StarRating/>
-  </div>;
+  return <div className="App"></div>;
 }
 
 export default App;
