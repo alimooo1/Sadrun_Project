@@ -4,17 +4,16 @@ import SearchInput from './SearchInput/SearchInput'
 import styles from './LeftSideNavigation.module.scss'
 import RegisterBtn from './RegisterBtn/RegisterBtn';
 import Login from './Login/Login';
+import NavBtn from './NavBtn/NavBtn';
 
 function CreateBtnComponent() {
     return (
         <>
             <div className={styles.conteiner} >
                 <SearchInput />
-                <RegisterBtn />
-                <Login />
-                <button className={styles.shopping_cart}>
-                    <FaShoppingCart />
-                </button>
+                <NavBtn btnTitle={'ثبت نام '} />
+                <NavBtn btnTitle={"ورود"} />
+                <NavBtn className={styles.shopping_cart} btnTitle={<FaShoppingCart />} />
             </div>
 
 
