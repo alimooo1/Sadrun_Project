@@ -5,19 +5,22 @@
 
 .navigation {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     color: #fff;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 img {
-    @include size(3rem, 3rem)
+    @include size(2.5rem, 2.5rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
 }
 
 .navigationItems {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0;
     padding: 0;
 
@@ -27,7 +30,7 @@ img {
     }
 
     a {
-        @include typography($primary-font-family, 1rem, $text-accent-color);
+        @include typography($primary-font-family, 0.8rem, $text-accent-color);
             text-decoration: none;
         
             &:hover {

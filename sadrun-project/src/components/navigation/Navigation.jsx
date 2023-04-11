@@ -6,9 +6,10 @@ const Navigation = () => {
     return (
         <div className={styles.navigation}>
 
-            <div class="navigation-logo"><a href="#"> <img src={avatar} alt="avatar" /></a></div>
+            {/* <div class="navigation-logo"><a href="#"> <img src={avatar} alt="avatar" /></a></div> */}
             <nav>
                 <ul className={styles.navigationItems}>
+                    <div class="navigation-logo"><a href="#"> <img src={avatar} alt="avatar" /></a></div>
                     <li className={styles.navigationItem}><a href="#">خانه</a></li>
                     <li><a href="#">آموزش</a></li>
                     <li><a href="#">بلاگ</a></li>
