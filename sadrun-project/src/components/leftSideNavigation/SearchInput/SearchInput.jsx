@@ -13,8 +13,10 @@ function InputWithIcon() {
 
     return (
         <div className={`${styles.inputContainer} ${expanded ? styles.expanded : ''}`}>
-            {!expanded && <span className={styles.icon}><FaSistrix /></span>}
-            <input type="text" placeholder="Search..." onClick={handleInputClick} className={`${styles.input} ${expanded ? styles.visible : ''}`} />
+
+
+            {!expanded && <span onClick={handleInputClick} className={styles.icon}><FaSistrix /></span>}
+            <input type="search" className={`${styles.input} ${expanded ? styles.visible : ''}`} />
         </div>
     );
 }
