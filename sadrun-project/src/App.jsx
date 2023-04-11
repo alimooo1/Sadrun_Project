@@ -7,7 +7,7 @@ import SearchInput from './components/leftSideNavigation/SearchInput/SearchInput
 function App() {
   return <div className="App">
     <Navigation />
-    <LeftSideNaviigation />
+    {/* <LeftSideNaviigation /> */}
     {/* <SearchInput /> */}
   </div>;
 }

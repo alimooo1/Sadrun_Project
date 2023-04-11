@@ -1,11 +1,12 @@
+@import '../../../sass/variables.scss';
+@import '../../../sass/mixins.scss';
 .inputContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #fff;
     border-radius: 4px;
-    width: 3rem;
-        height: 3rem;
+    @include size(2.2rem, 2.2rem);
 }
 
 .expanded {
@@ -30,13 +31,16 @@ input[type=search] {
 }
 
 .icon {
-font-size: 2rem;
+font-size: 1.3rem;
     border-radius: 100%;
     background-color: #eee6f6;
+    @include size(100%, 100%);
     width: 100%;
     height: 100%;
     text-align: center;
+    color: $text-accent-color;
 }
+
 
 .expanded .icon {
     display: none;
