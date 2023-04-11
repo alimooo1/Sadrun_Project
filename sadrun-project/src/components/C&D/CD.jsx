@@ -3,6 +3,7 @@ import "../../sass/fonts.scss";
 import styles from "./style.module.scss";
 import nodePic from "./assets/node.png";
 import StarRating from "../StarRating/StarRating";
+import CategoryPin from "../Category-Pin/CategoryPin";
 
 export default function CD() {
   const [toggleState, setToggleState] = useState(1);
@@ -66,6 +67,7 @@ export default function CD() {
             </p>
             <div className={styles.info}>
               <StarRating width={"17.5px"} initialValue={3} voteNum={99313} />
+              <CategoryPin name={"آموزشی"}/>
             </div>
           </div>
 
