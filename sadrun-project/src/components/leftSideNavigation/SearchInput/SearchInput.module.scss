@@ -15,7 +15,7 @@
         border-radius: 25px;
 }
 
-input[type=search] {
+.input {
     display: none;
     width: 100%;
     padding: 12px 20px;
@@ -24,6 +24,8 @@ input[type=search] {
     border: none;
     border-radius: 4px;
         color: black;
+        background-color: transparent;
+            outline: none;
 }
 
 .visible {
