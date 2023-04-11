@@ -6,12 +6,13 @@
   background-color: #fff;
   box-shadow: 0px 0px 3px #575757;
   border-radius: 20px;
-  padding: 35px;
+  padding: 12px 10px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   img {
     width: 100%;
+    padding: 25px 25px 0 25px;
     margin: auto;
     display: block;
   }
@@ -24,44 +25,85 @@
 
 /*---- Style the tab ---- */
 .tab {
+  padding: 10px;
   overflow: hidden;
   background-color: white;
   display: flex;
   flex-direction: column;
-
-  /* Style the tab buttons */
-  button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-  }
-
-  button:hover {
-    background-color: #ddd;
-  }
-
-  .active_btn {
-    background-color: #F6F6F6;
-  }
 }
 
 /* Style the tab Links */
 .tablinks {
   display: flex;
+  gap: 28px;
+  padding: 3px 35px 0 0;
+  margin-bottom: -5px;
+
+  div {
+    @include typography($secondary-font-family, 17.5px, #434343);
+    background-color: inherit;
+    cursor: pointer;
+    padding: 10px 24px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 15px 15px 0px 0px;
+  }
+
+  div:hover {
+    background-color: #f6f6f6;
+  }
+
+  div:active {
+    background-color: #f0f0f0;
+  }
+
+  .active_link {
+    background-color: #f6f6f6;
+  }
+}
+
+.comments_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  span {
+    display: inline-block;
+    @include typography(Shabnam-Bold, 12px, white);
+    padding: 2px 2px 0 2px;
+    background-color: red;
+    border-radius: 50%;
+  }
 }
 
 /* Style the tab content */
-.tabcontent div {
-  display: none;
-  padding: 6px 12px;
-  background-color: #F6F6F6;
+.tabcontent {
+  width: 98%;
+  margin: auto;
+  padding: 25px 30px;
   border-radius: 15px;
-  height: 500px;
+  background-color: #f6f6f6;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  div {
+    display: none;
+  }
 }
 div.active_content {
-  display: block;
+  display: flex;
+}
+.description_content {
+  text-align: justify;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 60px;
+  p {
+    @include typography($primary-font-family, 16px, #707070);
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    border: solid;
+    width: 100%;
+  }
 }
