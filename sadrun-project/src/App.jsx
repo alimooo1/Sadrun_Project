@@ -6,24 +6,7 @@ import RowCard from "./components/Blog-Cards/Row-Cards/Row-Card/RowCard";
 import RowPicture from "./components/Blog-Cards/Row-Cards/images/nest.png";
 
 function App() {
-  return (
-    <div className="App">
-      <BoxyCard
-        imageSRC={BoxyPicture}
-        title={"نست "}
-        description={"آموزشگاه در تدارک دوره های جدید برنامه نویسی است."}
-        category={"آموزشی"}
-      />
-      <RowCard
-        imageSRC={RowPicture}
-        title={"نست جی اس"}
-        details={
-          "آموزشگاه در تدارک دوره های جدید برنامه نویسی است. آموزشگاه در تدارک دوره های جدید برنامه نویسی است. آموزشگاه در تدارک دوره های جدید برنامه نویسی است."
-        }
-        category={"آموزشی"}
-      />
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;
