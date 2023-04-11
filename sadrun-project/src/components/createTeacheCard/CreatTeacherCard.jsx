@@ -38,8 +38,9 @@ function CreatTeacherCard() {
 
         </div>
 
+           
         <div className={styles.teachrs}>
-            <div className={styles.path2}>
+         <div className={styles.path2}>
             <img className={styles.path2_img} src={path2} alt="" />
          </div>
             <div className={styles.teachers_item}>

@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     direction: rtl;
+    position: relative;
 }
 .title{
     display: flex;
@@ -71,9 +72,9 @@
 }
 
 .icon_path{
-    position: relative;
-    right:442px;
-    bottom: 138px;
+    position: absolute;
+    left:0;
+    top: 138px;
 }
 .icon{
     position: absolute;
@@ -94,10 +95,10 @@ left: 0;
 .path2{
     position: absolute;
     right:1px;
-    bottom: 90px;
+    bottom:-70px;
 }
 .path2_img{
-    width: 280px;
+    width: 300px;
     height: 293px;
 }
 .teachrs{
