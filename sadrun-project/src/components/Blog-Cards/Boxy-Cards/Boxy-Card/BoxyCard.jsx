@@ -2,6 +2,7 @@ import React from "react";
 import "../../../../sass/fonts.scss";
 import styles from "./BoxyCard.module.scss";
 import CategoryPin from "../../Category-Pin/CategoryPin";
+import BlogButton from "../../Blog-Button/BlogButton";
 
 function BoxyCard({ imageSRC, title, description, category }) {
   return (
@@ -10,8 +11,8 @@ function BoxyCard({ imageSRC, title, description, category }) {
       <h4 className={styles.cardTitle}>{title}</h4>
       <h6 className={styles.cardDetails}>{description}</h6>
       <div className={styles.bottomPart}>
-        <CategoryPin name={"آموزشی"} />
-        <button className={styles.cardButton}>ادامه مطلب</button>
+        <CategoryPin name={category} />
+        <BlogButton />
       </div>
     </div>
   );

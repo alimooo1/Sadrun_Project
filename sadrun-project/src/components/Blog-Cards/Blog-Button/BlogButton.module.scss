@@ -1,0 +1,16 @@
+@import "../../../sass/mixins.scss";
+@import "../../../sass/variables.scss";
+
+.cardButton {
+  padding: 2px 10px;
+  border-radius: 15px;
+  background-color: white;
+  transition: 0.4s all;
+  border: 2px solid $text-accent-color;
+  @include typography($primary-font-family, 0.6rem, $text-accent-color);
+
+  &:hover {
+    cursor: pointer;
+    background-color: $secondary-bg-color;
+  }
+}
