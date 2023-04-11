@@ -1,0 +1,9 @@
+@import "../../../sass/mixins.scss";
+@import "../../../sass/variables.scss";
+
+.cardCategory {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  @include typography($primary-font-family, 0.6rem, $secondary-txt-color);
+}
