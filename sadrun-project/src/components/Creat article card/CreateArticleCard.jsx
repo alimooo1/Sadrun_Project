@@ -6,6 +6,7 @@ import VKE from "../Creat article card/images/VKE8r0.png"
 import visual from "./images/visual-studio-logo.png"
 import heIcon from "./images/heicon.svg"
 import sheIcon from "./images/sheicon.svg"
+import Article_cards from '../Create article cards/article_cards'
 
 function CreateArticleCard() {
     return (
@@ -28,14 +29,16 @@ function CreateArticleCard() {
         <div className={styles.conteiner_Article}>
           <div className={styles.news}>
                   <p className={styles.news_title} >اخبار</p>
-                  <div className={styles.news_item}>
+                  {/* <div className={styles.news_item}>
                       <img src={angular} alt="a" className={styles.image_article} />
                       <p>آموزشگاه در تدارک دوره های جدید برنامه نویسی است</p>
-                  </div>
+                  </div> */}
+                  <Article_cards/>
                   <hr/>
                   <div className={styles.news_item}>
-                      <img src={EGrP} alt="a" className={styles.image_article} />
-                      <p>آموزشگاه در تدارک دوره های جدید برنامه نویسی است</p>
+                       <img src={EGrP} alt="a" className={styles.image_article} />
+                      <p>آموزشگاه در تدارک دوره های جدید برنامه نویسی است</p> 
+                      
                   </div>
                   <hr/>
                   <div className={styles.news_item}>
