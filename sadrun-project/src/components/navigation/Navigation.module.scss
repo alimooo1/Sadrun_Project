@@ -10,12 +10,14 @@
     color: #fff;
     padding: 1rem;
 }
-
+.navigation-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 img {
     @include size(2.5rem, 2.5rem);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
 }
 
 .navigationItems {
