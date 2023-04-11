@@ -1,0 +1,31 @@
+.inputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+.expanded {
+    width: 200px;
+}
+
+.input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.visible {
+    display: block;
+}
+
+.icon {
+    margin-right: 8px;
+}
+
+.expanded .icon {
+    display: none;
+}
