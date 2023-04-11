@@ -10,16 +10,13 @@ function App() {
     <div className="App">
       <BoxyCard
         imageSRC={BoxyPicture}
-        title={"نست"}
+        title={"نست "}
         description={"آموزشگاه در تدارک دوره های جدید برنامه نویسی است."}
         category={"آموزشی"}
       />
-      <hr />
-      <hr />
-      <hr />
       <RowCard
         imageSRC={RowPicture}
-        title={"نست"}
+        title={"نست جی اس"}
         details={
           "آموزشگاه در تدارک دوره های جدید برنامه نویسی است. آموزشگاه در تدارک دوره های جدید برنامه نویسی است. آموزشگاه در تدارک دوره های جدید برنامه نویسی است."
         }
