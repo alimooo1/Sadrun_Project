@@ -1,9 +1,7 @@
-import React from 'react'
+
 import { FaShoppingCart } from 'react-icons/fa';
 import SearchInput from './SearchInput/SearchInput'
 import styles from './LeftSideNavigation.module.scss'
-import RegisterBtn from './RegisterBtn/RegisterBtn';
-import Login from './Login/Login';
 import NavBtn from './NavBtn/NavBtn';
 
 function CreateBtnComponent() {
