@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  img {
+  .big_pic {
     width: 100%;
     padding: 25px 25px 0 25px;
     margin: auto;
@@ -84,14 +84,13 @@
   border-radius: 15px;
   background-color: #f6f6f6;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-  div {
-    display: none;
-  }
+  
 }
 div.active_content {
   display: flex;
 }
 .description_content {
+  display: none;
   text-align: justify;
   flex-direction: column;
   justify-content: space-between;
@@ -103,7 +102,10 @@ div.active_content {
   .info {
     display: flex;
     justify-content: space-between;
-    border: solid;
     width: 100%;
   }
+}
+
+.comment_content{
+  display: none;
 }

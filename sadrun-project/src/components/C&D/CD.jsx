@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../../sass/fonts.scss";
 import styles from "./style.module.scss";
 import nodePic from "./assets/node.png";
+import StarRating from "../StarRating/StarRating";
 
 export default function CD() {
   const [toggleState, setToggleState] = useState(1);
@@ -11,7 +12,7 @@ export default function CD() {
   };
   return (
     <div className={styles.main_card}>
-      <img src={nodePic} alt="" />
+      <img src={nodePic} className={styles.big_pic} alt="" />
       <h1 className={styles.title}>نود جی اس</h1>
       <div className={styles.tab}>
         {/* ----------Tab Links---------------  */}
@@ -63,14 +64,18 @@ export default function CD() {
               است.نود جی‌اس یا نود دات جی‌اس (به انگلیسی: Node.js) یک محیط
               اجراییِ سمت سرورِ متن‌باز و .چندسکویی برای زبان جاوااسکریپت است.
             </p>
-            <div className={styles.info}>abc</div>
+            <div className={styles.info}>
+              <StarRating width={"17.5px"} initialValue={3} voteNum={99313} />
+            </div>
           </div>
 
-          <div className={
+          <div
+            className={
               toggleState === 2
-                ? `${styles.active_content} ${styles.description_content}`
+                ? `${styles.active_content} ${styles.comment_content}`
                 : styles.comment_content
-            }>
+            }
+          >
             <h3>Comments</h3>
           </div>
         </div>
