@@ -2,7 +2,6 @@
 @import "../../../../sass/variables.scss";
 
 .boxyCard {
-  //   border: 1px solid black;
   width: 220px;
   padding-block: 1rem;
   display: flex;
@@ -32,13 +31,6 @@
     justify-content: space-between;
     align-items: center;
     padding-inline: 1rem;
-
-    .cardCategory {
-      display: flex;
-      gap: 5px;
-      align-items: center;
-      @include typography($primary-font-family, 0.6rem, $secondary-txt-color);
-    }
 
     .cardButton {
       padding: 2px 10px;
