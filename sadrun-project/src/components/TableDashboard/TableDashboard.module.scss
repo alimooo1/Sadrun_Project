@@ -1,0 +1,26 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
+@import '../../sass/fonts.scss';
+
+.tableCountainer {
+    background-color: rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    margin: 5rem;
+    box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
+}
+
+.courseItemsTitle {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+        padding: 1rem;
+        @include typography($secondary-font-family, 1rem, #434343)
+    }
+}

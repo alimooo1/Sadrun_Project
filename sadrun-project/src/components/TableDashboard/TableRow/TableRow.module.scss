@@ -1,0 +1,21 @@
+@import '../../../sass/variables.scss';
+@import '../../../sass/mixins.scss';
+@import '../../../sass/fonts.scss';
+
+.tableRow {
+    display: flex;
+}
+
+.courseItems {
+    display: flex;
+    background-color: #fff;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+        padding: 1rem;
+        @include typography($secondary-font-family, 1rem, #434343)
+    }
+}
