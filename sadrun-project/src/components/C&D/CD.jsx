@@ -4,6 +4,7 @@ import styles from "./style.module.scss";
 import nodePic from "./assets/node.png";
 import StarRating from "../StarRating/StarRating";
 import CategoryPin from "../Category-Pin/CategoryPin";
+import Comments from './Comments/Comments';
 
 export default function CD() {
   const [toggleState, setToggleState] = useState(1);
@@ -78,7 +79,7 @@ export default function CD() {
                 : styles.comment_content
             }
           >
-            <h3>Comments</h3>
+            <Comments/>
           </div>
         </div>
       </div>

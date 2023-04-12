@@ -1,10 +1,9 @@
 import React from "react";
-import QA from "./components/Q&A/QA";
-import CD from "./components/C&D/CD";
+import CD from './components/C&D/CD';
 
 function App() {
   return <div className="App">
-    <CD/>
+    <CD name={"آموزشی"}/>
   </div>;
 }
 

@@ -4,7 +4,7 @@
 .main_card {
   width: 755px;
   background-color: #fff;
-  box-shadow: 0px 0px 3px #575757;
+  box-shadow: 0px 0px 3px rgba($color: #575757, $alpha: 0.16);
   border-radius: 20px;
   padding: 12px 10px;
   display: flex;
@@ -108,4 +108,5 @@ div.active_content {
 
 .comment_content{
   display: none;
+  min-height:300px ;
 }
