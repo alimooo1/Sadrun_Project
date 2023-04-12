@@ -9,8 +9,9 @@
 }
 
 .profile_pic {
-  width: 60px;
+  width: 65px;
   border-radius: 50%;
+  z-index: 2;
 }
 
 .content {
@@ -19,30 +20,31 @@
   flex-direction: column;
   gap: 8px;
   padding: 15px 30px;
-  width: 530px;
+  width: 550px;
   position: relative;
-  border-radius: 15px;
+  border-radius: 15px 0 15px 15px;
   box-shadow: 0px 0px 6px rgba($color: #575757, $alpha: 0.16);
   z-index: 1;
 }
 
 .shape {
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   background-color: white;
   position: absolute;
-  right: -30px;
+  right: -25px;
   top: 0;
-  z-index: 0;
-
+  // z-index: 0;
+  box-shadow: 0 -3px 3px -3px rgba($color: #575757, $alpha: 0.1);
 
   div {
-    width: 40px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     position: relative;
-    right: -10px;
+    right: 0px;
     background-color: #f6f6f6;
-    // background-color: red;
     border-top-left-radius: 100%;
+    // border: solid;
+    box-shadow: inset  3px 3px 6px -3px rgba($color: #575757, $alpha: 0.1);
   }
 }
