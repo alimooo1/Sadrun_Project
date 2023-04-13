@@ -1,13 +1,14 @@
 import React from 'react'
 import styles from './TableDashboard.module.scss';
 import TableRow from './TableRow/TableRow';
+import courseImage from './images/testImage.svg';
 const TableDashboard = () => {
 
 
     const courses = [
         {
             id: Math.floor(Math.random()),
-            courseImage: 2,
+            src: courseImage,
             courseName: 'maryam',
             courseMentorsName: 'ali',
             courseSeasonName: 'bahar',
@@ -17,7 +18,7 @@ const TableDashboard = () => {
         },
         {
             id: Math.floor(Math.random()),
-            courseImage: 2,
+            src: courseImage,
             courseName: 'maryam',
             courseMentorsName: 'ali',
             courseSeasonName: 'bahar',
@@ -27,7 +28,37 @@ const TableDashboard = () => {
         },
         {
             id: Math.floor(Math.random()),
-            courseImage: 2,
+            src: courseImage,
+            courseName: 'maryam',
+            courseMentorsName: 'ali',
+            courseSeasonName: 'bahar',
+            courseStartDate: 'today',
+            courseEndDate: 'tomorrow',
+            coursePrice: '5000'
+        },
+        {
+            id: Math.floor(Math.random()),
+            src: courseImage,
+            courseName: 'maryam',
+            courseMentorsName: 'ali',
+            courseSeasonName: 'bahar',
+            courseStartDate: 'today',
+            courseEndDate: 'tomorrow',
+            coursePrice: '5000'
+        },
+        {
+            id: Math.floor(Math.random()),
+            src: courseImage,
+            courseName: 'maryam',
+            courseMentorsName: 'ali',
+            courseSeasonName: 'bahar',
+            courseStartDate: 'today',
+            courseEndDate: 'tomorrow',
+            coursePrice: '5000'
+        },
+        {
+            id: Math.floor(Math.random()),
+            src: courseImage,
             courseName: 'maryam',
             courseMentorsName: 'ali',
             courseSeasonName: 'bahar',
@@ -38,7 +69,8 @@ const TableDashboard = () => {
     ]
     return (
         <div className={styles.tableCountainer}>
-            <ul className={styles.courseItemsTitle}>
+            <div className={styles.tablrRowTitle}>
+                <ul className={styles.courseItemsTitle}>
                 <li></li>
                 <li >نام دوره </li>
                 <li>نام استاد</li>
@@ -46,12 +78,14 @@ const TableDashboard = () => {
                 <li>تاریخ شروع</li>
                 <li>تاریخ پایان</li>
                 <li>قیمت </li>
-            </ul>
+                </ul>  
+            </div>
+
             {
                 courses.map(courseItem => {
                     return (
 
-                        <TableRow className={styles.courseItems} key={courseItem.id} courseImage={courseItem.courseImage} courseName={courseItem.courseName} courseMentorsName={courseItem.courseMentorsName} courseSeasonName={courseItem.courseSeasonName} courseStartDate={courseItem.courseStartDate} courseEndDate={courseItem.courseEndDate} coursePrice={courseItem.coursePrice} />
+                        <TableRow className={styles.courseItems} key={courseItem.id} courseImage={courseItem.src} courseName={courseItem.courseName} courseMentorsName={courseItem.courseMentorsName} courseSeasonName={courseItem.courseSeasonName} courseStartDate={courseItem.courseStartDate} courseEndDate={courseItem.courseEndDate} coursePrice={courseItem.coursePrice} />
 
                     )
                 })

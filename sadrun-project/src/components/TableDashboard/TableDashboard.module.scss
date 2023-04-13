@@ -5,22 +5,32 @@
 .tableCountainer {
     background-color: rgba(0, 0, 0, 0.03);
     display: flex;
+    width: 80%;
     flex-direction: column;
+    justify-content: center;
+        align-items: center;
     margin: 5rem;
     box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
     -webkit-box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
     -moz-box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
 }
-
+.tablrRowTitle {
+    width: 100%;
+    display: flex;
+}
 .courseItemsTitle {
     display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
+    width: 100%;
+        justify-content: space-between;
+        margin: 1rem;
+        padding: 0.5rem;
 
     li {
         list-style: none;
         padding: 1rem;
-        @include typography($secondary-font-family, 1rem, #434343)
+            @include typography($secondary-font-family, 1rem, #434343);
+                display: flex;
+                justify-content: center;
+                align-items: center;
     }
 }
