@@ -1,3 +1,5 @@
+@import "../../sass/mixins.scss";
+@import "../../sass/variables.scss";
 .container{
     display: flex;
     flex-direction: column;
@@ -18,14 +20,16 @@
     margin-bottom: 60px;
     border-radius: 25px;
 }
-.title h2{
-    color:#5A0BA9;
-    font-size: 30px;
+.title{
+ h2{
     font-weight: bold;
+    @include typography($primary-font-family, 30px, #5A0BA9)
 }
-.title p{
-    color: rgba(90, 11, 169, 0.6);
-    font-size: 18px;
+}
+.title{
+ p{
+    @include typography($primary-font-family, 18px, rgba(90, 11, 169, 0.6))
+  }
 }
 
 .teacher_item{
@@ -47,28 +51,27 @@
 .teacher_text{
     height:150px ;
     width: 650px;
-
 }
-.teacher_text h2{
+.teacher_text{
+ h2{
     margin-bottom: 10px;
-    font-size: 25px;
     position: relative;
     font-weight: 600;
-    color:rgba(0, 0, 0, 0.8) ;
-
+    @include typography($primary-font-family, 25px, rgba(0, 0, 0, 0.8) )
 }
-.teacher_text .teacher_item_head {
+}
+.teacher_text{
+ .teacher_item_head {
     margin-bottom: 10px;
-    color: rgba(0,0,0,0.7 );
-    font-size: 20px;
     position: relative;
-
+    @include typography($primary-font-family, 20px, rgba(0, 0, 0, 0.7) )
+    }
 }
-.teacher_text .teacher_item_text{
-    color: rgba(0, 0, 0, 0.501961) ;
-    font-size: 15px;
+.teacher_text{
+ .teacher_item_text{
     line-height: 20px;
-
+    @include typography($primary-font-family, 15px,  rgba(0, 0, 0, 0.501961) )
+}
 }
 
 .icon_path{
@@ -113,14 +116,17 @@ left: 0;
     border-radius: 25px;
     width: 330px;
     height: 120px;
-    gap:58px
+    gap:58px;
+    @include typography($primary-font-family, 15px,  rgba(0, 0, 0, 0.501961) )
 }
-.teachers_item img{
+.teachers_item{
+img{
     width: 138px;
     height: 130px;
     position: relative;
     bottom: 13px;
     right: 15px;
+}
 }
 .teachers_item_text{
     line-height:45px ;

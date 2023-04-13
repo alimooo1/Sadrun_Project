@@ -1,6 +1,6 @@
 import React from "react";
 import "../../sass/fonts.scss";
-import styles from "../TeacherCard/TeacherCard.module.css";
+import styles from "../TeacherCard/TeacherCard.module.scss";
 import teacher1 from "../TeacherCard/images/teacher1.png";
 import teacher2 from "../TeacherCard/images/teacher2.png";
 import teacher3 from "../TeacherCard/images/teacher3.png";

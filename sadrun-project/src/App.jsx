@@ -1,9 +1,8 @@
 import React from "react";
-import CreatTeacherCard from "./components/createTeacheCard/CreatTeacherCard";
+import CreatTeacherCard from "./components/TeacherCard/TeacherCard";
 
 function App() {
   return <div className="App">
-    <CreatTeacherCard/>
   </div>;
 }
 
