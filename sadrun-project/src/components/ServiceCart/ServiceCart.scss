@@ -22,6 +22,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
+  @include size(50%,50%);
 
 }
 
@@ -30,7 +31,9 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  @include size(20.5rem, 10.5rem);
+  // @include size(20.5rem, 10.5rem);
+  @include size(90%,100%);
+  padding:2rem 1rem;
 
   &:nth-child(1) {
     background-image: linear-gradient(to right top, #e0b408, #e0b809, #e1bc0b, #e1c00d, #e1c40f);
@@ -61,8 +64,9 @@
 }
 
 .path {
-  @include size(42rem, 22.5rem);
-    @include position(absolute, $top: -6rem, $left: 0);
+  // @include size(42rem, 22.5rem);
+  @include size(36rem, 26rem);
+    @include position(absolute, $top: -8rem, $left: 0);
 }
 
 
@@ -70,8 +74,9 @@
 
 
 .girlFlowerSet {
-  @include size(26.5rem, 25rem);
-    @include position(absolute, $bottom: -4rem, $left: 0);
+  @include size(23.5rem, 25rem);
+    @include position(absolute, $bottom: -4rem, $left:0);
+
 }
 
 .boy {
