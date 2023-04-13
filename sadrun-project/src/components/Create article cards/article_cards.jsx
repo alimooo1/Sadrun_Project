@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "../Create article cards/article_cards.module.css";
+import "../../sass/fonts.scss"
+import styles from "../Create article cards/article_cards.module.scss";
 import EGrP from "../Creat article card/images/1_EGrPBUoYfKm-2.png";
 function Article_cards() {
   return (

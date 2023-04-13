@@ -1,9 +1,9 @@
 import React from 'react'
-import styles from "../Creat article card/CreateArticleCard.module.css"
+import "../../sass/fonts.scss";
+import styles from "../Creat article card/CreateArticleCard.module.scss"
 import heIcon from "./images/heicon.svg"
 import sheIcon from "./images/sheicon.svg"
 import Article_cards from '../Create article cards/article_cards'
-import "./sass/_fonts.scss"
 
 function CreateArticleCard() {
     return (

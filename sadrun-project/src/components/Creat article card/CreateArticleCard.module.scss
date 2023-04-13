@@ -1,10 +1,12 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
 
 .conteiner{
     display: flex;
     flex-direction: column;
     align-items: center;
    direction: rtl;
-   font-family:'vazirmatn-Regular' ;
+//    font-family:'vazirmatn-Regular';
 }
 .head{
     display: flex;
@@ -20,11 +22,11 @@
     align-items: center;
     justify-content: center;
     border-radius: 25px;
+    
 }
 .title h2{
-    color:#5A0BA9;
-    font-size: 25px;
     font-weight: bold;
+    @include typography($primary-font-family,25px,#5A0BA9 ) ;
 }
 .heIcon{
     position: relative;
@@ -47,8 +49,6 @@
 .conteiner_Article{
     display: flex;
     gap: 35px;
-    
-    
 }
 .news,.articles{
     display: flex;
@@ -70,6 +70,7 @@
     align-items: center;
     box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
     margin-bottom: 10px;
+    @include typography($primary-font-family,15px,black ) ;
 }
 .btn{
   border: 2px solid #67008F ;  
@@ -79,8 +80,8 @@
   cursor: pointer;
   background-color:#ffff;
   margin-bottom: 18px;
-  font-size: 15px;
-  font-family:'vazirmatn-Regular' ;
+  @include typography($primary-font-family,15px,#5A0BA9 ) ;
+
 }
 .Newsletters{
     margin-top: 45px;
@@ -96,9 +97,8 @@
     color: #5A0BA9;
 }
 .add_Newsletters::placeholder{
-    color: #67008F;
-    font-size: 17px;
-    font-family: 'vazirmatn-Regular';
+    @include typography($primary-font-family,17px,#67008F ) ;
+
 }
 .add_Newsletters:focus{
     border: 2px solid #5A0BA9;

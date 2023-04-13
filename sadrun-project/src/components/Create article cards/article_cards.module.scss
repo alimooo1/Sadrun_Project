@@ -1,13 +1,15 @@
+@import "../../sass/mixins.scss";
+@import "../../sass/variables.scss";
+
 .news_item,
 .articles_item {
   display: flex;
   align-items: center;
   gap: 40px;
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 17px;
   padding-block: 8px;
   cursor: pointer;
-  font-family:'vazirmatn-Regular' ;
+  @include typography($primary-font-family,17px,rgba(0, 0, 0, 0.5) ) ;
+
 }
 .image_article {
   width: 93px;
