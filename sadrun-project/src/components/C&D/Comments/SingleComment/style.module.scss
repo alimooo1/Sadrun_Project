@@ -7,16 +7,31 @@
   justify-content: space-between;
   align-items: start;
 }
-// styles.title {
-//   display: flex;
-//   .name {
-//     @include typography($secondary-font-family, 16px, #434343);
-//   }
-//   .date {
-//   }
-// }
+.title {
+  display: flex;
+  margin: 0px 5px;
+  gap: 8px;
+  .name {
+    @include typography($secondary-font-family, 13px, #434343);
+  }
+  .date {
+    @include typography($secondary-font-family, 10px, #434343);
+    border-right: solid #707070 3px;
+    padding-right: 8px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    span {
+      @include typography($secondary-font-family, 13px, #434343);
+    }
+  }
+}
+.text {
+  @include typography($primary-font-family, 11.5px, #707070);
+  margin: 0px 5px;
+}
 .profile_pic {
-  width: 65px;
+  width: 54px;
   border-radius: 50%;
   z-index: 2;
 }
@@ -25,9 +40,9 @@
   background-color: white;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 15px 30px;
-  width: 550px;
+  gap: 15px;
+  padding: 15px 25px;
+  width: 570px;
   position: relative;
   border-radius: 15px 0 15px 15px;
   box-shadow: 0px 0px 6px rgba($color: #575757, $alpha: 0.16);
