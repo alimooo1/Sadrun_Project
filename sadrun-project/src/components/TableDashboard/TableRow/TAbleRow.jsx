@@ -4,7 +4,7 @@ const TAbleRow = (props) => {
     return (
         <div className={styles.tableRow}>
             <ul className={styles.courseItems}>
-                <li >{props.courseImage}</li>
+                <li><img src={props.courseImage} alt="courseImage" /></li>
                 <li >{props.courseName}</li>
                 <li >{props.courseMentorsName}</li>
                 <li >{props.courseSeasonName}</li>

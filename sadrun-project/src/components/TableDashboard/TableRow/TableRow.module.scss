@@ -4,18 +4,24 @@
 
 .tableRow {
     display: flex;
+    width: 100%;
 }
 
 .courseItems {
     display: flex;
+    width: 100%;
     background-color: #fff;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
+    border-radius: 1rem;
+        justify-content: space-between;
+        margin: 1rem;
+        padding: 0.5rem;
 
     li {
         list-style: none;
         padding: 1rem;
-        @include typography($secondary-font-family, 1rem, #434343)
+        @include typography($primary-font-family, 1rem, $primary-txt-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
     }
 }
