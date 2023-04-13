@@ -1,6 +1,6 @@
 import React from "react";
-import EGrP from "../Creat article card/images/1_EGrPBUoYfKm-2.png";
 import styles from "../Create article cards/article_cards.module.css";
+import EGrP from "../Creat article card/images/1_EGrPBUoYfKm-2.png";
 function Article_cards() {
   return (
     <div className={styles.news_item}>

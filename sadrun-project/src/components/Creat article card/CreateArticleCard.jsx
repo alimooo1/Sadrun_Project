@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from "../Creat article card/CreateArticleCard.module.css"
-import EGrP from "../Creat article card/images/1_EGrPBUoYfKm-2.png"
 import heIcon from "./images/heicon.svg"
 import sheIcon from "./images/sheicon.svg"
 import Article_cards from '../Create article cards/article_cards'
