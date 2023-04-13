@@ -13,7 +13,10 @@
 }
 .cardCategory {
   display: flex;
+  align-items: center;
   gap: 5px;
+  @include typography($primary-font-family, 0.6rem, $secondary-txt-color);
+
 }
 .cardDate {
   border-right: solid 0.8px $secondary-txt-color;
