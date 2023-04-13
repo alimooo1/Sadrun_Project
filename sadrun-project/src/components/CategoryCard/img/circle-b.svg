@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="87.958" height="88.007" viewBox="0 0 87.958 88.007">
+  <g id="circle-b" transform="translate(-109.173 -150.716) rotate(-22)">
+    <ellipse id="Ellipse_138" data-name="Ellipse 138" cx="33.771" cy="33.815" rx="33.771" ry="33.815" transform="translate(35.286 204.097)" fill="#6c63ff"/>
+    <circle id="Ellipse_139" data-name="Ellipse 139" cx="5.008" cy="5.008" r="5.008" transform="translate(62.547 219.163)" fill="rgba(0,0,0,0.9)" opacity="0.2"/>
+    <circle id="Ellipse_140" data-name="Ellipse 140" cx="8.681" cy="8.681" r="8.681" transform="translate(58.874 248.689)" fill="rgba(0,0,0,0.9)" opacity="0.2"/>
+    <circle id="Ellipse_141" data-name="Ellipse 141" cx="2.17" cy="2.17" r="2.17" transform="translate(40.365 242.203)" fill="rgba(0,0,0,0.9)" opacity="0.2"/>
+    <circle id="Ellipse_143" data-name="Ellipse 143" cx="1.154" cy="1.154" r="1.154" transform="translate(77.821 215.529)" fill="rgba(0,0,0,0.9)" opacity="0.2"/>
+    <circle id="Ellipse_144" data-name="Ellipse 144" cx="1.502" cy="1.502" r="1.502" transform="translate(64.561 237.901)" fill="rgba(0,0,0,0.9)" opacity="0.2"/>
+    <circle id="Ellipse_146" data-name="Ellipse 146" cx="1.154" cy="1.154" r="1.154" transform="translate(92.674 230.147)" fill="rgba(0,0,0,0.9)" opacity="0.2"/>
+    <circle id="Ellipse_148" data-name="Ellipse 148" cx="1.666" cy="1.666" r="1.666" transform="translate(82.794 241.314)" fill="rgba(0,0,0,0.9)" opacity="0.2"/>
+    <circle id="Ellipse_149" data-name="Ellipse 149" cx="2.17" cy="2.17" r="2.17" transform="translate(45.999 221.99)" fill="rgba(0,0,0,0.9)" opacity="0.2"/>
+    <path id="Path_239" data-name="Path 239" d="M232.873,429.564a93.931,93.931,0,0,1-10.642-.619c-10.626-1.215-20.427-4.087-27.6-8.086-7.257-4.048-10.97-8.788-10.456-13.347.356-3.159,3.387-5.986,9.267-8.642a.331.331,0,0,1,.438.168.335.335,0,0,1-.167.441c-5.648,2.552-8.552,5.2-8.879,8.108-.482,4.273,3.112,8.779,10.119,12.688,7.095,3.958,16.807,6.8,27.349,8.007s20.64.628,28.435-1.627c7.7-2.227,12.2-5.807,12.686-10.08.326-2.891-1.255-5.956-4.572-8.864a.336.336,0,0,1-.032-.471.33.33,0,0,1,.468-.033c3.489,3.059,5.147,6.324,4.8,9.443-.514,4.559-5.188,8.34-13.162,10.646A66.069,66.069,0,0,1,232.873,429.564Z" transform="translate(-156.5 -172.077)" fill="#fff"/>
+  </g>
+</svg>
