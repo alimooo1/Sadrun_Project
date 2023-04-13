@@ -6,7 +6,8 @@
   $font-size,
   $border-radius,
   $hover-bg-color,
-  $active-bg-color) {
+  $active-bg-color
+) {
   background-color: $bg-color;
   color: $text-color;
   padding: $padding;
@@ -22,14 +23,17 @@
   }
 }
 
-
 // typography
-@mixin typography($font-family, $font-size, $text-color) {
+@mixin typography($font-family, $font-size, $text-color, $is-important: null) {
   font-family: $font-family;
   font-size: $font-size;
   color: $text-color;
+  @if($is-important!=null){
+    font-family: $font-family !important;
+  font-size: $font-size !important;
+  color: $text-color !important;
+  }
 }
-
 
 // cart
 @mixin cart($background-color, $border-color, $text-color, $padding) {
@@ -43,7 +47,6 @@
 @mixin size($width, $height) {
   width: $width;
   height: $height;
-
 }
 
 //icon
@@ -55,22 +58,28 @@
   vertical-align: middle;
 }
 
-@mixin position ($position, $top: null, $right: null, $left: null, $bottom: null) {
+@mixin position(
+  $position,
+  $top: null,
+  $right: null,
+  $left: null,
+  $bottom: null
+) {
   position: $position;
 
-  @if($top !=null) {
+  @if ($top !=null) {
     top: $top;
   }
 
-  @if($right !=null) {
+  @if ($right !=null) {
     right: $right;
   }
 
-  @if($left !=null) {
+  @if ($left !=null) {
     left: $left;
   }
 
-  @if($bottom !=null) {
+  @if ($bottom !=null) {
     bottom: $bottom;
   }
 }
