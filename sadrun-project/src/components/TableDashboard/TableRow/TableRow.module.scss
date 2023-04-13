@@ -1,27 +1,29 @@
-@import '../../../sass/variables.scss';
-@import '../../../sass/mixins.scss';
-@import '../../../sass/fonts.scss';
+@import "../../../sass/variables.scss";
+@import "../../../sass/mixins.scss";
+@import "../../../sass/fonts.scss";
 
 .tableRow {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
 .courseItems {
-    display: flex;
-    width: 100%;
-    background-color: #fff;
-    border-radius: 1rem;
-        justify-content: space-between;
-        margin: 1rem;
-        padding: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 100%;
+  background-color: #fff;
+  border-radius: 16px;
+  margin: 0.4rem 0.8rem;
 
-    li {
-        list-style: none;
-        padding: 1rem;
-        @include typography($primary-font-family, 1rem, $primary-txt-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-    }
+  li {
+    list-style: none;
+    padding: 0.3rem 0.5rem;
+    @include typography($primary-font-family, 0.5rem, $primary-txt-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    width: 4rem;
+  }
 }

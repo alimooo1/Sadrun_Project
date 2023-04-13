@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './TableDashboard.module.scss';
 import TableRow from './TableRow/TableRow';
 import courseImage from './images/testImage.svg';
+import { FaSistrix } from 'react-icons/fa';
 const TableDashboard = () => {
 
 
@@ -68,36 +69,50 @@ const TableDashboard = () => {
         },
     ]
     return (
-        <div className={styles.tableCountainer}>
-            <div className={`${styles.inputContainer} ${expanded ? styles.expanded : ''}`}>
 
 
-                {!expanded && <span onClick={handleInputClick} className={styles.icon}><FaSistrix /></span>}
-                <input type="search" className={`${styles.input} ${expanded ? styles.visible : ''}`} />
+
+
+
+
+        < div className={styles.Countainer} >
+            <div className={styles.tableHeader}>
+                <div className={styles.registeredCourseNumbers}>
+                    <span>دوره های ثبت شده:  26 تا 39 </span>
+                </div>
+                <div className={styles.inputSearchCountainer}>
+                    <span className={styles.icon}><FaSistrix /></span>
+                    <input type="search" placeholder='جست و جو ' className={styles.input} />
+                </div>
+
             </div>
-            <div className={styles.tablrRowTitle}>
-                <ul className={styles.courseItemsTitle}>
-                <li></li>
-                <li >نام دوره </li>
-                <li>نام استاد</li>
-                <li>نام ترم </li>
-                <li>تاریخ شروع</li>
-                <li>تاریخ پایان</li>
-                <li>قیمت </li>
-                </ul>  
+            <div className={styles.tableCountainer}>
+                <div className={styles.tablrRowTitle}>
+                    <ul className={styles.courseItemsTitle}>
+                        <li></li>
+                        <li >نام دوره </li>
+                        <li>نام استاد</li>
+                        <li>نام ترم </li>
+                        <li>تاریخ شروع</li>
+                        <li>تاریخ پایان</li>
+                        <li>قیمت </li>
+                    </ul>
+                </div>
+
+                {
+                    courses.map(courseItem => {
+                        return (
+
+                            <TableRow className={styles.courseItems} key={courseItem.id} courseImage={courseItem.src} courseName={courseItem.courseName} courseMentorsName={courseItem.courseMentorsName} courseSeasonName={courseItem.courseSeasonName} courseStartDate={courseItem.courseStartDate} courseEndDate={courseItem.courseEndDate} coursePrice={courseItem.coursePrice} />
+
+                        )
+                    })
+                }
+
             </div>
 
-            {
-                courses.map(courseItem => {
-                    return (
+        </div >
 
-                        <TableRow className={styles.courseItems} key={courseItem.id} courseImage={courseItem.src} courseName={courseItem.courseName} courseMentorsName={courseItem.courseMentorsName} courseSeasonName={courseItem.courseSeasonName} courseStartDate={courseItem.courseStartDate} courseEndDate={courseItem.courseEndDate} coursePrice={courseItem.coursePrice} />
-
-                    )
-                })
-            }
-
-        </div>
     )
 }
 
