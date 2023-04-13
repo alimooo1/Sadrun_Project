@@ -1,0 +1,68 @@
+@import "../../sass/mixins.scss";
+@import "../../sass/variables.scss";
+
+.conteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+    height: 545px;
+    box-shadow: 0px 0px 3px rgba(87, 87, 87, 0.160784);
+    border-radius: 25px;
+}
+.userImage_Conteiner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 30px;
+}
+.user_image{
+    width: 180px;
+    height: 180px;
+    
+}
+.formConteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:280px; 
+    background: rgba(0,0,0,0.03 );
+    width: 950px;
+    border-radius:20px;
+}
+.form{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px
+}
+.conteiner_input{
+    @include typography($primary-font-family, 12px, #707070);
+    background-color:#ffff;
+    border-radius: 13px;
+    padding:4px 13px; 
+}
+
+.conteiner_input {
+   input{
+    width: 400px;
+    padding-block: 6px;
+    outline: none;
+    border: none;
+    @include typography($primary-font-family, 12px, #707070);
+
+} 
+}
+
+.editeIcon{
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+
+
+
