@@ -2,6 +2,7 @@ import styles from "./SearchInput.module.scss";
 import { FaSistrix } from "react-icons/fa";
 import React, { useState } from "react";
 import "../../../sass/fonts.scss";
+import { useEffect } from "react";
 
 function InputWithIcon() {
   const [expanded, setExpanded] = useState(false);
@@ -10,8 +11,11 @@ function InputWithIcon() {
     setExpanded(true);
   };
 
+  useEffect(() => {}, []);
+
   return (
     <div
+      id="searchBar"
       className={`${styles.inputContainer} ${expanded ? styles.expanded : ""}`}
     >
       {!expanded && (

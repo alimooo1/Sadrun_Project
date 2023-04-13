@@ -3,7 +3,7 @@ import styles from './NavBtn.module.scss';
 const NavBtn = (props) => {
     return (
         <div>
-            <button className={styles.register}>{props.btnTitle}</button>
+            <button className={props.className}>{props.btnTitle}</button>
         </div>
     )
 }
