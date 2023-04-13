@@ -7,7 +7,7 @@
   gap: 5px;
   
 }
-span {
+.cardDate {
   align-items: center;
   @include typography($primary-font-family, 0.6rem, $secondary-txt-color);
 }
