@@ -1,8 +1,8 @@
 import React from "react";
-import "../../sass/fonts.scss"
-import styles from "../Create article cards/article_cards.module.scss";
-import EGrP from "../Creat article card/images/1_EGrPBUoYfKm-2.png";
-function Article_cards() {
+import "../../sass/fonts.scss";
+import styles from "./ArticleCards.module.scss";
+import EGrP from "../Article-Card/images/1_EGrPBUoYfKm-2.png";
+function ArticleCards() {
   return (
     <div className={styles.news_item}>
       <div className={styles.image_article}>
@@ -13,4 +13,4 @@ function Article_cards() {
   );
 }
 
-export default Article_cards;
+export default ArticleCards;
