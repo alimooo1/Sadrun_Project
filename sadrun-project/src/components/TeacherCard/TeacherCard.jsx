@@ -1,14 +1,15 @@
 import React from "react";
-import styles from "../createTeacheCard/TeacherCard.module.css";
-import teacher1 from "../createTeacheCard/images/teacher1.png";
-import teacher2 from "../createTeacheCard/images/teacher2.png";
-import teacher3 from "../createTeacheCard/images/teacher3.png";
-import teacher4 from "../createTeacheCard/images/teacher4.png";
-import icon from "../createTeacheCard/images/12121212.svg";
+import "../../sass/fonts.scss";
+import styles from "../TeacherCard/TeacherCard.module.css";
+import teacher1 from "../TeacherCard/images/teacher1.png";
+import teacher2 from "../TeacherCard/images/teacher2.png";
+import teacher3 from "../TeacherCard/images/teacher3.png";
+import teacher4 from "../TeacherCard/images/teacher4.png";
+import icon from "../TeacherCard/images/12121212.svg";
 import path1 from "./images/Path 563.svg";
 import path2 from "./images/Path 564.svg";
 
-function CreatTeacherCard() {
+function TeacherCard() {
   return (
     <div className={styles.container}>
       <div className={styles.title}>
@@ -64,4 +65,4 @@ function CreatTeacherCard() {
   );
 }
 
-export default CreatTeacherCard;
+export default TeacherCard;

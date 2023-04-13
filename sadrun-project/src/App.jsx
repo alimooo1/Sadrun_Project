@@ -1,8 +1,10 @@
 import React from "react";
-import "./sass/_fonts.scss"
+import TeacherCard from "./components/TeacherCard/TeacherCard";
 
 function App() {
-  return <div className="App"></div>;
+  return <div className="App">
+    <TeacherCard />
+  </div>;
 }
 
 export default App;
