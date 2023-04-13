@@ -1,9 +1,10 @@
 import React from 'react'
+import "../../sass/fonts.scss"
+import styles from "./contact_us.module.scss"
 import phone from "./image/phone-80-mdpi.svg"
 import massege from "./image/Message-Free-Ic-mdpi.svg"
 import clock from "./image/icons8-clock-24.svg"
 import map from "./image/icons8-address-24.svg"
-import styles from "./contact_us.module.css"
 
 
 
@@ -53,7 +54,7 @@ zahracheloi@gmail.com</p>
                 <form className={styles.form} action="">
                     <input type="text"placeholder='نام و نام خانوادگی' />
                     <input type="email" placeholder='ایمیل' />
-                    <input type="number"placeholder='شماره موبایل' />
+                    <input type="text"placeholder='شماره موبایل' />
                     <textarea name="" id="" cols="50" rows="6" placeholder='متن پیام'></textarea>
                     <button className={styles.btn}>ارسال پیام</button>
                 </form>

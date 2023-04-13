@@ -1,3 +1,6 @@
+
+@import "../../sass/mixins.scss";
+@import "../../sass/variables.scss";
 .conteiner{
     display:flex;
     width: 100%;
@@ -30,12 +33,11 @@
     height: 20px;
 }
 .informatino_text :nth-child(odd){
-    
     font-size: 15px;
+    @include typography($primary-font-family, 15px,black);
 }
 .informatino_text :nth-child(even){
-    color:rgba(0, 0, 0, 0.4) ;
-    font-size: 12px;
+    @include typography($primary-font-family, 12px,rgba(0, 0, 0, 0.4) );
 }
 
 .form_conteiner {
@@ -47,18 +49,22 @@
     flex-direction: column;
     justify-content: center; 
 }
-.form_conteiner P{
+.form_conteiner{
+  P{
     text-align: center; 
     margin-bottom: 25px;
     font-weight: bold;
-    font-size: 19px;
-}
+    @include typography($primary-font-family, 19px,black );
+}  
+} 
+
 .form{
     padding-inline: 25px;
     display: flex;
     flex-direction: column;
 }
-.form input,textarea {
+.form{
+    input,textarea {
     outline: none;
     border: 1px solid #9F0099;
     border-radius: 12px;
@@ -66,19 +72,30 @@
     padding-right: 12px;
     margin-bottom: 15px;
 }
-.form input,textarea::placeholder{
+}
+
+
+.form{
+    input,textarea::placeholder{
     color:rgba(0, 0, 0, 0.6); ;
     font-size: 12px;
+    @include typography($primary-font-family, 12px,rgba(0, 0, 0, 0.6) );
 }
-.form textarea{
+} 
+
+.form {
+   textarea{
     resize: none;
-    
+    @include typography($primary-font-family, 12px,rgba(0, 0, 0, 0.6) );
 }
+} 
+
+
 .btn{
     border-radius: 12px;
     border: none;
     background: #36C54E;
     padding: 9px;
-    color: #fff;
     margin-top: 30px;
+    @include typography($primary-font-family, 12px,#fff );
 }
