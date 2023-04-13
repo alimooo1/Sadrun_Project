@@ -1,10 +1,7 @@
 import React from "react";
-import TeacherCard from "./components/TeacherCard/TeacherCard";
 
 function App() {
-  return <div className="App">
-    <TeacherCard />
-  </div>;
+  return <div className="App"></div>;
 }
 
 export default App;
