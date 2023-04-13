@@ -38,7 +38,7 @@ export default function CD() {
             onClick={() => toggleTab(2)}
           >
             نظرات
-            <span>14</span>
+            <span className={styles.comment_count}>14</span>
           </div>
         </div>
 

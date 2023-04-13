@@ -7,7 +7,14 @@
   justify-content: space-between;
   align-items: start;
 }
-
+// styles.title {
+//   display: flex;
+//   .name {
+//     @include typography($secondary-font-family, 16px, #434343);
+//   }
+//   .date {
+//   }
+// }
 .profile_pic {
   width: 65px;
   border-radius: 50%;
@@ -45,6 +52,38 @@
     background-color: #f6f6f6;
     border-top-left-radius: 100%;
     // border: solid;
-    box-shadow: inset  3px 3px 6px -3px rgba($color: #575757, $alpha: 0.1);
+    box-shadow: inset 3px 3px 6px -3px rgba($color: #575757, $alpha: 0.1);
   }
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    gap: 5px;
+    img {
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+}
+
+.likes_count {
+  @include typography(Shabnam-Bold, 12px, #36c54e);
+}
+
+.dislikes_count {
+  @include typography(Shabnam-Bold, 12px, #ff0000);
+  border-right: solid #707070 3px;
+  padding-right: 5px;
+  margin-right: 3px;
 }
