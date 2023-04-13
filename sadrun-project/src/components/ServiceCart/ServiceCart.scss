@@ -123,10 +123,10 @@
   text-align: center;
 
   h2 {
-    @include typography($secondary-font-family, 2rem, $text-accent-color);
+    @include typography($secondary-font-family, 2.5rem, $text-accent-color);
   }
   p {
-    @include typography($primary-font-family, 1rem, rgba(90, 11, 169, 0.6));
+    @include typography($primary-font-family, 1.5rem, rgba(90, 11, 169, 0.6));
   }
 }
 
