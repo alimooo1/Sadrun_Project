@@ -1,5 +1,4 @@
 import React from "react";
-import "./sass/_fonts.scss"
 import CreatTeacherCard from "./components/createTeacheCard/CreatTeacherCard";
 
 function App() {
