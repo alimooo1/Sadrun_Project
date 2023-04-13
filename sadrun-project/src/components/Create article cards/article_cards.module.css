@@ -1,0 +1,14 @@
+.news_item,.articles_item{
+    display: flex;
+    align-items: center;
+    gap:40px;
+    color:rgba(0,0,0,0.5 ) ;
+    font-size:17px ;
+    padding-block:8px ;
+    /* padding-bottom:15px;
+     padding-top:15px ; */
+}
+.image_article{
+    width:93px ;
+    height:66px ;
+}
