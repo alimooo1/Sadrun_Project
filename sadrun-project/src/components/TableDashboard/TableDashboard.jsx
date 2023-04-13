@@ -69,6 +69,12 @@ const TableDashboard = () => {
     ]
     return (
         <div className={styles.tableCountainer}>
+            <div className={`${styles.inputContainer} ${expanded ? styles.expanded : ''}`}>
+
+
+                {!expanded && <span onClick={handleInputClick} className={styles.icon}><FaSistrix /></span>}
+                <input type="search" className={`${styles.input} ${expanded ? styles.visible : ''}`} />
+            </div>
             <div className={styles.tablrRowTitle}>
                 <ul className={styles.courseItemsTitle}>
                 <li></li>
