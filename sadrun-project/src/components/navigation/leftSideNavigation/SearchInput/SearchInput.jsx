@@ -1,7 +1,7 @@
 import styles from "./SearchInput.module.scss";
 import { FaSistrix } from "react-icons/fa";
 import React, { useState } from "react";
-import "../../../sass/fonts.scss";
+import "../../../../sass/fonts.scss";
 import { useEffect, useRef } from "react";
 
 function InputWithIcon() {
