@@ -1,137 +1,128 @@
 @import "../../sass/mixins.scss";
 @import "../../sass/variables.scss";
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    direction: rtl;
-    position: relative;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  direction: rtl;
+  position: relative;
 }
-.title{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 350px;
-    height: 90px;
-    box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
-    line-height: 40px;
-    margin-bottom: 60px;
-    border-radius: 25px;
-}
-.title{
- h2{
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 90px;
+  box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
+  line-height: 40px;
+  margin-bottom: 60px;
+  border-radius: 25px;
+
+  h2 {
     font-weight: bold;
-    @include typography($primary-font-family, 30px, #5A0BA9)
-}
-}
-.title{
- p{
-    @include typography($primary-font-family, 18px, rgba(90, 11, 169, 0.6))
+    @include typography($primary-font-family, 30px, #5a0ba9);
+  }
+
+  p {
+    @include typography($primary-font-family, 18px, rgba(90, 11, 169, 0.6));
   }
 }
 
-.teacher_item{
-    display: flex;
-    align-items: center;
-    box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
-    width: 650px;
-    height: 200px;
-    border-radius: 25px;
-    margin-bottom: 100px;
-    
+.teacher_item {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
+  width: 650px;
+  height: 200px;
+  border-radius: 25px;
+  margin-bottom: 100px;
 }
-.teacher_imag{
-    width:170px ;
-    height:170px ;
-    position:relative;
-    left: 50px;
+.teacher_imag {
+  width: 170px;
+  height: 170px;
+  position: relative;
+  left: 50px;
 }
-.teacher_text{
-    height:150px ;
-    width: 650px;
-}
-.teacher_text{
- h2{
+.teacher_text {
+  height: 150px;
+  width: 650px;
+
+  h2 {
     margin-bottom: 10px;
     position: relative;
     font-weight: 600;
-    @include typography($primary-font-family, 25px, rgba(0, 0, 0, 0.8) )
-}
-}
-.teacher_text{
- .teacher_item_head {
+    @include typography($primary-font-family, 25px, rgba(0, 0, 0, 0.8));
+  }
+
+  .teacher_item_head {
     margin-bottom: 10px;
     position: relative;
-    @include typography($primary-font-family, 20px, rgba(0, 0, 0, 0.7) )
-    }
-}
-.teacher_text{
- .teacher_item_text{
+    @include typography($primary-font-family, 20px, rgba(0, 0, 0, 0.7));
+  }
+
+  .teacher_item_text {
     line-height: 20px;
-    @include typography($primary-font-family, 15px,  rgba(0, 0, 0, 0.501961) )
-}
-}
-
-.icon_path{
-    position: absolute;
-    left:0;
-    top: 138px;
-}
-.icon{
-    position: absolute;
-    z-index: 1;
-    width: 270px;
-    height: 200px;
-    left: 0;
-    top:-11px
-    
-}
-.path1{
-position: absolute;
-width: 400px;
-height: 300px;
-left: 0;
+    @include typography($primary-font-family, 15px, rgba(0, 0, 0, 0.501961));
+  }
 }
 
-.path2{
-    position: absolute;
-    right:1px;
-    bottom:-70px;
+.icon_path {
+  position: absolute;
+  left: 0;
+  top: 138px;
 }
-.path2_img{
-    width: 300px;
-    height: 293px;
+.icon {
+  position: absolute;
+  z-index: 1;
+  width: 270px;
+  height: 200px;
+  left: 0;
+  top: -11px;
 }
-.teachrs{
-    display: flex;
-    gap: 40px;
-    
+.path1 {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  left: 0;
 }
-.teachers_item{
-    display: flex;
-    align-items: center;
-    box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
-    border-radius: 25px;
-    width: 330px;
-    height: 120px;
-    gap:58px;
-    @include typography($primary-font-family, 15px,  rgba(0, 0, 0, 0.501961) )
+
+.path2 {
+  position: absolute;
+  right: 1px;
+  bottom: -70px;
 }
-.teachers_item{
-img{
+.path2_img {
+  width: 300px;
+  height: 293px;
+}
+.teachrs {
+  display: flex;
+  gap: 40px;
+}
+.teachers_item {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
+  border-radius: 25px;
+  width: 330px;
+  height: 120px;
+  gap: 58px;
+  @include typography($primary-font-family, 15px, rgba(0, 0, 0, 0.501961));
+
+  img {
     width: 138px;
     height: 130px;
     position: relative;
     bottom: 13px;
     right: 15px;
-}
-}
-.teachers_item_text{
-    line-height:45px ;
-}
-.teachers_item_text :nth-child(even){
-    color: rgba(0, 0, 0, 0.501961); ;
+  }
 }
 
+.teachers_item_text {
+  line-height: 45px;
+}
+.teachers_item_text :nth-child(even) {
+  color: rgba(0, 0, 0, 0.501961);
+}
