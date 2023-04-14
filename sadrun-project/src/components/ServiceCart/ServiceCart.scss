@@ -1,106 +1,147 @@
 @import "../../sass/mixins.scss";
 @import "../../sass/global.scss";
 @import "../../sass/variables.scss";
-@import '../../sass/fonts.scss';
+@import "../../sass/fonts.scss";
+@import "../../sass/media.scss";
 
 .service-container {
-  max-width: 1040px;
+  //max-width: 1040px;
   padding: 100px 0;
   margin: 100px auto;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-
-
-
 
 .service_carts {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  @include min-width($breakpoint: medium) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  @include min-width($breakpoint: large) {
+    width: 50%;
+  }
   gap: 2rem;
-
+  width: 65%;
 }
 
 .cart {
   border-radius: 1rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  @include size(20.5rem, 10.5rem);
+  padding-block: 10%;
 
   &:nth-child(1) {
-    background-image: linear-gradient(to right top, #e0b408, #e0b809, #e1bc0b, #e1c00d, #e1c40f);
+    background-image: linear-gradient(
+      to right top,
+      #e0b408,
+      #e0b809,
+      #e1bc0b,
+      #e1c00d,
+      #e1c40f
+    );
   }
 
   &:nth-child(2) {
-    background-image: linear-gradient(to right top, #cc2817, #d33221, #da3b2a, #e04433, #e74c3c);
+    background-image: linear-gradient(
+      to right top,
+      #cc2817,
+      #d33221,
+      #da3b2a,
+      #e04433,
+      #e74c3c
+    );
   }
 
   &:nth-child(3) {
-    background-image: linear-gradient(to right top, #1a5f8f, #216da1, #277bb4, #2e89c7, #3498db);
+    background-image: linear-gradient(
+      to right top,
+      #1a5f8f,
+      #216da1,
+      #277bb4,
+      #2e89c7,
+      #3498db
+    );
   }
 
   &:nth-child(4) {
-    background-image: linear-gradient(to right top, #641184, #722690, #7f389d, #8d49a9, #9b59b6);
+    background-image: linear-gradient(
+      to right top,
+      #641184,
+      #722690,
+      #7f389d,
+      #8d49a9,
+      #9b59b6
+    );
   }
 
-
-
   img {
-    @include size(4.6rem, 5rem);
+    @include size(7rem, 7rem);
   }
 
   span {
-    @include typography($secondary-font-family, 1.6rem, #fff);
-    font-weight: bold
+    @include typography($secondary-font-family, 2rem, #fff);
+    font-weight: bold;
+    margin-right: 15px;
   }
 }
 
 .path {
-  @include size(42rem, 22.5rem);
-    @include position(absolute, $top: -6rem, $left: 0);
+  @include size(38%, 72%);
+  @include position(absolute, $top: -15rem, $left: 0rem);
 }
 
-
-
-
-
 .girlFlowerSet {
-  @include size(26.5rem, 25rem);
-    @include position(absolute, $bottom: -4rem, $left: 0);
+  display: none;
+  @include size(21.5rem, 23rem);
+  @include position(absolute, $bottom: -5rem, $left: 0);
+  @include min-width($breakpoint: large) {
+    display: block;
+  }
 }
 
 .boy {
-  @include position(absolute, $top: -5rem, $right: 0);
-    @include size(19.56rem, 24.5rem);
-
+  display: none;
+  @include position(absolute, $top: -1.3rem, $right: 0);
+  @include size(21.5rem, 23rem);
+  @include min-width($breakpoint: large) {
+    display: block;
+  }
 }
-
-;
 
 .servicesCart-content {
   box-shadow: 0px 0px 5px 0px rgba(57, 57, 57, 0.16);
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(57, 57, 57, 0.16);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(57, 57, 57, 0.16);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(57, 57, 57, 0.16);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(57, 57, 57, 0.16);
   border-radius: 7px;
-  @include size(14.6rem, 6rem);
+  padding: 0.5rem 2rem;
   text-align: center;
-  @include position(absolute, $top: -4rem, $right: 18rem);
-  
-    h2 {
-      @include typography($secondary-font-family, 2rem, $text-accent-color);
-    }
-            p {
-              @include typography($primary-font-family, 1rem, rgba(90, 11, 169, 0.6));
-            }
+
+  h2 {
+    @include typography($secondary-font-family, 2.5rem, $text-accent-color);
+  }
+  p {
+    @include typography($primary-font-family, 1.5rem, rgba(90, 11, 169, 0.6));
+  }
+}
+
+.servicesCartTitle {
+  @include position(absolute, $top: 0rem, $right: 50%);
+  transform: translateX(50%);
+
+  @include min-width($breakpoint: large) {
+    @include position(absolute, $top: -1.1rem, $right: 20.5rem);
+    transform: translateX(0);
+  }
 }
 
 .puepleFlower2 {
   @include size(2rem, 3rem);
-  transform: rotate(-20deg);
-  @include position(absolute, $top: -7rem, $right: 25rem);
+  transform: rotateY(0deg);
+  @include position(absolute, $top: -2.8rem, $right: 50%);
 }
