@@ -2,19 +2,31 @@ import styles from "./SearchInput.module.scss";
 import { FaSistrix } from "react-icons/fa";
 import React, { useState } from "react";
 import "../../../sass/fonts.scss";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 function InputWithIcon() {
   const [expanded, setExpanded] = useState(false);
-
   const handleInputClick = () => {
     setExpanded(true);
   };
 
-  useEffect(() => {}, []);
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    document.addEventListener("click", function (e) {
+      // if (inputRef.current.contains(e.target)) {
+      //   setExpanded(false);
+      // }
+      // const searchBar = document.getElementById("searchBar");
+      // if (!searchBar.contains(e.target)) {
+      //   setExpanded(false);
+      // }
+    });
+  }, [expanded]);
 
   return (
     <div
+      ref={inputRef}
       id="searchBar"
       className={`${styles.inputContainer} ${expanded ? styles.expanded : ""}`}
     >
