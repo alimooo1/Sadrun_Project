@@ -1,0 +1,141 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.Courses {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0 32px 0;
+  width: 100%;
+}
+
+.title {
+  background-color: white;
+  margin: auto;
+  display: flex;
+  box-shadow: 0px 0px 3px rgba(87, 87, 87, 0.160784);
+  padding: 18px 70px;
+  border-radius: 17.5px;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  h2 {
+    @include typography($secondary-font-family, 28px, $text-accent-color);
+  }
+  span {
+    @include typography($primary-font-family, 15.5px, rgba(90, 11, 169, 0.6));
+  }
+  img {
+    z-index: -1;
+    display: inline-block;
+    position: absolute;
+    right: -42px;
+    top: 0px;
+    width: 65px;
+  }
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 35px;
+}
+.man_graph_1,
+.man_graph_2,
+.hand_graph {
+  position: absolute;
+}
+.bigcard {
+  background-color: white;
+  padding: 26px;
+  width: 703px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 17.5px;
+  box-shadow: 0px 0px 3px rgba(87, 87, 87, 0.160784);
+
+  .man_graph_1 {
+    z-index: -1;
+    height: 280px;
+    right: -57px;
+    top: -59px;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    .right_box {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 70%;
+      padding: 14px 15px 0 0;
+      gap: 20px;
+    }
+    .left_box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 17px 10px;
+      gap: 45px;
+    }
+    h3 {
+      @include typography($secondary-font-family, 24.5px, #434343);
+    }
+    p {
+      @include typography($primary-font-family, 14px, $primary-txt-color);
+    }
+    span {
+      @include typography($primary-font-family, 17.5px, $primary-txt-color);
+    }
+  }
+}
+
+.smallcard {
+  background-color: white;
+  width: 286px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 17.5px;
+  box-shadow: 0px 0px 3px rgba(87, 87, 87, 0.160784);
+  padding: 21px 24px;
+
+  
+  img {
+    display: block;
+    width: 100%;
+  }
+  .man_2{
+    position: relative;
+    left: -177px;
+    top: 237px;
+  }
+  .man_graph_2 {
+    z-index: -1;
+    height: 280px;
+    left: 0px;
+    top: 0px;
+  }
+  .hand_graph {
+    width: 59.5px ;
+    left: 138px;
+    top: 43px;
+    // bottom: 0;
+  }
+  .btn {
+    margin: auto;
+  }
+}
+
+.btn {
+  border: 2px solid $text-accent-color;
+  border-radius: 17.5px;
+  padding: 10px 22px;
+  cursor: pointer;
+  background-color: #ffff;
+  @include typography($primary-font-family, 14px, $text-accent-color);
+}

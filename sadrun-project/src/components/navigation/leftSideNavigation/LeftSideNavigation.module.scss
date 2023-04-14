@@ -1,0 +1,34 @@
+@import "../../../sass/mixins.scss";
+@import "../../../sass/global.scss";
+@import "../../../sass/variables.scss";
+@import "../../../sass/fonts.scss";
+.conteiner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "vazirmatn-Regular";
+}
+
+button {
+  @include button-text(
+    #eee6f6,
+    $text-accent-color,
+    0.5rem 1.2rem,
+    0.8rem,
+    25px,
+    #e6e3e9,
+    #e6e3e9
+  );
+  border: none;
+  font-family: $primary-font-family;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.shopping_cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  font-size: 1rem;
+}
