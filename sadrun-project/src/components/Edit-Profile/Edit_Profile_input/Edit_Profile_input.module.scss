@@ -1,0 +1,23 @@
+@import "../../../sass/mixins.scss";
+@import "../../../sass/variables.scss";
+.conteiner_input{
+    @include typography($primary-font-family, 12px, #707070);
+    background-color:#ffff;
+    border-radius: 13px;
+    padding:4px 13px; 
+    box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
+}
+.conteiner_input {
+    input{
+     width: 400px;
+     padding-block: 6px;
+     outline: none;
+     border: none;
+     @include typography($primary-font-family, 12px, #707070);
+ 
+ } 
+ }
+.editeIcon{
+    width: 20px;
+    height: 20px;
+}
