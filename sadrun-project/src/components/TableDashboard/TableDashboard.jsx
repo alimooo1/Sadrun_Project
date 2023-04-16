@@ -1,104 +1,120 @@
-import React from 'react'
-import styles from './TableDashboard.module.scss';
-import TableRow from './TableRow/TableRow';
-import courseImage from './images/testImage.svg';
-import { FaSistrix } from 'react-icons/fa';
+import { useState } from "react";
+import styles from "./TableDashboard.module.scss";
+import TableRow from "./TableRow/TableRow";
+import courseImage from "./images/testImage.svg";
+import { FaSistrix } from "react-icons/fa";
 const TableDashboard = () => {
+  // Creating a state variable called searchQuery and a function to update it
+  const [searchQuery, setSearchQuery] = useState("");
 
-
-    const courses = [
-      {
-        id: Math.floor(Math.random()),
-        src: courseImage,
-        courseName: "maryam",
-        courseMentorsName: "mahsa",
-        courseSeasonName: "bahar",
-        courseStartDate: "today",
-        courseEndDate: "tomorrow",
-        coursePrice: "5000",
-      },
-      {
-        id: Math.floor(Math.random()),
-        src: courseImage,
-        courseName: "sara",
-        courseMentorsName: "ali",
-        courseSeasonName: "bahar",
-        courseStartDate: "today",
-        courseEndDate: "tomorrow",
-        coursePrice: "5000",
-      },
-      {
-        id: Math.floor(Math.random()),
-        src: courseImage,
-        courseName: "maryam",
-        courseMentorsName: "neda",
-        courseSeasonName: "bahar",
-        courseStartDate: "today",
-        courseEndDate: "tomorrow",
-        coursePrice: "5000",
-      },
-      {
-        id: Math.floor(Math.random()),
-        src: courseImage,
-        courseName: "maryam",
-        courseMentorsName: "ali",
-        courseSeasonName: "bahar",
-        courseStartDate: "today",
-        courseEndDate: "tomorrow",
-        coursePrice: "5000",
-      },
-      {
-        id: Math.floor(Math.random()),
-        src: courseImage,
-        courseName: "sara",
-        courseMentorsName: "ali",
-        courseSeasonName: "bahar",
-        courseStartDate: "today",
-        courseEndDate: "tomorrow",
-        coursePrice: "5000",
-      },
-      {
-        id: Math.floor(Math.random()),
-        src: courseImage,
-        courseName: "kati",
-        courseMentorsName: "reza",
-        courseSeasonName: "tabestan",
-        courseStartDate: "today",
-        courseEndDate: "tomorrow",
-        coursePrice: "5000",
-      },
-    ];
-    return (
-      <div className={styles.Countainer}>
-        <div className={styles.tableHeader}>
-          <div className={styles.registeredCourseNumbers}>
-            <span>دوره های ثبت شده: 26 تا 39 </span>
-          </div>
-          <div className={styles.inputSearchCountainer}>
-            <span className={styles.icon}>
-              <FaSistrix />
-            </span>
-            <input
-              type="search"
-              placeholder="جست و جو "
-              className={styles.input}
-            />
-          </div>
+  // courses data array
+  const courses = [
+    {
+      id: Math.floor(Math.random()),
+      src: courseImage,
+      courseName: "maryam",
+      courseMentorsName: "mahsa",
+      courseSeasonName: "bahar",
+      courseStartDate: "today",
+      courseEndDate: "tomorrow",
+      coursePrice: "5000",
+    },
+    {
+      id: Math.floor(Math.random()),
+      src: courseImage,
+      courseName: "sara",
+      courseMentorsName: "ali",
+      courseSeasonName: "bahar",
+      courseStartDate: "today",
+      courseEndDate: "tomorrow",
+      coursePrice: "5000",
+    },
+    {
+      id: Math.floor(Math.random()),
+      src: courseImage,
+      courseName: "maryam",
+      courseMentorsName: "neda",
+      courseSeasonName: "bahar",
+      courseStartDate: "today",
+      courseEndDate: "tomorrow",
+      coursePrice: "5000",
+    },
+    {
+      id: Math.floor(Math.random()),
+      src: courseImage,
+      courseName: "maryam",
+      courseMentorsName: "ali",
+      courseSeasonName: "bahar",
+      courseStartDate: "today",
+      courseEndDate: "tomorrow",
+      coursePrice: "5000",
+    },
+    {
+      id: Math.floor(Math.random()),
+      src: courseImage,
+      courseName: "sara",
+      courseMentorsName: "ali",
+      courseSeasonName: "bahar",
+      courseStartDate: "today",
+      courseEndDate: "tomorrow",
+      coursePrice: "5000",
+    },
+    {
+      id: Math.floor(Math.random()),
+      src: courseImage,
+      courseName: "kati",
+      courseMentorsName: "reza",
+      courseSeasonName: "tabestan",
+      courseStartDate: "today",
+      courseEndDate: "tomorrow",
+      coursePrice: "5000",
+    },
+  ];
+  // Filtering the courses array based on the search query
+  const filteredCourses = courses.filter((course) =>
+    course.courseName.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+  // Creating a function to handle changes to the search input
+  const handleSearch = (event) => {
+    setSearchQuery(event.target.value);
+  };
+  return (
+    <div className={styles.Countainer}>
+      <div className={styles.tableHeader}>
+        <div className={styles.registeredCourseNumbers}>
+          <span>دوره های ثبت شده: 26 تا 39 </span>
         </div>
-        <div className={styles.tableCountainer}>
-          <div className={styles.tablrRowTitle}>
-            <ul className={styles.courseItemsTitle}>
-              <li></li>
-              <li>نام دوره </li>
-              <li>نام استاد</li>
-              <li>نام ترم </li>
-              <li>تاریخ شروع</li>
-              <li>تاریخ پایان</li>
-              <li>قیمت </li>
-            </ul>
-          </div>
+        <div className={styles.inputSearchCountainer}>
+          <span className={styles.icon}>
+            <FaSistrix />
+          </span>
+          {/* Creating a search input and binding it to the searchQuery state */}
+          <input
+            type="search"
+            placeholder="جست و جو "
+            className={styles.input}
+            value={searchQuery}
+            onChange={handleSearch}
+          />
+        </div>
+      </div>
+      <div className={styles.tableCountainer}>
+        {/* Creating a table row title */}
+        <div className={styles.tablrRowTitle}>
+          <ul className={styles.courseItemsTitle}>
+            <li></li>
+            <li>نام دوره </li>
+            <li>نام استاد</li>
+            <li>نام ترم </li>
+            <li>تاریخ شروع</li>
+            <li>تاریخ پایان</li>
+            <li>قیمت </li>
+          </ul>
+        </div>
 
-          {courses.map((courseItem) => {
+        {/* Mapping over the filteredCourses array to render the table rows */}
+        {filteredCourses.length > 0 ? (
+          filteredCourses.map((courseItem) => {
             return (
               <TableRow
                 className={styles.courseItems}
@@ -112,10 +128,13 @@ const TableDashboard = () => {
                 coursePrice={courseItem.coursePrice}
               />
             );
-          })}
-        </div>
+          })
+        ) : (
+          <div className={styles.notFound}>Not Found</div>
+        )}
       </div>
-    );
-}
+    </div>
+  );
+};
 
-export default TableDashboard
+export default TableDashboard;
