@@ -122,7 +122,14 @@
 
 .teachers_item_text {
   line-height: 45px;
+  
 }
+.teachers_item_text :nth-child(odd) {
+  @include typography($primary-font-family, 18px, rgba(0, 0, 0, 0.501961));
+  
+}
+
 .teachers_item_text :nth-child(even) {
-  color: rgba(0, 0, 0, 0.501961);
+  @include typography($primary-font-family, 15px, rgba(0, 0, 0, 0.501961));
+  
 }
