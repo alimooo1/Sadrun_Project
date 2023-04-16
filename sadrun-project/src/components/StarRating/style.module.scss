@@ -1,0 +1,17 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.star_rating{
+    display: flex;
+    align-items: flex-end;
+    gap: 7px;
+}
+
+.fillStar, .emptyStar {
+  margin: 0px 1px;
+}
+
+.vote_num{
+  @include typography(Shabnam-Bold, 12.5px, #707070);
+    
+}
