@@ -14,10 +14,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-img {
-    @include size(2.5rem, 2.5rem);
-
+    img {
+        @include size(2.5rem, 2.5rem);
+    
+    }
 }
 
 .navigationItems {

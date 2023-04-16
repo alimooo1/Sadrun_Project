@@ -55,17 +55,19 @@
     @include size(91.7rem, 49.6rem);
     @include position(absolute, $top: 0, $right: 0);
     z-index: 0;
-    background-size: cover
+    background-size: cover;
+    z-index: -2;
 }
 
 
 .header2 {
     @include size(49rem, null);
-    @include position(absolute, $top: 0, $left: 0)
+    @include position(absolute, $top: 0, $left: 0);
+    z-index: -1
 }
 
 
 .girlDesk {
     @include size(34.1rem, 31rem);
-    @include position(absolute, $top: 7.5rem, $left: 7rem)
+    @include position(absolute, $top: 7.5rem, $left: 7rem);
 }
