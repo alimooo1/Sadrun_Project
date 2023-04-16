@@ -70,11 +70,12 @@ const TableDashboard = () => {
       coursePrice: "5000",
     },
   ];
-  // Filtering the courses array based on the search query
+
+  // Filtering the courses array
   const filteredCourses = courses.filter((course) =>
     course.courseName.toLowerCase().includes(searchQuery.toLowerCase())
   );
-  // Creating a function to handle changes to the search input
+  //
   const handleSearch = (event) => {
     setSearchQuery(event.target.value);
   };
@@ -88,18 +89,16 @@ const TableDashboard = () => {
           <span className={styles.icon}>
             <FaSistrix />
           </span>
-          {/* Creating a search input and binding it to the searchQuery state */}
           <input
             type="search"
             placeholder="جست و جو "
             className={styles.input}
-            value={searchQuery}
             onChange={handleSearch}
           />
         </div>
       </div>
       <div className={styles.tableCountainer}>
-        {/* Creating a table row title */}
+        {/*table row title */}
         <div className={styles.tablrRowTitle}>
           <ul className={styles.courseItemsTitle}>
             <li></li>
@@ -112,7 +111,7 @@ const TableDashboard = () => {
           </ul>
         </div>
 
-        {/* Mapping over the filteredCourses array to render the table rows */}
+        {/* Mapping  the filteredCourses array */}
         {filteredCourses.length > 0 ? (
           filteredCourses.map((courseItem) => {
             return (
@@ -130,7 +129,7 @@ const TableDashboard = () => {
             );
           })
         ) : (
-          <div className={styles.notFound}>Not Found</div>
+          <p className={styles.notFoundText}>دوره درسی موردنظر یافت نشد !</p>
         )}
       </div>
     </div>
