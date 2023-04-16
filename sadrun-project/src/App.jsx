@@ -7,7 +7,7 @@ import LandingNav from "./components/LandingPage/LandingNav/LandingNav";
 function App() {
   return (
     <div className="App">
-      <LandingNav />
+      {/* <LandingNav /> */}
       <LandingPage />
     </div>
   );
