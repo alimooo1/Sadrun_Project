@@ -78,7 +78,7 @@ const TableDashboard = () => {
 
   // Filtering the courses array
   const filteredCourses = courses.filter((course) =>
-    course.courseName.toLowerCase().includes(searchQuery.toLowerCase())
+    course.courseName.includes(searchQuery.toLowerCase())
   );
   //
   const handleSearch = (event) => {
