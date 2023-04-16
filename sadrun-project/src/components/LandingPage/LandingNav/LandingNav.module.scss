@@ -1,0 +1,42 @@
+
+@import '../../../sass/mixins.scss';
+@import '../../../sass/variables.scss';
+@import '../../../sass/fonts.scss';
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 1rem;
+}
+.navigation-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        @include size(2.5rem, 2.5rem);
+    
+    }
+}
+
+.navigationItems {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+
+    li {
+        padding: 1rem;
+        list-style: none;
+    }
+
+    a {
+        @include typography($primary-font-family, 0.8rem, $text-accent-color);
+            text-decoration: none;
+        
+            &:hover {
+                color: lighten($text-accent-color, 20%);
+            }
+        }
+}
