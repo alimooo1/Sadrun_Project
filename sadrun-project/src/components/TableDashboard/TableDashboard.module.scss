@@ -122,3 +122,19 @@ border-radius: 10px;
 //             }
 //     }
 // }
+
+
+.notFoundText {
+   background-color:#fff;
+  @include typography($secondary-font-family, 1.5rem, $primary-txt-color);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
+  -moz-box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
+}
