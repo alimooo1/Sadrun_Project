@@ -4,7 +4,7 @@ import avatar from "./navigation-image/avatar.svg";
 import LeftSideNavigation from "../leftSideNavigation/LeftSideNavigation";
 const LandingNav = (props) => {
   return (
-    <div className={`${styles.navigation}$}${props.class}`}>
+    <div className={`${styles.navigation}`}>
       {/* <div class="navigation-logo"><a href="#"> <img src={avatar} alt="avatar" /></a></div> */}
       <nav>
         <ul className={styles.navigationItems}>
