@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import styles from "../Edit_Profile_input/Edit_Profile_input.module.scss";
-import Edite_icon from "../image/user-edit-svgre-mdpi.svg";
+import Edit_icon from "../image/user-edit-svgre-mdpi.svg";
 import Tick from "../image/iconmonstr-check-mark-17.svg";
 
 function Edit_Profile_input(props, onSubmit) {
@@ -25,14 +25,14 @@ function Edit_Profile_input(props, onSubmit) {
         />
         {!isEditing ? (
           <img
-          className={styles.editeIcon}
+          className={styles.editIcon}
           onClick={() => setIsEditing(true)}
-          src={Edite_icon}
+          src={Edit_icon}
           alt=""      
           />
         ) :  (
           <img
-            className={styles.editeIcon}
+            className={styles.editIcon}
             onClick={handleSubmit}
             src={Tick}
             alt=""
