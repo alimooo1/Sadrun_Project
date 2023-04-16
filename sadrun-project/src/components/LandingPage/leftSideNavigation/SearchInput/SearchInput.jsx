@@ -3,31 +3,21 @@ import { FaSistrix } from "react-icons/fa";
 import React, { useState } from "react";
 import "../../../../sass/fonts.scss";
 import { useEffect, useRef } from "react";
+import useOutsideHandler from "../../../../hooks/useOutsideHandler";
 
 function InputWithIcon() {
+  const containerRef = useRef(null);
+
   const [expanded, setExpanded] = useState(false);
   const handleInputClick = () => {
     setExpanded(true);
   };
 
-  const inputRef = useRef(null);
-
-  useEffect(() => {
-    document.addEventListener("click", function (e) {
-      // if (inputRef.current.contains(e.target)) {
-      //   setExpanded(false);
-      // }
-      // const searchBar = document.getElementById("searchBar");
-      // if (!searchBar.contains(e.target)) {
-      //   setExpanded(false);
-      // }
-    });
-  }, [expanded]);
+  useOutsideHandler(containerRef, () => setExpanded(false));
 
   return (
     <div
-      ref={inputRef}
-      id="searchBar"
+      ref={containerRef}
       className={`${styles.inputContainer} ${expanded ? styles.expanded : ""}`}
     >
       {!expanded && (
