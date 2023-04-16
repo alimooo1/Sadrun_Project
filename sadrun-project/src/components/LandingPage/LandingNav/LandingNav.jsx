@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "./Navigation.module.scss";
+import styles from "./LandingNav.module.scss";
 import avatar from "./navigation-image/avatar.svg";
-import LeftSideNavigation from "./leftSideNavigation/LeftSideNavigation";
-const Navigation = () => {
+import LeftSideNavigation from "../leftSideNavigation/LeftSideNavigation";
+const LandingNav = () => {
   return (
     <div className={styles.navigation}>
       {/* <div class="navigation-logo"><a href="#"> <img src={avatar} alt="avatar" /></a></div> */}
@@ -39,4 +39,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default LandingNav;
