@@ -13,17 +13,17 @@
   width: 100%;
   background-color: #fff;
   border-radius: 16px;
-  margin: 0.4rem 0.8rem;
+  margin: 0.6rem 1rem;
 
   li {
     list-style: none;
-    padding: 0.3rem 0.5rem;
-    @include typography($primary-font-family, 0.5rem, $primary-txt-color);
+    padding: 1rem 0.6rem;
+    @include typography($primary-font-family, 1.2rem, $primary-txt-color);
     display: flex;
     justify-content: center;
     align-items: center;
   }
   img {
-    width: 4rem;
+    width: 5rem;
   }
 }
