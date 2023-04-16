@@ -7,6 +7,11 @@ const TableDashboard = () => {
   // Creating a state variable called searchQuery and a function to update it
   const [searchQuery, setSearchQuery] = useState("");
 
+  // remove search icon When the user is typing in the input
+  // creating a state for showing icon
+
+  const [isShownIcon, setisShownIcon] = useState(true);
+
   // courses data array
   const courses = [
     {
@@ -78,6 +83,7 @@ const TableDashboard = () => {
   //
   const handleSearch = (event) => {
     setSearchQuery(event.target.value);
+    setisShownIcon(false);
   };
   return (
     <div className={styles.Countainer}>
@@ -86,9 +92,12 @@ const TableDashboard = () => {
           <span>دوره های ثبت شده: 26 تا 39 </span>
         </div>
         <div className={styles.inputSearchCountainer}>
-          <span className={styles.icon}>
-            <FaSistrix />
-          </span>
+          {isShownIcon && (
+            <span className={styles.icon}>
+              <FaSistrix />
+            </span>
+          )}
+
           <input
             type="search"
             placeholder="جست و جو "
