@@ -13,8 +13,15 @@
      padding-block: 6px;
      outline: none;
      border: none;
-     @include typography($primary-font-family, 12px, #707070);
+     @include typography($primary-font-family, 12px, #000000);
+     background-color: #fff;
+     
  
+ } 
+ }
+ .conteiner_input {
+    input:disabled{
+        color: #b8b8b8;
  } 
  }
 .editeIcon{

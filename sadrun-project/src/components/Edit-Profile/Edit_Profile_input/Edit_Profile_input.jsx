@@ -25,12 +25,12 @@ function Edit_Profile_input(props, onSubmit) {
         />
         {!isEditing ? (
           <img
-            className={styles.editeIcon}
-            onClick={() => setIsEditing(true)}
-            src={Edite_icon}
-            alt=""
+          className={styles.editeIcon}
+          onClick={() => setIsEditing(true)}
+          src={Edite_icon}
+          alt=""      
           />
-        ) : (
+        ) :  (
           <img
             className={styles.editeIcon}
             onClick={handleSubmit}
