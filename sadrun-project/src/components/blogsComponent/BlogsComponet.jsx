@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./BlogsComponet.module.css"
+import styles from "./BlogsComponet.module.scss"
 import BlogComponet from "../blogComponet/BlogComponet";
 import menuu from "../blogComponet/image/menuu.svg"
 function BlogsComponet() {

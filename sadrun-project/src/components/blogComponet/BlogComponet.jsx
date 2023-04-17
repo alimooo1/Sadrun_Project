@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "./BlogComponet.module.css"
+import styles from "./BlogComponet.module.scss"
 import vs from "./image/visual-studio-logo.png"
 function BlogComponet({data}) {
     // 
