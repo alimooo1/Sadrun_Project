@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./main.scss";
 import App from "./App";
 import Layout from "./layouts/Main-Layout/Layout";
-import QA from "./components/Q&A/QA";
+import LandingLayout from "./layouts/Landing-Layout/LandingLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -16,6 +16,10 @@ const router = createBrowserRouter([
         element: <App />,
       },
     ],
+  },
+  {
+    path: "/landing",
+    element: <LandingLayout />,
   },
 ]);
 
