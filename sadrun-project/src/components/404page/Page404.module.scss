@@ -1,0 +1,27 @@
+@import "../../sass/fonts.scss";
+@import "../../sass/mixins.scss";
+@import "../../sass/variables.scss";
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .img{
+        width: 34rem;
+        height: 19.591rem;
+        margin-top: 80px;
+    }
+
+    .btn{
+        width: 17rem;
+        height: 3.2rem;
+        border: none;
+        border-radius: 20px;
+        background-color: #A644C1;
+        @include typography($primary-font-family, 18px, #FFFFFF);
+    }
+}
+
+

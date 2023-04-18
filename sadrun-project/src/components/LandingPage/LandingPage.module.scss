@@ -1,0 +1,73 @@
+@import "../../sass/mixins.scss";
+// @import "../../sass/global.scss";
+@import "../../sass/variables.scss";
+@import '../../sass/fonts.scss';
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+
+.header {
+    width: 37.2rem;
+    z-index:1;
+    @include position(absolute, $top: 10rem, $right: 6.2rem);
+
+    h1 {
+        @include typography($secondary-font-family, 1.7rem, #434343)
+    }
+
+    p {
+        margin-top: 1.4rem;
+        @include typography($primary-font-family, 1rem, $primary-txt-color)
+    }
+
+    button {
+        margin-top: 4rem;
+        @include typography($primary-font-family, 1rem, #fff);
+        border-radius: 35px;
+        background-image: linear-gradient(to right top, #c003b2, #a900b1, #9100af, #7705ac, #5a0ba9);
+        padding: 1rem 2.5rem;
+        outline: none;
+        border: none;
+
+        &:hover {
+            background-color: $text-accent-color;
+        }
+
+        &:active {
+            background-color: $text-accent-color;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+.header1 {
+    @include size(91.7rem, 49.6rem);
+    @include position(absolute, $top: 0, $right: 0);
+    z-index: 0;
+    background-size: cover;
+    z-index: -2;
+}
+
+
+.header2 {
+    @include size(49rem, null);
+    @include position(absolute, $top: 0, $left: 0);
+    z-index: -1
+}
+
+
+.girlDesk {
+    @include size(34.1rem, 31rem);
+    @include position(absolute, $top: 7.5rem, $left: 7rem);
+}

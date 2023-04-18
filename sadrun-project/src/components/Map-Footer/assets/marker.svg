@@ -1,0 +1,23 @@
+<svg id="placeholder" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="59.594" height="86.081" viewBox="0 0 59.594 86.081">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.343" y1="-0.367" x2="0" y2="0.903" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f093fb"/>
+      <stop offset="1" stop-color="#67008f"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1.343" y1="-0.367" x2="0" y2="0.903" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#970dcc"/>
+      <stop offset="1" stop-color="#ff00f6"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <path id="Shape" d="M29.466,86.05a2.355,2.355,0,0,1-1.689-1.161L4.47,46.15A30.312,30.312,0,0,1,29.8,0,30.319,30.319,0,0,1,55.373,45.747L32,84.839a2.471,2.471,0,0,1-2.533,1.211Z" fill="url(#linear-gradient)"/>
+    </clipPath>
+    <radialGradient id="radial-gradient" cx="0.431" cy="-0.204" r="1.423" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ea4972" stop-opacity="0.502"/>
+      <stop offset="1" stop-color="#4a51e2" stop-opacity="0.396"/>
+    </radialGradient>
+  </defs>
+  <path id="Shape-2" data-name="Shape" d="M29.466,86.05a2.355,2.355,0,0,1-1.689-1.161L4.47,46.15A30.312,30.312,0,0,1,29.8,0,30.319,30.319,0,0,1,55.373,45.747L32,84.839a2.471,2.471,0,0,1-2.533,1.211Z" transform="translate(0 0)" fill="url(#linear-gradient-2)"/>
+  <g id="placeholder-2" data-name="placeholder" clip-path="url(#clip-path)">
+    <path id="Path_8" data-name="Path 8" d="M20.258,0S-4.142,9.275,6.986,25.8s21.02,17.369,17.805,31.112S2.205,71.752.144,84.315,24.791,99.323,24.791,99.323l31.489-68.3L41.113,11.383Z" transform="translate(15.453 -9.932)" fill="url(#radial-gradient)"/>
+  </g>
+</svg>
