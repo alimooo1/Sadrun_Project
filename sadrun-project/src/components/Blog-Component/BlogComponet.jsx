@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import styles from "./BlogsComponet.module.scss"
-import BlogComponet from "../blogComponet/BlogComponet";
-import menuu from "../blogComponet/image/menuu.svg"
-function BlogsComponet() {
+import styles from "../BlogComponet.module.scss"
+import BlogsComponet from "../Blog-Component/BlogsComponent/BlogsComponent";
+import menuu from "../blog-Component/image/menuu.svg"
+function BlogComponet() {
   // const [dataBloge, setDataBloge] = useState({img:"jk",title:"نود جی س",text:"نود جی‌اس یا نود دات جی‌اس (به انگلیسی: Node.js) یک محیط اجراییِ "})
   const [dataBloge, setDataBloge] = useState([{
     img: "./image/visual-studio-logo.png",
@@ -53,7 +53,7 @@ function BlogsComponet() {
     </div>
     <div className={styles.blogs}>
       {dataBloge.map((data, index) => (
-        <BlogComponet key={index} data={data} />
+        <BlogsComponet key={index} data={data} />
       ))}
     </div>
       
@@ -61,4 +61,4 @@ function BlogsComponet() {
   );
 }
 
-export default BlogsComponet;
+export default BlogComponet;

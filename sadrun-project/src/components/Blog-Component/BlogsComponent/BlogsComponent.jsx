@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from "./BlogComponet.module.scss"
-import vs from "./image/visual-studio-logo.png"
-function BlogComponet({data}) {
+import styles from "../BlogsComponent/BlogsComponent.moudle.scss"
+import vs from "../image/visual-studio-logo.png"
+function BlogsComponet({data}) {
     // 
   return (
     
@@ -20,4 +20,4 @@ function BlogComponet({data}) {
   )
 }
 
-export default BlogComponet
+export default BlogsComponet
