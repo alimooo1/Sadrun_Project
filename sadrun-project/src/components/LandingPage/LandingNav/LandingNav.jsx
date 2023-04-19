@@ -8,7 +8,7 @@ const LandingNav = (props) => {
       {/* <div class="navigation-logo"><a href="#"> <img src={avatar} alt="avatar" /></a></div> */}
       <nav>
         <ul className={styles.navigationItems}>
-          <div class="navigation-logo">
+          <div className={styles.navigationLogo}>
             <a href="#">
               {" "}
               <img src={avatar} alt="avatar" />

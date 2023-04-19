@@ -10,12 +10,13 @@
     color: #fff;
     padding: 1rem;
 }
-.navigation-logo {
+.navigationLogo {
     display: flex;
     justify-content: center;
     align-items: center;
+
     img {
-        @include size(2.5rem, 2.5rem);
+        @include size(3rem, 3rem);
     
     }
 }
@@ -32,7 +33,7 @@
     }
 
     a {
-        @include typography($primary-font-family, 0.8rem, $text-accent-color);
+        @include typography($primary-font-family, 1rem, $text-accent-color);
             text-decoration: none;
         
             &:hover {
