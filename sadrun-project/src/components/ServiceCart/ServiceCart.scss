@@ -23,10 +23,10 @@
     grid-template-rows: repeat(2, 1fr);
   }
   @include min-width($breakpoint: large) {
-    width: 50%;
+    width: 40%;
   }
   gap: 2rem;
-  width: 65%;
+  // width: 50%;
 }
 
 .cart {
@@ -92,8 +92,8 @@
 }
 
 .path {
-  @include size(38%, 72%);
-  @include position(absolute, $top: -15rem, $left: 0rem);
+  @include size(35%, 65%);
+  @include position(absolute, $top: -12rem, $left: 0rem);
 }
 
 .girlFlowerSet {
@@ -131,12 +131,14 @@
 }
 
 .servicesCartTitle {
+  
   @include position(absolute, $top: 0rem, $right: 50%);
   transform: translateX(50%);
 
   @include min-width($breakpoint: large) {
     @include position(absolute, $top: -1.1rem, $right: 20.5rem);
     transform: translateX(0);
+    
   }
 }
 
