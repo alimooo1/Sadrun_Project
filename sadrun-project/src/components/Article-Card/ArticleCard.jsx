@@ -3,7 +3,7 @@ import "../../sass/fonts.scss";
 import styles from "./ArticleCard.module.scss";
 import heIcon from "./images/heicon.svg";
 import sheIcon from "./images/sheicon.svg";
-import ArticleCards from "../ArticleCards/ArticleCards";
+import ArticleCards from "../Article-Cards/ArticleCards";
 
 function CreateArticleCard() {
   return (
