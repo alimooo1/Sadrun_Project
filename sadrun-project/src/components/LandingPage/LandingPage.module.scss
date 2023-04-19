@@ -12,7 +12,7 @@
 .header {
     width: 37.2rem;
     z-index:1;
-    @include position(absolute, $top: 10rem, $right: 6.2rem);
+    @include position(absolute, $top: 15rem, $right: 6.2rem);
 
     h1 {
         @include typography($secondary-font-family, 1.7rem, #434343)
