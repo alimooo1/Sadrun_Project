@@ -1,43 +1,57 @@
-
-@import '../../../sass/mixins.scss';
-@import '../../../sass/variables.scss';
-@import '../../../sass/fonts.scss';
+@import "../../../sass/mixins.scss";
+@import "../../../sass/variables.scss";
+@import "../../../sass/fonts.scss";
+@import "../../../sass/media.scss";
 
 .navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 1rem;
 }
 .navigationLogo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    img {
-        @include size(3rem, 3rem);
-    
+  img {
+    @include size(3rem, 3rem);
+  }
+}
+.navigationIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include size(2rem, 2rem);
+   @include typography($primary-font-family, 2rem, #fff);
+  @include min-width(medium) {
+      display: none;
     }
 }
 
 .navigationItems {
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+ 
 
-    li {
-        padding: 1rem;
-        list-style: none;
+  li {
+    display: none;
+    padding: 1rem;
+    list-style: none;
+    @include min-width(medium) {
+      display: flex;
     }
+  }
 
-    a {
-        @include typography($primary-font-family, 1rem, $text-accent-color);
-            text-decoration: none;
-        
-            &:hover {
-                color: lighten($text-accent-color, 20%);
-            }
-        }
+  a {
+    @include typography($primary-font-family, 1rem, $text-accent-color);
+    text-decoration: none;
+
+    &:hover {
+      color: lighten($text-accent-color, 20%);
+    }
+  }
 }

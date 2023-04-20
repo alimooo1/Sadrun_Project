@@ -2,7 +2,13 @@ import React from "react";
 import styles from "./LandingNav.module.scss";
 import avatar from "./navigation-image/avatar.svg";
 import LeftSideNavigation from "../leftSideNavigation/LeftSideNavigation";
+import { BiMenu } from "react-icons/bi";
+
+BiMenu;
 const LandingNav = (props) => {
+  // nav display state
+  const [state, setstate] = useState(initialState);
+
   return (
     <div className={`${styles.navigation}`}>
       {/* <div class="navigation-logo"><a href="#"> <img src={avatar} alt="avatar" /></a></div> */}
@@ -12,6 +18,16 @@ const LandingNav = (props) => {
             <a href="#">
               {" "}
               <img src={avatar} alt="avatar" />
+            </a>
+          </div>
+          .
+          <div className={styles.navigationIcon}>
+            <a href="#">
+              {" "}
+              <BiMenu
+                onClick={addNavHandller}
+                className={styles.navigationIcon}
+              />
             </a>
           </div>
           <li className={styles.navigationItem}>
