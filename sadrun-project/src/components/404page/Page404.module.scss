@@ -21,7 +21,12 @@
     border: none;
     border-radius: 20px;
     background-color: #a644c1;
+    transition: 0.3s all;
     @include typography($primary-font-family, 18px, #ffffff);
-    cursor: pointer;
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
   }
 }
