@@ -2,6 +2,7 @@
 // @import "../../../sass/global.scss";
 @import "../../../sass/variables.scss";
 @import "../../../sass/fonts.scss";
+@import "../../../sass/media.scss";
 .conteiner {
   display: flex;
   align-items: center;
@@ -31,4 +32,25 @@ button {
   align-items: center;
   padding: 0.8rem;
   font-size: 1rem;
+}
+.registerContainer {
+  @include max-width(medium) {
+    display: none;
+  }
+}
+.input {
+  @include max-width(medium) {
+    display: none;
+  }
+}
+
+.User {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  @include min-width(medium) {
+    display: none;
+  }
 }

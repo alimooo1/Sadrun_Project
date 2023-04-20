@@ -1,43 +1,94 @@
-
-@import '../../../sass/mixins.scss';
-@import '../../../sass/variables.scss';
-@import '../../../sass/fonts.scss';
+@import "../../../sass/mixins.scss";
+@import "../../../sass/variables.scss";
+@import "../../../sass/fonts.scss";
+@import "../../../sass/media.scss";
 
 .navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 1rem;
+}
+
+nav {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include max-width(medium){
+    width: 50%;
+  }
+  
 }
 .navigationLogo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  @include max-width(medium){
+    order: 2;
+  }
 
-    img {
-        @include size(3rem, 3rem);
-    
-    }
+
+  img {
+    @include size(3rem, 3rem);
+  }
+}
+.navigationIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  @include size(2rem, 2rem);
+  @include typography($primary-font-family, 2rem, #fff);
+  @include min-width(medium) {
+    display: none;
+  }
 }
 
 .navigationItems {
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
 
-    li {
-        padding: 1rem;
-        list-style: none;
+  @include max-width(medium) {
+    & {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      background: #fff;
+      list-style: none;
+      right: 0;
+      top: 5.25rem;
+      height: 100%;
+      padding: 50px 15px;
+      width: 80%;
+      max-width: 300px;
+      transition: 0.3s;
+      transform: translateX(100%);
     }
+  }
 
-    a {
-        @include typography($primary-font-family, 1rem, $text-accent-color);
-            text-decoration: none;
-        
-            &:hover {
-                color: lighten($text-accent-color, 20%);
-            }
-        }
+  li {
+    padding: 1rem;
+    list-style: none;
+    @include min-width(medium) {
+      display: flex;
+    }
+  }
+
+  a {
+    @include typography($primary-font-family, 1rem, $text-accent-color);
+    text-decoration: none;
+
+    &:hover {
+      color: lighten($text-accent-color, 20%);
+    }
+  }
+}
+
+.isSidenavOpen {
+  transform: translateX(0%);
 }
