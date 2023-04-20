@@ -10,8 +10,10 @@
     height: 545px;
     box-shadow: 0px 0px 3px rgba(87, 87, 87, 0.160784);
     border-radius: 25px;
-    @include min-width(small){
-        width: 300px;
+    @include max-width(small){
+        display: flex;
+        width: 350px;
+        height: 100%;margin: auto;
     }
 }
 .userImage_Conteiner{
@@ -23,6 +25,10 @@
 .user_image{
     width: 180px;
     height: 180px;
+    @include max-width(small){
+        width: 120px;
+        height:120px ;
+    }
     
 }
 .formConteiner{
@@ -33,6 +39,10 @@
     background: rgba(0,0,0,0.03 );
     width: 950px;
     border-radius:20px;
+    @include max-width(small){
+        width: 320px;
+        height:500px ;
+    }
 }
 .form{ 
     display: flex;
@@ -41,8 +51,9 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 22px;
-    @include min-width(small){
+    @include max-width(small){
         flex-direction: column;
+        gap: 19px;
     }
 }
 
