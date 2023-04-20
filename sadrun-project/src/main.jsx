@@ -5,6 +5,7 @@ import App from "./App";
 import Layout from "./layouts/Main-Layout/Layout";
 import LandingLayout from "./layouts/Landing-Layout/LandingLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout404 from "./layouts/404-Layout/Layout404";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/landing",
     element: <LandingLayout />,
+  },
+  {
+    path: "*",
+    element: <Layout404 />,
   },
 ]);
 
