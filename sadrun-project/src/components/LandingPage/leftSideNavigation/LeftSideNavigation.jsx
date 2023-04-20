@@ -17,7 +17,11 @@ function CreateBtnComponent() {
     <>
       <div className={styles.conteiner}>
         <SearchInput className={styles.SearchInput} />
-        <div className={styles.registerContainer}>
+        <div
+          className={`${styles.registerContainer} ${
+            openUser ? styles.isRegisterContainerOpen : ""
+          }`}
+        >
           <NavBtn className={styles.register} btnTitle={"ثبت نام "} />
           <NavBtn className={styles.input} btnTitle={"ورود"} />
         </div>

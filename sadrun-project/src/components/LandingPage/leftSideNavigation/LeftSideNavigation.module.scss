@@ -8,9 +8,10 @@
   align-items: center;
   gap: 8px;
   font-family: "vazirmatn-Regular";
+  position: relative;
 }
 
-button {
+.button {
   @include button-text(
     #eee6f6,
     $text-accent-color,
@@ -34,14 +35,27 @@ button {
   font-size: 1rem;
 }
 .registerContainer {
+  display: flex;
+  gap: 7px;
   @include max-width(medium) {
-    display: none;
+    position: absolute;
+    top: 3rem;
+    left: -5px;
+    background-color: #fff;
+    border-radius: 15px;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 5px;
+    transition: 0.3s;
+    transform: scale(0, 0);
+    transform-origin: 0 0;
+    button {
+      width: 100%;
+    }
   }
 }
-.input {
-  @include max-width(medium) {
-    display: none;
-  }
+.isRegisterContainerOpen {
+  transform: scale(1, 1);
 }
 
 .User {

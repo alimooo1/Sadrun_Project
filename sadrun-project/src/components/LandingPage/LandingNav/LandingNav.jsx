@@ -2,9 +2,8 @@ import React from "react";
 import styles from "./LandingNav.module.scss";
 import avatar from "./navigation-image/avatar.svg";
 import LeftSideNavigation from "../leftSideNavigation/LeftSideNavigation";
-import { BiMenu } from "react-icons/bi";
+import { SlMenu, SlArrowRight } from "react-icons/sl";
 import { useState } from "react";
-
 
 const LandingNav = (props) => {
   // menu display state
@@ -24,13 +23,19 @@ const LandingNav = (props) => {
           </a>
         </div>
         <div className={styles.navigationIcon}>
-          <a href="#">
-            {" "}
-            <BiMenu
+          {!openMenu && (
+            <SlMenu
               onClick={addMenuHandller}
               className={styles.navigationIcon}
             />
-          </a>
+          )}
+          {openMenu && (
+            <SlArrowRight
+              onClick={addMenuHandller}
+              fill="#5a0ba9"
+              className={styles.navigationIcon}
+            />
+          )}
         </div>
 
         <ul
