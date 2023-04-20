@@ -1,8 +1,9 @@
 @import "../../../sass/variables.scss";
 @import "../../../sass/mixins.scss";
 @import "../../../sass/fonts.scss";
+@import '../../../sass/media.scss';
 
-.tableRow {
+ .tableRow {
   display: flex;
   width: 100%;
 }
@@ -14,6 +15,11 @@
   background-color: #fff;
   border-radius: 16px;
   margin: 0.6rem 1rem;
+     @include max-width(medium) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  
 
   li {
     list-style: none;
@@ -22,6 +28,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include max-width(medium) {
+    &:nth-child(1),
+    &:nth-child(6) {
+      display: none;
+    }
+  }
   }
   img {
     width: 5rem;
