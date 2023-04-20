@@ -41,11 +41,9 @@
   align-items: center;
   padding-block: 10%;
    @include min-width($breakpoint: x-large) {
-    padding:1.5rem 1.2rem;
+    padding:2.2rem 1.6rem;
   }
-   @include min-width($breakpoint: large) {
-    padding:1.5rem 1rem;
-  }
+
 
   &:nth-child(1) {
     background-image: linear-gradient(
@@ -98,16 +96,18 @@
   span {
     @include typography($secondary-font-family, 1.8rem, #fff);
     font-weight: bold;
-    margin-right: 15px;
+    margin-right: 5px;
 
     @include min-width($breakpoint: medium) {
    @include typography($secondary-font-family, 1rem, #fff);
   }
   @include min-width($breakpoint: large) {
-    @include typography($secondary-font-family, 1.5rem, #fff);
+    @include typography($secondary-font-family, 1.3rem, #fff);
   }
   @include min-width($breakpoint: x-large) {
-    @include typography($secondary-font-family, 1.8rem, #fff);
+    @include typography($secondary-font-family, 1.3rem, #fff);
+     padding: 1rem 0.5rem;
+     //white-space: nowrap
   }
   }
 }
@@ -121,7 +121,7 @@
   display: none;
   @include size(14rem, 14.5rem);
   @include position(absolute, $bottom: -5rem, $left: 0);
-  
+
   @include min-width($breakpoint: large) {
     display: block;
     @include size(16rem, 18rem);
