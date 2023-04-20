@@ -1,5 +1,6 @@
 @import "../../sass/mixins.scss";
 @import "../../sass/variables.scss";
+@import "../../sass/media.scss";
 
 .conteiner{
     display: flex;
@@ -9,6 +10,9 @@
     height: 545px;
     box-shadow: 0px 0px 3px rgba(87, 87, 87, 0.160784);
     border-radius: 25px;
+    @include min-width(small){
+        width: 300px;
+    }
 }
 .userImage_Conteiner{
     display: flex;
@@ -32,10 +36,14 @@
 }
 .form{ 
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 22px
+    gap: 22px;
+    @include min-width(small){
+        flex-direction: column;
+    }
 }
 
 
