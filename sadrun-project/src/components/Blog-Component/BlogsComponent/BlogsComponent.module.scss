@@ -8,11 +8,26 @@
     direction: rtl;
     padding-bottom: 1rem;
     margin-right: 10px;
+    cursor: pointer;
 }
 .image_blog{
-    width: 100px;
-    height: 74px;
+
+  width: 120px;
+  height: 74px;
+  overflow: hidden;
+  border-radius: 15px;
 }
+
+.image_blog{
+    img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.7s;
+}
+}
+.blog:hover .image_blog img {
+    transform: scale(1.2);
+  }
 .title{
     font-weight: bold;
     margin-bottom: 9px;

@@ -8,7 +8,9 @@ function BlogsComponet({data}) {
       
                 
     <div className={styles.blog}>
-            <img className={styles.image_blog} src={vs} alt="dfsdff" />
+            <div className={styles.image_blog}>
+               <img  src={vs} alt="dfsdff" />
+            </div>
         <div>
             <p className={styles.title}>{data.title}</p>
             <p className={styles.text}>{data.text}</p>
