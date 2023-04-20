@@ -31,7 +31,7 @@ $breakpoint-extra-large: 1300px;
     @media (min-width: $breakpoint-large) {
       @content;
     }
-  } @else if ($breakpoint ==xlarge) {
+  } @else if ($breakpoint ==x-large) {
     @media (min-width: $breakpoint-extra-large) {
       @content;
     }
