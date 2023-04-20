@@ -11,14 +11,25 @@
   padding: 1rem;
 }
 
-nav{
+nav {
+  
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  @include max-width(medium){
+    width: 50%;
+  }
+  
 }
 .navigationLogo {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
+  @include max-width(medium){
+    order: 2;
+  }
+
 
   img {
     @include size(3rem, 3rem);
@@ -28,11 +39,12 @@ nav{
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
   @include size(2rem, 2rem);
-   @include typography($primary-font-family, 2rem, #fff);
+  @include typography($primary-font-family, 2rem, #fff);
   @include min-width(medium) {
-      display: none;
-    }
+    display: none;
+  }
 }
 
 .navigationItems {
@@ -40,10 +52,26 @@ nav{
   justify-content: space-around;
   margin: 0;
   padding: 0;
- 
+
+  @include max-width(medium) {
+    & {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      background: #fff;
+      list-style: none;
+      right: 0;
+      top: 5.25rem;
+      height: 100%;
+      padding: 50px 15px;
+      width: 80%;
+      max-width: 300px;
+      transition: 0.3s;
+      transform: translateX(100%);
+    }
+  }
 
   li {
-    display: none;
     padding: 1rem;
     list-style: none;
     @include min-width(medium) {
@@ -59,4 +87,8 @@ nav{
       color: lighten($text-accent-color, 20%);
     }
   }
+}
+
+.isSidenavOpen {
+  transform: translateX(0%);
 }

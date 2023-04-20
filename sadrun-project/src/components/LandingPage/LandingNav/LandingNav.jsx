@@ -7,10 +7,10 @@ import { useState } from "react";
 
 BiMenu;
 const LandingNav = (props) => {
-  // nav display state
+  // menu display state
   const [openMenu, setOpenMenu] = useState(false);
   const addMenuHandller = () => {
-    setOpenMenu(true);
+    setOpenMenu(!openMenu);
   };
 
   return (
@@ -23,7 +23,6 @@ const LandingNav = (props) => {
             <img src={avatar} alt="avatar" />
           </a>
         </div>
-
         <div className={styles.navigationIcon}>
           <a href="#">
             {" "}
@@ -33,8 +32,13 @@ const LandingNav = (props) => {
             />
           </a>
         </div>
-        <ul className={styles.navigationItems}>
-          <li className={styles.navigationItem}>
+
+        <ul
+          className={`${styles.navigationItems} ${
+            openMenu ? styles.isSidenavOpen : ""
+          }`}
+        >
+          <li>
             <a href="#">خانه</a>
           </li>
           <li>
