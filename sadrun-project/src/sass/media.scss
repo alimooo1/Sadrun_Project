@@ -39,3 +39,28 @@ $breakpoint-extra-large: 1300px;
     @error "UNKNOWN MEDIA BREAKPOINT #{$breakpoint}";
   }
 }
+@mixin max-width($breakpoint) {
+  @if ($breakpoint ==xsmall) {
+    @media (max-width: $breakpoint-xsmall) {
+      @content;
+    }
+  } @else if ($breakpoint ==small) {
+    @media (max-width: $breakpoint-small) {
+      @content;
+    }
+  } @else if ($breakpoint ==medium) {
+    @media (max-width: $breakpoint-medium) {
+      @content;
+    }
+  } @else if ($breakpoint ==large) {
+    @media (max-width: $breakpoint-large) {
+      @content;
+    }
+  } @else if ($breakpoint ==xlarge) {
+    @media (max-width: $breakpoint-extra-large) {
+      @content;
+    }
+  } @else {
+    @error "UNKNOWN MEDIA BREAKPOINT #{$breakpoint}";
+  }
+}
