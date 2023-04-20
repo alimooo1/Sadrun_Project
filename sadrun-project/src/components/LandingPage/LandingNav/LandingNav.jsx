@@ -5,7 +5,7 @@ import LeftSideNavigation from "../leftSideNavigation/LeftSideNavigation";
 import { BiMenu } from "react-icons/bi";
 import { useState } from "react";
 
-BiMenu;
+
 const LandingNav = (props) => {
   // menu display state
   const [openMenu, setOpenMenu] = useState(false);

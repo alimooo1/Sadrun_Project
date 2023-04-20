@@ -17,8 +17,11 @@ function CreateBtnComponent() {
     <>
       <div className={styles.conteiner}>
         <SearchInput className={styles.SearchInput} />
-        <NavBtn className={styles.register} btnTitle={"ثبت نام "} />
-        <NavBtn className={styles.input} btnTitle={"ورود"} />
+        <div className={styles.registerContainer}>
+          <NavBtn className={styles.register} btnTitle={"ثبت نام "} />
+          <NavBtn className={styles.input} btnTitle={"ورود"} />
+        </div>
+
         <NavBtn
           className={styles.shopping_cart}
           btnTitle={<FaShoppingCart />}
