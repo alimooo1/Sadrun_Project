@@ -9,10 +9,10 @@
   align-items: center;
   color: #fff;
   padding: 1rem;
+  position: relative;
 }
 
 nav {
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,6 +40,7 @@ nav {
   justify-content: center;
   align-items: center;
   z-index: 2;
+  cursor: pointer;
   @include size(2rem, 2rem);
   @include typography($primary-font-family, 2rem, #fff);
   @include min-width(medium) {
@@ -57,31 +58,49 @@ nav {
     & {
       display: flex;
       flex-direction: column;
-      position: fixed;
-      background: #fff;
+      position: absolute;
+     // background-color: lighten($secondary-bg-color, 20%);
+       -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.16), 0px 0px 6px 0px rgba(90,11,169,0.16); 
+       box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.16), 0px 0px 6px 0px rgba(90,11,169,0.16);
+      background-color:#ffff ;
+      border-radius: 10px;
       list-style: none;
       right: 0;
       top: 5.25rem;
-      height: 100%;
-      padding: 50px 15px;
+     // height: 100%;
+      //padding: 50px 15px;
       width: 80%;
-      max-width: 300px;
+      max-width: 250px;
       transition: 0.3s;
       transform: translateX(100%);
+      
     }
   }
 
   li {
-    padding: 1rem;
+    padding: 0.7rem;
     list-style: none;
-    @include min-width(medium) {
+    @include max-width(medium) {
       display: flex;
+      // margin-top: 0.5rem;
+     
+      
     }
   }
 
   a {
     @include typography($primary-font-family, 1rem, $text-accent-color);
     text-decoration: none;
+    width: 100%;
+    text-align: center;
+    @include max-width(medium){
+      padding: 0.3rem 0;
+      border-radius: 5px;
+      &:hover {
+      background-color: $secondary-bg-color;
+      transition:0.5s all;
+    }
+    }
 
     &:hover {
       color: lighten($text-accent-color, 20%);

@@ -2,9 +2,10 @@ import React from "react";
 import styles from "./LandingNav.module.scss";
 import avatar from "./navigation-image/avatar.svg";
 import LeftSideNavigation from "../leftSideNavigation/LeftSideNavigation";
-import { BiMenu } from "react-icons/bi";
-import { useState } from "react";
-
+import { SlMenu, SlArrowRight } from "react-icons/sl";
+import { useState, useRef } from "react";
+import useOutsideHandler from "../../../hooks/useOutsideHandler";
+import { FaRegUserCircle } from "react-icons/fa";
 
 const LandingNav = (props) => {
   // menu display state
@@ -12,10 +13,10 @@ const LandingNav = (props) => {
   const addMenuHandller = () => {
     setOpenMenu(!openMenu);
   };
-
+  const containerRef = useRef(null);
+  useOutsideHandler(containerRef, () => setOpenMenu(false));
   return (
-    <div className={`${styles.navigation}`}>
-      {/* <div class="navigation-logo"><a href="#"> <img src={avatar} alt="avatar" /></a></div> */}
+    <div ref={containerRef} className={`${styles.navigation}`}>
       <nav>
         <div className={styles.navigationLogo}>
           <a href="#">
@@ -24,13 +25,19 @@ const LandingNav = (props) => {
           </a>
         </div>
         <div className={styles.navigationIcon}>
-          <a href="#">
-            {" "}
-            <BiMenu
+          {!openMenu && (
+            <SlMenu
               onClick={addMenuHandller}
               className={styles.navigationIcon}
             />
-          </a>
+          )}
+          {openMenu && (
+            <SlArrowRight
+              onClick={addMenuHandller}
+              fill="#5a0ba9"
+              className={styles.navigationIcon}
+            />
+          )}
         </div>
 
         <ul
