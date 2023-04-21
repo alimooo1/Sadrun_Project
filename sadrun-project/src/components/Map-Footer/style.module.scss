@@ -1,0 +1,129 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.map_footer {
+  width: 100%;
+  // position: absolute;
+  // bottom: 0;
+}
+.map {
+  box-sizing: border-box;
+  width: 100%;
+  // z-index: -1;
+  height: 45vh;
+  position: relative;
+  top: 40px;
+  // background-color: red;
+}
+.map_popup {
+  @include typography($primary-font-family, 0.8rem, rgba(0, 0, 0, 0.8));
+  background-color: white;
+}
+.footer {
+  display: flex;
+  z-index: 1;
+  flex-direction: column;
+  padding: 32px 0 32px 0;
+  width: 100%;
+}
+.graph {
+  width: 100%;
+  position: absolute;
+  bottom: -20%;
+  overflow: hidden;
+  pointer-events: none;
+  img {
+    width: 113%;
+    position: relative;
+    left: 6%;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+.white_graph {
+  pointer-events: none;
+  z-index: 1;
+  width: 100%;
+  position: absolute;
+  top: -10%;
+  overflow: hidden;
+  img {
+    width: 113%;
+    position: relative;
+    left: 6%;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+
+.row {
+  width: 92%;
+  margin: auto;
+  display: flex;
+  z-index: 1;
+
+  div {
+    width: 33.33%;
+  }
+}
+
+.info {
+  display: flex;
+  @include typography(vazirmatn-Bold, 0.9rem, rgba(0, 0, 0, 0.8));
+
+  .about_us {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact_us {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px 10px;
+    gap: 10px;
+  }
+  .phone_num {
+    direction: ltr;
+    @include typography(Shabnam-Bold, 1.1rem, rgba(0, 0, 0, 0.8));
+  }
+}
+
+.follow_us_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 15px;
+  gap: 15px;
+
+  .follow_us_logos {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    img {
+      display: block;
+      height: 30px;
+    }
+  }
+  .follow_us_text {
+    @include typography(vazirmatn-bold, 1rem, $text-accent-color);
+    text-align: center;
+  }
+}
+
+.enamad_pic {
+  // background-color: blue;
+  display: flex;
+  justify-content: flex-end;
+  // border: solid;
+  // background-color: #666;
+  img {
+    display: inline-block;
+    height: 140px;
+    position: relative;
+    left: -20px;
+  }
+}
