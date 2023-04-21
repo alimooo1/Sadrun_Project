@@ -1,5 +1,6 @@
 @import "../../../../sass/variables.scss";
 @import "../../../../sass/mixins.scss";
+@import '../../../../sass/media.scss';
 
 .inputContainer {
   display: flex;
@@ -7,6 +8,9 @@
   justify-content: center;
   border-radius: 4px;
   @include size(2.2rem, 2.2rem);
+  @include max-width(medium){
+    display: none;
+  }
 }
 
 .expanded {
