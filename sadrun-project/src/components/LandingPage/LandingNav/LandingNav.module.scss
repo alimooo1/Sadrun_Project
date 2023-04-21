@@ -78,7 +78,7 @@ nav {
   }
 
   li {
-    padding: 1rem;
+    padding: 0.7rem;
     list-style: none;
     @include max-width(medium) {
       display: flex;
@@ -94,8 +94,11 @@ nav {
     width: 100%;
     text-align: center;
     @include max-width(medium){
+      padding: 0.3rem 0;
+      border-radius: 5px;
       &:hover {
       background-color: $secondary-bg-color;
+      transition:0.5s all;
     }
     }
 
