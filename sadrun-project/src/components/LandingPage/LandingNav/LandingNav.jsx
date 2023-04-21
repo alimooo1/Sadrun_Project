@@ -4,6 +4,8 @@ import avatar from "./navigation-image/avatar.svg";
 import LeftSideNavigation from "../leftSideNavigation/LeftSideNavigation";
 import { SlMenu, SlArrowRight } from "react-icons/sl";
 import { useState } from "react";
+import { FaRegUserCircle } from "react-icons/fa";
+
 
 const LandingNav = (props) => {
   // menu display state

@@ -1,21 +1,21 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import SearchInput from "./SearchInput/SearchInput";
 import styles from "./LeftSideNavigation.module.scss";
 import NavBtn from "./NavBtn/NavBtn";
-import { BiUserCircle } from "react-icons/bi";
+import { FaRegUserCircle } from "react-icons/fa";
+import useOutsideHandler from "../../../hooks/useOutsideHandler";
 
 function CreateBtnComponent() {
   const [openUser, setOpenUser] = useState(false);
+  const containerRef = useRef(null);
   const openUserHandler = () => {
     setOpenUser(!openUser);
-    console.log("mm");
-    console.log(openUser);
   };
-  console.log("nn");
+  useOutsideHandler(containerRef, () => setOpenUser(false));
   return (
     <>
-      <div className={styles.conteiner}>
+      <div ref={containerRef} className={styles.conteiner}>
         <SearchInput className={styles.SearchInput} />
         <div
           className={`${styles.registerContainer} ${
@@ -33,7 +33,7 @@ function CreateBtnComponent() {
         <NavBtn
           onClick={openUserHandler}
           className={`${styles.User} ${openUser ? styles.isUserOpen : ""}`}
-          btnTitle={<BiUserCircle />}
+          btnTitle={<FaRegUserCircle />}
         />
       </div>
     </>
@@ -41,4 +41,3 @@ function CreateBtnComponent() {
 }
 
 export default CreateBtnComponent;
-
