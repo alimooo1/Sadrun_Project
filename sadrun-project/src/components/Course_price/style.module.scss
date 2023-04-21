@@ -1,0 +1,36 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.course_pice {
+  width: 25rem;
+  box-shadow: 0px 0px 6px rgba(57, 57, 57, 0.160784);
+  border-radius: 17.5px;
+}
+
+.row {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin: auto;
+  @include typography($primary-font-family, 15.5px, #707070);
+  .price {
+    @include typography("Shabnam-Bold", 15.5px, #ff0000);
+  }
+  .discount {
+    @include typography("Shabnam-Bold", 15.5px, #36c54e);
+  }
+}
+
+.time_left{
+  @include typography($primary-font-family, 12.5px, #707070);
+}
+
+.button{
+  width: 100%;
+  @include typography($primary-font-family, 15.5px, #fff);
+  background-color: #36C54E;
+  border: none;
+  outline: none;
+  border-radius: 0 0 15px 15px;
+
+}
