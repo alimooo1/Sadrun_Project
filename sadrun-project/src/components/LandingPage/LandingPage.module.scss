@@ -15,8 +15,9 @@
 }
 
 .header {
+
   width: 90%;
-  padding: 1rem;
+  padding: 0.5rem;
   z-index: 1;
   display: grid;
   grid-template-columns: repeat(1,1fr);
@@ -73,7 +74,7 @@
   }
 
   .girlDesk {
-    @include size(80%, 31rem);
+    @include size(90%, 31rem);
     max-width: 500px;
     order: -1;
     margin: auto
