@@ -7,6 +7,10 @@ import clock from "./image/icons8-clock-24.svg";
 import map from "./image/icons8-address-24.svg";
 
 function ContactUs() {
+  const clickHandler = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className={styles.conteiner}>
       <div className={styles.informatinoBox}>
@@ -56,7 +60,9 @@ function ContactUs() {
               rows="6"
               placeholder="متن پیام"
             ></textarea>
-            <button className={styles.btn}>ارسال پیام</button>
+            <button className={styles.btn} onClick={clickHandler}>
+              ارسال پیام
+            </button>
           </form>
         </div>
       </div>
