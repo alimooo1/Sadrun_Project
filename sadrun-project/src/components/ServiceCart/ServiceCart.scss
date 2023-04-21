@@ -1,0 +1,172 @@
+@import "../../sass/mixins.scss";
+@import "../../sass/global.scss";
+@import "../../sass/variables.scss";
+@import "../../sass/fonts.scss";
+@import "../../sass/media.scss";
+
+.service-container {
+  //max-width: 1040px;
+  padding: 100px 0;
+  margin: 100px auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service_carts {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  @include min-width($breakpoint: medium) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  @include min-width($breakpoint: large) {
+    width: 50%;
+  }
+  @include min-width($breakpoint: x-large) {
+    width: 45%;
+    padding: 2rem;
+  }
+ 
+  gap: 2rem;
+  width: 50%;
+}
+
+.cart {
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 10%;
+   @include min-width($breakpoint: x-large) {
+    padding:2.2rem 1.6rem;
+  }
+
+
+  &:nth-child(1) {
+    background-image: linear-gradient(
+      to right top,
+      #e0b408,
+      #e0b809,
+      #e1bc0b,
+      #e1c00d,
+      #e1c40f
+    );
+  }
+
+  &:nth-child(2) {
+    background-image: linear-gradient(
+      to right top,
+      #cc2817,
+      #d33221,
+      #da3b2a,
+      #e04433,
+      #e74c3c
+    );
+  }
+
+  &:nth-child(3) {
+    background-image: linear-gradient(
+      to right top,
+      #1a5f8f,
+      #216da1,
+      #277bb4,
+      #2e89c7,
+      #3498db
+    );
+  }
+
+  &:nth-child(4) {
+    background-image: linear-gradient(
+      to right top,
+      #641184,
+      #722690,
+      #7f389d,
+      #8d49a9,
+      #9b59b6
+    );
+  }
+
+  img {
+    @include size(4.5rem, 4.5rem);
+  }
+
+  span {
+    @include typography($secondary-font-family, 1.8rem, #fff);
+    font-weight: bold;
+    margin-right: 5px;
+
+    @include min-width($breakpoint: medium) {
+   @include typography($secondary-font-family, 1rem, #fff);
+  }
+  @include min-width($breakpoint: large) {
+    @include typography($secondary-font-family, 1.3rem, #fff);
+  }
+  @include min-width($breakpoint: x-large) {
+    @include typography($secondary-font-family, 1.3rem, #fff);
+     padding: 1rem 0.5rem;
+     //white-space: nowrap
+  }
+  }
+}
+
+.path {
+  @include size(38%, 75%);
+  @include position(absolute, $top: -6rem, $left: 0rem);
+}
+
+.girlFlowerSet {
+  display: none;
+  @include size(14rem, 14.5rem);
+  @include position(absolute, $bottom: -5rem, $left: 0);
+
+  @include min-width($breakpoint: large) {
+    display: block;
+    @include size(16rem, 18rem);
+  }
+}
+
+.boy {
+  display: none;
+  @include position(absolute, $top: -1.3rem, $right: 0);
+  @include size(14rem, 14.5rem);
+  @include min-width($breakpoint: large) {
+    display: block;
+    @include size(16rem, 17rem);
+  }
+}
+
+.servicesCart-content {
+  box-shadow: 0px 0px 5px 0px rgba(57, 57, 57, 0.16);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(57, 57, 57, 0.16);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(57, 57, 57, 0.16);
+  border-radius: 7px;
+  padding: 0.5rem 2rem;
+  text-align: center;
+
+  h2 {
+    @include typography($secondary-font-family, 2rem, $text-accent-color);
+  }
+  p {
+    @include typography($primary-font-family, 1.2rem, rgba(90, 11, 169, 0.6));
+  }
+}
+
+.servicesCartTitle {
+  @include position(absolute, $top: -2rem, $right: 50%);
+  width: 50%;
+  transform: translateX(50%);
+  @include min-width($breakpoint: large) {
+    @include position(absolute, $top: -3rem, $right: 15rem);
+    transform: translateX(0);
+    width: 15%;
+  }
+}
+
+.puepleFlower2 {
+  @include size(2rem, 3rem);
+  transform: rotateY(0deg);
+  @include position(absolute, $top: -2.8rem, $right: 50%);
+}

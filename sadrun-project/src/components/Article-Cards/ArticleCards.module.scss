@@ -1,0 +1,29 @@
+@import "../../sass/mixins.scss";
+@import "../../sass/variables.scss";
+
+.news_item,
+.articles_item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-block: 8px;
+  cursor: pointer;
+  @include typography($primary-font-family,17px,rgba(0, 0, 0, 0.5) ) ;
+
+}
+.image_article {
+  width: 93px;
+  height: 66px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.image_article img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.7s;
+}
+
+.news_item:hover .image_article img {
+  transform: scale(1.2);
+}
