@@ -1,10 +1,20 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import Navigation from "../../components/navigation/Navigation";
+import Footer from "../../components/Footer/Footer";
 
 export default function Layout() {
   return (
-    <main>
-      <Outlet />
-    </main>
+    <>
+      <header>
+        <Navigation />
+      </header>
+      <main>
+        <Outlet />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </>
   );
 }
