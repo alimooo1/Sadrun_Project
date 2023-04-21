@@ -3,9 +3,9 @@ import styles from "./LandingNav.module.scss";
 import avatar from "./navigation-image/avatar.svg";
 import LeftSideNavigation from "../leftSideNavigation/LeftSideNavigation";
 import { SlMenu, SlArrowRight } from "react-icons/sl";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import useOutsideHandler from "../../../hooks/useOutsideHandler";
 import { FaRegUserCircle } from "react-icons/fa";
-
 
 const LandingNav = (props) => {
   // menu display state
@@ -13,10 +13,10 @@ const LandingNav = (props) => {
   const addMenuHandller = () => {
     setOpenMenu(!openMenu);
   };
-
+  const containerRef = useRef(null);
+  useOutsideHandler(containerRef, () => setOpenMenu(false));
   return (
-    <div className={`${styles.navigation}`}>
-      {/* <div class="navigation-logo"><a href="#"> <img src={avatar} alt="avatar" /></a></div> */}
+    <div ref={containerRef} className={`${styles.navigation}`}>
       <nav>
         <div className={styles.navigationLogo}>
           <a href="#">
