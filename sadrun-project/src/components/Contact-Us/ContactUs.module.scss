@@ -69,18 +69,16 @@
     padding-block: 10px;
     padding-right: 12px;
     margin-bottom: 15px;
+    @include typography($primary-font-family, 12px, black);
   }
 
-  input,
+  input::placeholder,
   textarea::placeholder {
     color: rgba(0, 0, 0, 0.6);
-    font-size: 12px;
-    @include typography($primary-font-family, 12px, rgba(0, 0, 0, 0.6));
   }
 
   textarea {
     resize: none;
-    @include typography($primary-font-family, 12px, rgba(0, 0, 0, 0.6));
   }
 }
 
