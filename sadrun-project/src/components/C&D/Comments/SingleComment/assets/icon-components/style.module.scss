@@ -1,0 +1,25 @@
+.share_icon,
+.report_icon {
+  fill: #909090;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+}
+.report_icon:hover {
+  fill: #ffdd00;
+  &:active {
+    fill: #ffbb00;
+  }
+}
+.share_icon:hover {
+  fill: #4040ff;
+  &:active {
+    fill: #2a2ad1;
+  }
+}
