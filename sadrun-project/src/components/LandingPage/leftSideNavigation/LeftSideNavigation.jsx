@@ -42,21 +42,3 @@ function CreateBtnComponent() {
 
 export default CreateBtnComponent;
 
-// import './styles.css';
-
-// function InputWithIcon() {
-//     const [expanded, setExpanded] = useState(false);
-
-//     const handleInputClick = () => {
-//         setExpanded(true);
-//     };
-
-//     return (
-//         <div className={`input-container ${expanded ? 'expanded' : ''}`}>
-//             <input type="text" placeholder="Search..." onClick={handleInputClick} />
-//             {!expanded && <span className="icon"><i className="fa fa-search"></i></span>}
-//         </div>
-//     );
-// }
-
-// export default InputWithIcon;
