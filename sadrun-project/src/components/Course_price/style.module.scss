@@ -1,13 +1,13 @@
 @import "../../sass/mixins";
 @import "../../sass/variables";
 
-.course_pice {
+.course_price {
   width: 22rem;
   box-shadow: 0px 0px 6px rgba(57, 57, 57, 0.160784);
   border-radius: 17.5px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   padding-top: 15px;
 }
 
@@ -38,8 +38,12 @@
     display: flex;
     gap: 15px;
   }
-  .discount_text::after {
-    content: "%2";
+
+  .discount_box {
+    display: flex;
+  }
+
+  .discount_persentage {
     background-color: #36c54e;
     @include typography("Shabnam-Bold", 13px, #fff);
     border-radius: 6px;
@@ -67,8 +71,16 @@
   border: none;
   outline: none;
   border-radius: 0 0 15px 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 10px;
 
   &:hover {
+    @include typography($primary-font-family, 15.5px, #fff);
     background-color: #22ac39;
+  }
+
+  &:active {
+    background-color: #179c2d;
   }
 }

@@ -1,26 +1,30 @@
 import React, { useState, useEffect } from "react";
 import "../../../sass/fonts.scss";
 import styles from "./style.module.scss";
+import getRemainingTime from "./Utils/TimerUtils";
 
 const defaultRemainingTime = {
-  seconds: "00",
-  minutes: "00",
-  hours: "00",
-  days: "00",
-  monthes: "00",
+  seconds: 0,
+  minutes: 0,
+  hours: 0,
+  days: 0,
+  monthes: 0,
 };
 
 const Countdown = ({ timestampMs }) => {
   const [remainingTime, setRemainingTime] = useState(defaultRemainingTime);
 
   useEffect(() => {
+    setRemainingTime(getRemainingTime(timestampMs));
     const intervalId = setInterval(() => {
       updateRemainingTime(timestampMs);
     }, 1000);
     return () => clearInterval(intervalId);
-  }, []);
+  }, [timestampMs]);
 
-  const updateRemainingTime = (timestampMs) => {};
+  const updateRemainingTime = (countdown) => {
+    setRemainingTime(getRemainingTime(countdown));
+  };
 
   return (
     <div className={styles.countdown}>
