@@ -21,9 +21,6 @@ const LandingNav = (props) => {
   const containerRef = useRef(null);
   useOutsideHandler(containerRef, () => setOpenMenu(false));
   return (
-    //  className={`${styles.navigationItems} ${
-    //         openMenu ? styles.isSidenavOpen : ""
-    //       }`}
     <div ref={containerRef} className={`${styles.navigation}`}>
       <nav>
         <div className={styles.navigationLogo}>
