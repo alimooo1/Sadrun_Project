@@ -5,7 +5,12 @@ import LeftSideNavigation from "../leftSideNavigation/LeftSideNavigation";
 import { SlMenu, SlArrowRight } from "react-icons/sl";
 import { useState, useRef } from "react";
 import useOutsideHandler from "../../../hooks/useOutsideHandler";
-import { FaRegUserCircle } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
+import { AiFillHome } from "react-icons/ai";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { ImList2 } from "react-icons/im";
+import { RiCustomerServiceFill } from "react-icons/ri";
+import { MdOutlineModelTraining } from "react-icons/md";
 
 const LandingNav = (props) => {
   // menu display state
@@ -45,24 +50,44 @@ const LandingNav = (props) => {
             openMenu ? styles.isSidenavOpen : ""
           }`}
         >
-          <li>
-            <a href="#">خانه</a>
-          </li>
-          <li>
-            <a href="#">آموزش</a>
-          </li>
-          <li>
-            <a href="#">بلاگ</a>
-          </li>
-          <li>
-            <a href="#">خدمات</a>
-          </li>
-          <li>
-            <a href="#">دوره ها </a>
-          </li>
-          <li>
-            <a href="#">تماس با ما </a>
-          </li>
+          <div className={styles.itemsContainer}>
+            <li>
+              <span className={styles.navigationItemIcon}>
+                <AiFillHome />
+              </span>
+              <a href="#">خانه</a>
+            </li>
+            <li>
+              <span className={styles.navigationItemIcon}>
+                <MdOutlineModelTraining />
+              </span>
+              <a href="#">آموزش</a>
+            </li>
+            <li>
+              <span className={styles.navigationItemIcon}>
+                <FaBars />
+              </span>
+              <a href="#">بلاگ</a>
+            </li>
+            <li>
+              <span className={styles.navigationItemIcon}>
+                <RiCustomerServiceFill />
+              </span>
+              <a href="#">خدمات</a>
+            </li>
+            <li>
+              <span className={styles.navigationItemIcon}>
+                <ImList2 />
+              </span>
+              <a href="#">دوره ها </a>
+            </li>
+            <li>
+              <span className={styles.navigationItemIcon}>
+                <BsFillTelephoneFill />
+              </span>
+              <a href="#">تماس با ما </a>
+            </li>
+          </div>
         </ul>
       </nav>
       <LeftSideNavigation />

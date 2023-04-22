@@ -58,25 +58,49 @@ nav {
     & {
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
       position: absolute;
-     // background-color: lighten($secondary-bg-color, 20%);
        -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.16), 0px 0px 6px 0px rgba(90,11,169,0.16); 
        box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.16), 0px 0px 6px 0px rgba(90,11,169,0.16);
-      background-color:#ffff ;
-      border-radius: 10px;
-      list-style: none;
+      background-color:#fff6ee ;
       right: 0;
-      top: 5.25rem;
-     // height: 100%;
-      //padding: 50px 15px;
-      width: 80%;
-      max-width: 250px;
+      top: 0;
+      height: 70vh;
+      width: 50%;
+      min-width: 250px;
       transition: 0.3s;
       transform: translateX(100%);
       
     }
   }
+.itemsContainer{
+  display: flex;
+  @include max-width(medium) {
+    & {
+      margin: 5.25rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+    //   position: absolute;
+    //  // background-color: lighten($secondary-bg-color, 20%);
+    //    -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.16), 0px 0px 6px 0px rgba(90,11,169,0.16); 
+    //    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.16), 0px 0px 6px 0px rgba(90,11,169,0.16);
+      background-color:#fff;
+     // margin: 2rem 1rem;
 
+       border-radius: 10px;
+       list-style: none;
+    //   right: 0;
+    //   top: 5.25rem;
+    //  // height: 100%;
+    //   //padding: 50px 15px;
+    //   width: 80%;
+    //   max-width: 250px;
+    //   transition: 0.3s;
+    //   transform: translateX(100%);
+      
+    }
+  }
+}
   li {
     padding: 0.7rem;
     list-style: none;
@@ -94,8 +118,11 @@ nav {
     width: 100%;
     text-align: center;
     @include max-width(medium){
+      @include typography($primary-font-family, 1rem, #66008C);
       padding: 0.3rem 0;
       border-radius: 5px;
+      text-align: start;
+      margin-right: 0.8rem;
       &:hover {
       background-color: $secondary-bg-color;
       transition:0.5s all;
@@ -107,7 +134,18 @@ nav {
     }
   }
 }
-
+.navigationItemIcon{
+  display: none;
+  @include max-width(medium){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #B325AB;
+  }
+}
 .isSidenavOpen {
   transform: translateX(0%);
 }
+
