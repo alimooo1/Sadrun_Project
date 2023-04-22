@@ -50,3 +50,17 @@
   filter: invert(69%) sepia(7%) saturate(74%) hue-rotate(335deg) brightness(84%)
     contrast(92%) grayscale(100%);
 }
+
+.dashedLine {
+  width: 25%;
+}
+
+.coloredLine {
+  width: 25%;
+
+  hr {
+    height: 2px;
+    border: 0;
+    background: #c200bc;
+  }
+}

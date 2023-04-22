@@ -3,6 +3,7 @@ import styles from "./BuyLevel.module.scss";
 import finishedPic from "./images/finished.svg";
 import detailPic from "./images/detail.svg";
 import cardPic from "./images/card.svg";
+import dashedLine from "./images/dashedLine.svg"
 
 export default function BuyLevel({ level }) {
 
@@ -35,13 +36,20 @@ export default function BuyLevel({ level }) {
       <div className={styles.insideContainer}>
         <div className={styles.card}>
           <img src={cardPic} alt="" />
-          سبد خرید</div>
+          سبد خرید
+        </div>
+        {!situation[2] && <img src={dashedLine} alt="" className={styles.dashedLine} />}
+        {situation[2] && <div className={styles.coloredLine}><hr /></div>}
         <div className={`${styles.detail} ${!situation[0] && styles.noColor}`}>
           <img src={detailPic} alt="" />
-          جزئیات پرداخت</div>
+          جزئیات پرداخت
+        </div>
+        {!situation[3] && <img src={dashedLine} alt="" className={styles.dashedLine} />}
+        {situation[3] && <div className={styles.coloredLine}><hr /></div>}
         <div className={`${styles.finished} ${!situation[1] && styles.noColor}`}>
           <img src={finishedPic} alt="" />
-          اتمام فرایند خرید</div>
+          اتمام فرایند خرید
+        </div>
       </div>
     </div>)
 }
