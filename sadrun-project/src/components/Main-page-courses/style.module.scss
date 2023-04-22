@@ -7,6 +7,13 @@
   flex-direction: column;
   padding: 32px 0 32px 0;
   width: 100%;
+  @include max-width(medium) {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 17.5px;
+    box-shadow: 0px 0px 10px rgba(87, 87, 87, 0.115);
+  }
 }
 
 .title {
@@ -20,11 +27,25 @@
   justify-content: center;
   text-align: center;
   position: relative;
+  @include max-width(medium) {
+    width: 60%;
+    min-width: 300px;
+  }
+  @include max-width(small) {
+    width: 60%;
+    min-width: 100px;
+  }
   h2 {
     @include typography($secondary-font-family, 28px, $text-accent-color);
+    @include max-width(small) {
+      @include typography($secondary-font-family, 20px, $text-accent-color);
+    }
   }
   span {
     @include typography($primary-font-family, 15.5px, rgba(90, 11, 169, 0.6));
+    @include max-width(small) {
+      @include typography($primary-font-family, 13px, rgba(90, 11, 169, 0.6));
+    }
   }
   img {
     z-index: -1;
@@ -33,6 +54,16 @@
     right: -42px;
     top: 0px;
     width: 65px;
+    @include max-width(medium) {
+      width: 100px;
+      right: -70px;
+      top: -30px;
+    }
+    @include max-width(small) {
+      width: 60px;
+      right: -40px;
+      top: 0px;
+    }
   }
 }
 
@@ -66,7 +97,7 @@
     width: 550px;
   }
   @include max-width(medium) {
-    width: 90%;
+    width: 94%;
   }
 
   .man_graph_1 {
@@ -98,12 +129,21 @@
     }
     h3 {
       @include typography($secondary-font-family, 24.5px, #434343);
+      @include max-width(medium) {
+        @include typography($secondary-font-family, 20px, #434343);
+      }
     }
     p {
       @include typography($primary-font-family, 14px, $primary-txt-color);
+      @include max-width(medium) {
+        @include typography($primary-font-family, 12px, $primary-txt-color);
+      }
     }
     span {
       @include typography($primary-font-family, 17.5px, $primary-txt-color);
+      @include max-width(medium) {
+        @include typography($primary-font-family, 15px, $primary-txt-color);
+      }
     }
   }
 }
@@ -123,13 +163,9 @@
   }
 
   @include max-width(medium) {
-    width: 90%;
+    width: 94%;
   }
 
-  img {
-    display: block;
-    width: 100%;
-  }
   .man_2 {
     position: relative;
     left: -177px;
@@ -142,6 +178,7 @@
   }
   .man_graph_2 {
     z-index: -1;
+    width: 100%;
     height: 280px;
     left: 0px;
     top: 0px;
@@ -158,6 +195,7 @@
     width: 59.5px;
     left: 138px;
     top: 43px;
+
     @include max-width(medium) {
       display: none;
     }
@@ -165,6 +203,33 @@
   }
   .btn {
     margin: auto;
+    @include max-width(medium) {
+      padding: 10px 25px;
+      margin-top: 10px;
+      @include typography($primary-font-family, 14px, $text-accent-color);
+    }
+  }
+}
+
+.courses_pic {
+  overflow: hidden;
+  border-radius: 17.5px;
+  margin: 5px 0;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.0);
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(1.0);
+    }
   }
 }
 
@@ -174,5 +239,17 @@
   padding: 10px 22px;
   cursor: pointer;
   background-color: #ffff;
+  transition: 0.3s;
+  &:hover {
+    background-color: #eee6f6;
+  }
+  &:active {
+    background-color: #dbcfe8;
+  }
+
   @include typography($primary-font-family, 14px, $text-accent-color);
+  @include max-width(medium) {
+    padding: 8px 10px;
+    @include typography($primary-font-family, 12px, $text-accent-color);
+  }
 }
