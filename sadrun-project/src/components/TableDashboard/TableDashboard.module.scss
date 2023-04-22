@@ -1,9 +1,10 @@
 @import "../../sass/variables.scss";
 @import "../../sass/mixins.scss";
 @import "../../sass/fonts.scss";
+@import "../../sass/media.scss";
 
 .Countainer {
-  width: 60%;
+  max-width: 947px;
   padding: 0.8rem;
   margin: 2rem auto;
   box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
@@ -15,18 +16,17 @@
 .tableHeader {
   display: flex;
   width: 100%;
-  padding:0.6rem 1rem;
+  padding: 0.6rem 1rem;
   justify-content: space-between;
-border-radius: 10px;
-  .registeredCourseNumbers{
-         span {
-        @include typography($secondary-font-family, 1.2rem, $primary-txt-color);
-      }
-    
+  border-radius: 10px;
+  .registeredCourseNumbers {
+    span {
+      @include typography($secondary-font-family, 1.2rem, $primary-txt-color);
+    }
   }
-  .inputSearchCountainer{
+  .inputSearchCountainer {
     position: relative;
-.input {
+    .input {
       background-color: #eee6f6;
       width: 100%;
       padding: 0.7rem;
@@ -35,16 +35,20 @@ border-radius: 10px;
       border-radius: 25px;
       outline: none;
       padding-left: 2.2rem;
-       @include typography($primary-font-family, 0.7rem, $text-accent-color);
-      &::placeholder{
+      @include typography($primary-font-family, 0.7rem, $text-accent-color);
+      &::placeholder {
         @include typography($primary-font-family, 0.7rem, $text-accent-color);
       }
-      &::-webkit-input-placeholder{
-                @include typography($primary-font-family, 0.7rem, $text-accent-color,important);
-
+      &::-webkit-input-placeholder {
+        @include typography(
+          $primary-font-family,
+          0.7rem,
+          $text-accent-color,
+          important
+        );
       }
     }
-     .icon {
+    .icon {
       @include position(absolute, $top: 0.7rem, $left: 1rem);
       font-size: 1.7rem;
       color: $text-accent-color;
@@ -52,9 +56,7 @@ border-radius: 10px;
         @include typography($secondary-font-family, 1rem, $primary-txt-color);
       }
     }
-
   }
-
 }
 .tableCountainer {
   background-color: rgba(0, 0, 0, 0.03);
@@ -76,9 +78,11 @@ border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   width: 100%;
-  margin:0.8rem 1rem;
-  padding:0.5rem 0.7rem;
-
+  margin: 0.8rem 1rem;
+  padding: 0.5rem 0.7rem;
+  @include max-width(medium) {
+    grid-template-columns: repeat(5, 1fr);
+  }
   li {
     list-style: none;
     padding: 1rem 1.2rem;
@@ -86,6 +90,12 @@ border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include max-width(medium) {
+      &:nth-child(1),
+       &:nth-child(6){
+        display: none;
+      }
+    }
     span {
       display: flex;
       justify-content: center;
@@ -93,39 +103,9 @@ border-radius: 10px;
     }
   }
 }
-//     .registeredCourseNumbers {
-
-//         //input saerch
-//         .inputSearchCountainer {
-//             position: relative;
-//         }
-
-//         .input {
-//             background-color: #eee6f6;
-//             width: 100%;
-//             padding: 0.5rem;
-//             box-sizing: border-box;
-//             border: none;
-//             border-radius: 25px;
-//             color: black;
-//             outline: none;
-//             padding-left: 2rem;
-//         }
-
-//         .icon {
-//             @include position(absolute, $top: 0.5rem, $left: 0.5rem);
-//             font-size: 1.5rem;
-//             color: $text-accent-color;
-
-//             span {
-//                 @include typography($secondary-font-family, 1rem, $primary-txt-color);
-//             }
-//     }
-// }
-
 
 .notFoundText {
-   background-color:#fff;
+  background-color: #fff;
   @include typography($secondary-font-family, 1.5rem, $primary-txt-color);
   border-radius: 6px;
   display: flex;

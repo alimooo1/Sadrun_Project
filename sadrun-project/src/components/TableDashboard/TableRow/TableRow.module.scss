@@ -17,6 +17,7 @@
   margin: 0.6rem 1rem;
      @include max-width(medium) {
     grid-template-columns: repeat(5, 1fr);
+    
   }
 
   
