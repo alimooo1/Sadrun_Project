@@ -1,5 +1,6 @@
 @import "../../sass/mixins";
 @import "../../sass/variables";
+@import "../../sass/media.scss";
 
 .Courses {
   display: flex;
@@ -38,10 +39,14 @@
 .row {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   justify-content: center;
   gap: 40px;
   padding-top: 35px;
+  @include max-width(large) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .man_graph_1,
 .man_graph_2,
@@ -57,12 +62,21 @@
   flex-direction: column;
   border-radius: 17.5px;
   box-shadow: 0px 0px 3px rgba(87, 87, 87, 0.160784);
+  @include max-width(x-large) {
+    width: 550px;
+  }
+  @include max-width(medium) {
+    width: 90%;
+  }
 
   .man_graph_1 {
     z-index: -1;
     height: 280px;
     right: -57px;
     top: -59px;
+    @include max-width(medium) {
+      display: none;
+    }
   }
 
   .info {
@@ -104,26 +118,49 @@
   box-shadow: 0px 0px 3px rgba(87, 87, 87, 0.160784);
   padding: 21px 24px;
 
-  
+  @include max-width(large) {
+    width: 550px;
+  }
+
+  @include max-width(medium) {
+    width: 90%;
+  }
+
   img {
     display: block;
     width: 100%;
   }
-  .man_2{
+  .man_2 {
     position: relative;
     left: -177px;
     top: 237px;
+    @include max-width(large) {
+      left: -177px;
+      top: 237px;
+      // z-index: 5;
+    }
   }
   .man_graph_2 {
     z-index: -1;
     height: 280px;
     left: 0px;
     top: 0px;
+    @include max-width(large) {
+      z-index: 0;
+      left: -135px;
+      top: -3px;
+    }
+    @include max-width(medium) {
+      display: none;
+    }
   }
   .hand_graph {
-    width: 59.5px ;
+    width: 59.5px;
     left: 138px;
     top: 43px;
+    @include max-width(medium) {
+      display: none;
+    }
     // bottom: 0;
   }
   .btn {
