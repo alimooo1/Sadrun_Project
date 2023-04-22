@@ -11,13 +11,13 @@ export default function BuyLevel({ level }) {
     let [firstProgressOn, secondProgressOn] = [false, false];
 
     switch (level) {
-      case "1":
+      case 1:
         break;
-      case "2":
+      case 2:
         firstProgressOn = true;
         detailOn = true;
         break;
-      case "3":
+      case 3:
         firstProgressOn = true;
         secondProgressOn = true;
         detailOn = true;
@@ -28,7 +28,7 @@ export default function BuyLevel({ level }) {
     return [detailOn, finishedOn, firstProgressOn, secondProgressOn]
   }
 
-  levelHandler(level)
+  const situation = levelHandler(level)
 
   return (
     <div className={styles.outsideContainer}>
@@ -36,10 +36,10 @@ export default function BuyLevel({ level }) {
         <div className={styles.card}>
           <img src={cardPic} alt="" />
           سبد خرید</div>
-        <div className={styles.detail}>
+        <div className={`${styles.detail} ${!situation[0] && styles.noColor}`}>
           <img src={detailPic} alt="" />
           جزئیات پرداخت</div>
-        <div className={styles.finished}>
+        <div className={`${styles.finished} ${!situation[1] && styles.noColor}`}>
           <img src={finishedPic} alt="" />
           اتمام فرایند خرید</div>
       </div>
