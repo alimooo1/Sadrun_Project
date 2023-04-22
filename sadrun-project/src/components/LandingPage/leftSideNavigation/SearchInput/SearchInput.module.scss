@@ -40,6 +40,9 @@
 }
 
 .icon {
+   display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.3rem;
   border-radius: 100%;
   background-color: #eee6f6;
@@ -55,9 +58,9 @@
   display: none;
   
 }
-span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// span {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
   
-}
+// }
