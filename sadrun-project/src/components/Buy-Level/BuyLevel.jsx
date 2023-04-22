@@ -4,18 +4,32 @@ import finishedPic from "./images/finished.svg";
 import detailPic from "./images/detail.svg";
 import cardPic from "./images/card.svg";
 
-export default function BuyLevel() {
+export default function BuyLevel({ level }) {
 
   const levelHandler = level => {
     let [detailOn, finishedOn] = [false, false];
     let [firstProgressOn, secondProgressOn] = [false, false];
 
     switch (level) {
+      case "1":
+        break;
       case "2":
-        firstProgressOn = true
-
+        firstProgressOn = true;
+        detailOn = true;
+        break;
+      case "3":
+        firstProgressOn = true;
+        secondProgressOn = true;
+        detailOn = true;
+        finishedOn = true;
+        break;
     }
+
+    return [detailOn, finishedOn, firstProgressOn, secondProgressOn]
   }
+
+  levelHandler(level)
+
   return (
     <div className={styles.outsideContainer}>
       <div className={styles.insideContainer}>
