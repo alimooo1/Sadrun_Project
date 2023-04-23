@@ -1,37 +1,42 @@
 @import "../../sass/mixins.scss";
 @import "../../sass/global.scss";
 @import "../../sass/variables.scss";
-@import '../../sass/fonts.scss';
+@import "../../sass/fonts.scss";
 
 .navigation {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: #fff;
-    padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 1rem;
 }
+.navigation-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-img {
-    @include size(3rem, 3rem)
+  img {
+    @include size(2.5rem, 2.5rem);
+  }
 }
 
 .navigationItems {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
 
-    li {
-        padding: 1rem;
-        list-style: none;
+  li {
+    padding: 1rem;
+    list-style: none;
+  }
+
+  a {
+    @include typography($primary-font-family, 0.8rem, $text-accent-color);
+    text-decoration: none;
+
+    &:hover {
+      color: lighten($text-accent-color, 20%);
     }
-
-    a {
-        @include typography($primary-font-family, 1rem, $text-accent-color);
-            text-decoration: none;
-        
-            &:hover {
-                color: lighten($text-accent-color, 20%);
-            }
-        }
+  }
 }

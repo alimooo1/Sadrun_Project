@@ -3,14 +3,14 @@
 
 .map_footer {
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  // position: absolute;
+  // bottom: 0;
 }
 .map {
   box-sizing: border-box;
   width: 100%;
   // z-index: -1;
-  height: 45vh;
+  height: 340px;
   position: relative;
   top: 40px;
   // background-color: red;
@@ -46,7 +46,7 @@
   z-index: 1;
   width: 100%;
   position: absolute;
-  top: -10%;
+  top: -12%;
   overflow: hidden;
   img {
     width: 113%;

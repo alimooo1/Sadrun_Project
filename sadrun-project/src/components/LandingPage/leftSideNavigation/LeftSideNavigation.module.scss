@@ -1,0 +1,70 @@
+@import "../../../sass/mixins.scss";
+// @import "../../../sass/global.scss";
+@import "../../../sass/variables.scss";
+@import "../../../sass/fonts.scss";
+@import "../../../sass/media.scss";
+.conteiner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "vazirmatn-Regular";
+  position: relative;
+}
+
+.button {
+  @include button-text(
+    #eee6f6,
+    $text-accent-color,
+    0.5rem 1.2rem,
+    0.8rem,
+    25px,
+    #e6e3e9,
+    #e6e3e9
+  );
+  border: none;
+  font-family: $primary-font-family;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.shopping_cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  font-size: 1rem;
+}
+.registerContainer {
+  display: flex;
+  gap: 7px;
+  @include max-width(medium) {
+    position: absolute;
+    top: 3rem;
+    left: -5px;
+    background-color: #fff;
+    border-radius: 15px;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 5px;
+    transition: 0.3s;
+    transform: scale(0, 0);
+    transform-origin: 0 0;
+    button {
+      width: 100%;
+    }
+  }
+}
+.isRegisterContainerOpen {
+  transform: scale(1, 1);
+}
+
+.User {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  @include min-width(medium) {
+    display: none;
+  }
+}
