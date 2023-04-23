@@ -1,0 +1,71 @@
+@import "../../sass/mixins.scss";
+@import "../../sass/variables.scss";
+.container{
+    width:25rem ;
+    height:250px ;
+    border-radius: 20px;
+    direction: rtl;
+    margin-left: 1rem;
+    background: #FFFFFF;
+box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
+}
+
+.padding{
+    padding: 0 24px 0 24px;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:  rgba(0,0,0,0.7 );
+    padding-bottom: 11px
+
+}
+.title{
+ h2{
+    @include typography($primary-font-family, 22px, rgba(0, 0, 0, 0.701961));
+}
+}
+.icon_teacher{
+    width: 25px;
+    height: 21px;
+}
+.teacher_information{
+    background: rgba(0, 0, 0, 0.0313726);
+    border-radius: 20px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.160784);
+    margin-bottom: 20px
+}
+.teacher_information {
+    img {
+    margin-left: 20px;
+}
+}
+.teacher_information{
+ span{
+    @include typography($primary-font-family, 17px, rgba(0,0,0,0.5 ));
+}
+}
+
+.relation .relation_item{
+line-height:30px;
+}
+.relation{
+    color: rgba(0,0,0,0.5 );
+}
+.relation{
+     p{
+        @include typography($primary-font-family, 16px, rgba(0,0,0,0.5 ));
+        font-weight: bold;
+        padding-bottom: 10px;
+}}
+.relation_item{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    @include typography($primary-font-family, 14px, rgba(0,0,0,0.5 ));
+    
+}

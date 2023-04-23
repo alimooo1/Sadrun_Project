@@ -1,0 +1,111 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.main_card {
+  width: 755px;
+  background-color: #fff;
+  box-shadow: 0px 0px 3px rgba($color: #575757, $alpha: 0.16);
+  border-radius: 20px;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  .big_pic {
+    width: 100%;
+    padding: 25px 25px 0 25px;
+    margin: auto;
+    display: block;
+  }
+}
+
+.title {
+  @include typography($secondary-font-family, 27px, black);
+  text-align: center;
+}
+
+/*---- Style the tab ---- */
+.tab {
+  padding: 10px;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the tab Links */
+.tablinks {
+  display: flex;
+  gap: 28px;
+  padding: 3px 35px 0 0;
+  margin-bottom: -5px;
+
+  div {
+    @include typography($secondary-font-family, 17.5px, #434343);
+    background-color: inherit;
+    cursor: pointer;
+    padding: 10px 24px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 15px 15px 0px 0px;
+  }
+
+  div:hover {
+    background-color: #f6f6f6;
+  }
+
+  div:active {
+    background-color: #f0f0f0;
+  }
+
+  .active_link {
+    background-color: #f6f6f6;
+  }
+}
+
+.comments_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  .comment_count {
+    display: inline-block;
+    @include typography(Shabnam-Bold, 12px, white);
+    padding: 2px 2px 0 2px;
+    background-color: red;
+    border-radius: 50%;
+  }
+}
+
+/* Style the tab content */
+.tabcontent {
+  width: 98%;
+  margin: auto;
+  padding: 25px 30px;
+  border-radius: 15px;
+  background-color: #f6f6f6;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  
+}
+div.active_content {
+  display: flex;
+}
+.description_content {
+  display: none;
+  text-align: justify;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 60px;
+  p {
+    @include typography($primary-font-family, 16px, #707070);
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.comment_content{
+  display: none;
+}
