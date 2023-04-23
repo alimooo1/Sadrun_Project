@@ -1,11 +1,11 @@
 //Common screen sizes
 //Mobile: 360 x 640
 //Mobile: 375 x 667
-//Mobile: 360 x 720 
+//Mobile: 360 x 720
 //iPhone X: 375 x 812
 //Pixel 2: 411 x 731
 //Tablet: 768 x 1024
-//Laptop: 1366 x 768 
+//Laptop: 1366 x 768
 //High-res laptop or desktop: 1920 x 1080
 
 $breakpoint-xsmall: 320px;
@@ -15,7 +15,7 @@ $breakpoint-large: 1024px;
 $breakpoint-extra-large: 1300px;
 
 @mixin min-width($breakpoint) {
-  @if ($breakpoint ==xsmall) {
+  @if ($breakpoint ==x-small) {
     @media (min-width: $breakpoint-xsmall) {
       @content;
     }
@@ -31,8 +31,34 @@ $breakpoint-extra-large: 1300px;
     @media (min-width: $breakpoint-large) {
       @content;
     }
-  } @else if ($breakpoint ==xlarge) {
+  } @else if ($breakpoint ==x-large) {
     @media (min-width: $breakpoint-extra-large) {
+      @content;
+    }
+  } @else {
+    @error "UNKNOWN MEDIA BREAKPOINT #{$breakpoint}";
+  }
+}
+
+@mixin max-width($breakpoint) {
+  @if ($breakpoint ==x-small) {
+    @media (max-width: $breakpoint-xsmall) {
+      @content;
+    }
+  } @else if ($breakpoint ==small) {
+    @media (max-width: $breakpoint-small) {
+      @content;
+    }
+  } @else if ($breakpoint ==medium) {
+    @media (max-width: $breakpoint-medium) {
+      @content;
+    }
+  } @else if ($breakpoint ==large) {
+    @media (max-width: $breakpoint-large) {
+      @content;
+    }
+  } @else if ($breakpoint ==x-large) {
+    @media (max-width: $breakpoint-extra-large) {
       @content;
     }
   } @else {
