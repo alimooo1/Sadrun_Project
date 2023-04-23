@@ -1,0 +1,86 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.course_price {
+  width: 22rem;
+  box-shadow: 0px 0px 6px rgba(57, 57, 57, 0.160784);
+  border-radius: 17.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 15px;
+}
+
+.row {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin: auto;
+  @include typography($primary-font-family, 15.5px, #707070);
+  .price {
+    @include typography("Shabnam-Bold", 17.5px, #ff0000);
+
+    &:after {
+      content: "\00A0 تومان";
+      @include typography($primary-font-family, 10px, #ff0000);
+    }
+  }
+  .discount {
+    @include typography("Shabnam-Bold", 17.5px, #36c54e);
+
+    &:after {
+      content: "\00A0 تومان";
+      @include typography($primary-font-family, 10px, #36c54e);
+    }
+  }
+
+  .title {
+    display: flex;
+    gap: 15px;
+  }
+
+  .discount_box {
+    display: flex;
+  }
+
+  .discount_persentage {
+    background-color: #36c54e;
+    @include typography("Shabnam-Bold", 13px, #fff);
+    border-radius: 6px;
+    padding: 3px 5px 0px 5px;
+    margin-right: 5px;
+  }
+
+  .price_img {
+    height: 20px;
+  }
+  .discount_img {
+    height: 22px;
+    padding-right: 2px;
+  }
+}
+
+.time_left {
+  @include typography($primary-font-family, 12.5px, #707070);
+}
+
+.button {
+  width: 100%;
+  @include typography($primary-font-family, 15.5px, #fff);
+  background-color: #36c54e;
+  border: none;
+  outline: none;
+  border-radius: 0 0 15px 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 10px;
+
+  &:hover {
+    @include typography($primary-font-family, 15.5px, #fff);
+    background-color: #22ac39;
+  }
+
+  &:active {
+    background-color: #179c2d;
+  }
+}
