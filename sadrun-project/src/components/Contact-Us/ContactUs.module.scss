@@ -1,9 +1,16 @@
 @import "../../sass/mixins.scss";
 @import "../../sass/variables.scss";
+@import "../../sass/media.scss";
 .conteiner {
   display: flex;
+  flex-direction: row;
   width: 100%;
   // margin-top: 100px;
+  @include max-width(small){
+    flex-direction: column;
+    align-items: center;
+    gap:50px ;
+  }
 }
 .informatinoBox {
   width: 30%;
