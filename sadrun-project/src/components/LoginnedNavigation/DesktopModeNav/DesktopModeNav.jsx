@@ -48,9 +48,10 @@ const DesktopModeNav = () => {
 
           {openMenu && (
             <div className={styles.smallNavSideMenu}>
-              {showSmallNav && (
+              <SmallNavSideMenu />
+              {/* {showSmallNav && (
                 <SmallNavSideMenu onClick={handleHideSmallNav} />
-              )}
+              )} */}
             </div>
           )}
         </div>
