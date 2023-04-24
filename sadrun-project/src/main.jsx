@@ -7,6 +7,7 @@ import LandingLayout from "./layouts/Landing-Layout/LandingLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout404 from "./layouts/404-Layout/Layout404";
 import ContactUs from "./components/Contact-Us/ContactUs";
+import SingleBlogLayout from "./layouts/SingleBlog-Layout/SingleBlogLayout";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactUs />,
+      },
+      {
+        path: "/single-blog",
+        element: <SingleBlogLayout />,
       },
     ],
   },
