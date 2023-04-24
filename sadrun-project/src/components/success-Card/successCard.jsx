@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./SuccessCard.module.scss";
 import Ticks from "./images/Path 929.svg";
+import { Link } from "react-router-dom";
 
 function SuccessCard() {
   return (
@@ -15,7 +16,9 @@ function SuccessCard() {
         <p className={styles.text}>
           اکنون میتوانید دوره خود را در داشبورد خود مشاهده کنید
         </p>
-        <button className={styles.btn}>رفتن به داشبورد</button>
+        <Link to={"/landing"}>
+          <button className={styles.btn}>رفتن به داشبورد</button>
+        </Link>
       </div>
     </div>
   );
