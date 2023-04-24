@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout404 from "./layouts/404-Layout/Layout404";
 import ContactUs from "./components/Contact-Us/ContactUs";
 import SingleBlogLayout from "./layouts/SingleBlog-Layout/SingleBlogLayout";
+import SuccessLayout from "./layouts/Success-Layout/SuccessLayout";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/single-blog",
         element: <SingleBlogLayout />,
+      },
+      {
+        path: "/success",
+        element: <SuccessLayout />,
       },
     ],
   },
