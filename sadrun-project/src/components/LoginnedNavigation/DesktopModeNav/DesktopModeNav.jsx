@@ -22,9 +22,9 @@ const DesktopModeNav = () => {
   };
   const containerRef = useRef(null);
   useOutsideHandler(containerRef, () => setOpenMenu(false));
-  const [closeMenu, setCloseMenu] = useState(true);
-  const closeMenuHandler = () => {
-    setCloseMenu(false);
+  const [showSmallNav, setShowSmallNav] = useState(true);
+  const handleHideSmallNav = () => {
+    setShowSmallNav(false);
   };
   return (
     <div ref={containerRef} className={`${styles.navigation}`}>
@@ -48,7 +48,9 @@ const DesktopModeNav = () => {
 
           {openMenu && (
             <div className={styles.smallNavSideMenu}>
-              <SmallNavSideMenu onClick={closeMenuHandler} />{" "}
+              {showSmallNav && (
+                <SmallNavSideMenu onClick={handleHideSmallNav} />
+              )}
             </div>
           )}
         </div>

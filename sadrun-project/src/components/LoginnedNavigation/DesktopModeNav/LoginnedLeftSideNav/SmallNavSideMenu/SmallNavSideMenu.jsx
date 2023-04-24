@@ -20,6 +20,7 @@ const SmallNavSideMenu = (props) => {
   const handleInputClick = () => {
     console.log("mm");
   };
+  
 
   return (
     <div className={styles.navSideContainer}>
