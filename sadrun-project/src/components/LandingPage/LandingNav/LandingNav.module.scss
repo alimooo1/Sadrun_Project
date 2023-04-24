@@ -98,6 +98,25 @@ nav {
     @include max-width(medium) {
       display: flex;
       margin: 0.3rem;
+      border-radius: 10px;
+       &:hover {
+         transition: 0.5s all;
+        
+      a,
+      .navigationItemIcon {
+        color: #fff;
+      }
+      background-image: linear-gradient(
+        to right top,
+        #66008c,
+        #750090,
+        #830093,
+        #910096,
+        #9f0099
+      );
+
+      //transition: 0.5s all;
+    }
       &:hover {
         background-color: $secondary-bg-color;
         transition: 0.5s all;
