@@ -1,0 +1,76 @@
+@import "../../sass/variables";
+
+@mixin font($size, $family){
+    font-size: $size;
+    font-family: $family;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    
+    .card{
+
+        width: 27rem;
+        height: 15.813rem;
+        border-radius: 20px;
+        background-color: #FFFFFF;
+        box-shadow: 0px 0px 6px 0px rgba(87,87,87,0.16);
+        -webkit-box-shadow: 0px 0px 6px 0px rgba(87,87,87,0.16);
+        -moz-box-shadow: 0px 0px 6px 0px rgba(87,87,87,0.16);
+
+        .titer{
+            margin-top: 10px;
+            margin-right: 24px;
+            margin-bottom: 16.2;
+            font-size: 25px;
+            font-family: $secondary-font-family;
+        }
+
+        .row-r{
+            font-size: 18px;
+            font-family: $primary-font-family;
+            display: flex;
+            justify-content: space-between;
+            color: #707070;
+
+            img{
+                margin-left: 18px;
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+
+        .course-name{
+            @include font(18px, "vazirmatn-SemoBold");
+            color: #707070;
+        }
+
+        .information{
+            @include font(22px, "Shabnam-FD-Regular");
+        }
+    }
+}
+
+@for $item from 1 through 4{
+
+    @if ($item%2==0){
+        .row-#{$item}{
+            width: 27rem;
+            height: 3.188rem;
+            padding:  9px 20.4px 15px 24px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }@else{
+        .row-#{$item}{
+            width: 27rem;
+            height: 3.188rem;
+            padding:  9px 20.4px 15px 24px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #0000000e;
+        }
+    }
+
+}

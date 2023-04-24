@@ -1,10 +1,9 @@
 import React from "react";
-import QA from "./components/Q&A/QA";
-import BlogComponet from "./components/blog-Component/BlogComponet"
+
 function App() {
-  return <div className="App">
-    <BlogComponet/>
-  </div>;
+  return (
+    <div className="App"></div>
+  );
 }
 
 export default App;
