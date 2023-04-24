@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "../success-Card/successCard.module.scss";
-import Ticks from "../success-Card/images/Path 929.svg";
+import styles from "./SuccessCard.module.scss";
+import Ticks from "./images/Path 929.svg";
 
 function SuccessCard() {
   return (
