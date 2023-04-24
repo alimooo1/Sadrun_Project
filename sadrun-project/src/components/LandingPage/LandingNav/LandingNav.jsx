@@ -23,12 +23,15 @@ const LandingNav = (props) => {
   return (
     <div ref={containerRef} className={`${styles.navigation}`}>
       <nav>
-        <div className={styles.navigationLogo}>
-          <a href="#">
-            {" "}
-            <img src={avatar} alt="avatar" />
-          </a>
-        </div>
+        {!openMenu && (
+          <div className={styles.navigationLogo}>
+            <a href="#">
+              {" "}
+              <img src={avatar} alt="avatar" />
+            </a>
+          </div>
+        )}
+
         <div className={styles.navigationIcon}>
           {!openMenu && (
             <SlMenu

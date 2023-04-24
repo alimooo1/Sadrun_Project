@@ -70,9 +70,9 @@ nav {
         0px 0px 6px 0px rgba(90, 11, 169, 0.16);
       background-color: #fff6ee;
       right: 0;
-      // right: -4rem;
+      border-radius: 15px 0 15px 15px;
       top: 0;
-      height: 70vh;
+      height: 75vh;
       width: 50%;
       min-width: 250px;
       transition: 0.3s;
@@ -83,7 +83,7 @@ nav {
     display: flex;
     @include max-width(medium) {
       & {
-        margin: 5.25rem 2.5rem;
+        margin: 5.25rem 2rem;
         display: flex;
         flex-direction: column;
         background-color: #fff;
@@ -97,12 +97,24 @@ nav {
     list-style: none;
     @include max-width(medium) {
       display: flex;
+    border-radius: 15px;
       margin: 0.3rem;
-      &:hover {
-        background-color: $secondary-bg-color;
-        transition: 0.5s all;
-        border-radius: 10px;
+     &:hover {
+      a,
+      .navigationItemIcon {
+        color: #fff;
       }
+      background-image: linear-gradient(
+        to right top,
+        #66008c,
+        #750090,
+        #830093,
+        #910096,
+        #9f0099
+      );
+
+      //transition: 0.5s all;
+    }
     }
   }
 
