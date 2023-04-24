@@ -1,5 +1,6 @@
 @import "../../sass/variables.scss";
 @import "../../sass/mixins.scss";
+@import "../../sass/media.scss";
 
 .QA {
   width: 100%;
@@ -22,11 +23,24 @@
 
   .mainQA {
     width: 100%;
+    min-height: 500px;
     display: flex;
     justify-content: flex-end;
   }
 
   .QAPic {
-    width: 850px;
+    // width: 850px;
+    width: 52.35%;
+  }
+
+  @include max-width("medium") {
+    .mainQA {
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .QAPic {
+      display: none;
+    }
   }
 }
