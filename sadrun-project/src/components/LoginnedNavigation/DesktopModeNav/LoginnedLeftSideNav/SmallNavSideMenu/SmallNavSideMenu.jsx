@@ -12,7 +12,7 @@ import { BiErrorCircle } from "react-icons/bi";
 import { MdOutlineModelTraining } from "react-icons/md";
 import { IoMdExit } from "react-icons/io";
 
-const SmallNavSideMenu = () => {
+const SmallNavSideMenu = (props) => {
   const [showIcon, setShowIcon] = useState(true);
   const changeHandler = () => {
     setShowIcon(false);
@@ -20,12 +20,16 @@ const SmallNavSideMenu = () => {
   const handleInputClick = () => {
     console.log("mm");
   };
+
   return (
-    <div className={`${styles.navSideContainer}`}>
+    <div className={styles.navSideContainer}>
       <div className={styles.navSideHeader}>
         <img className={styles.navigationLogo} src={avatar} alt="logo" />
         <span className={styles.navigationCloseIcon}>
-          <AiFillCloseSquare className={styles.navigationIcon} />
+          <AiFillCloseSquare
+            onClick={props.onClick}
+            className={styles.navigationIcon}
+          />
         </span>
       </div>
       <div className={styles.prifileContainer}>
@@ -54,13 +58,6 @@ const SmallNavSideMenu = () => {
             پیشخوان
           </a>
         </li>
-
-        {/* <li>
-            <span className={styles.navigationItemIcon}>
-              <MdOutlineModelTraining />
-            </span>
-            <a href="#">آموزش</a>
-          </li> */}
         <li>
           <span className={styles.navigationItemIcon}>
             <FaUserEdit />
@@ -74,7 +71,7 @@ const SmallNavSideMenu = () => {
             <ImList2 />
           </span>
           <a className={styles.navigationItemLink} href="#">
-            دوره های من <ImList2 />
+            دوره های من
           </a>
         </li>
         <li>

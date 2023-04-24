@@ -55,7 +55,9 @@ const LandingNav = (props) => {
               <span className={styles.navigationItemIcon}>
                 <AiFillHome />
               </span>
-              <a href="#">خانه</a>
+              <a className={styles.navigationItemLink} href="#">
+                خانه
+              </a>
             </li>
             <li>
               <span className={styles.navigationItemIcon}>

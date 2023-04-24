@@ -12,6 +12,7 @@ import { ImList2 } from "react-icons/im";
 import { RiCustomerServiceFill } from "react-icons/ri";
 import { MdOutlineModelTraining } from "react-icons/md";
 import LoginnedLeftSideNav from "./LoginnedLeftSideNav/LoginnedLeftSideNav";
+import SmallNavSideMenu from "./LoginnedLeftSideNav/SmallNavSideMenu/SmallNavSideMenu";
 
 const DesktopModeNav = () => {
   // menu display state
@@ -21,15 +22,22 @@ const DesktopModeNav = () => {
   };
   const containerRef = useRef(null);
   useOutsideHandler(containerRef, () => setOpenMenu(false));
+  const [closeMenu, setCloseMenu] = useState(true);
+  const closeMenuHandler = () => {
+    setCloseMenu(false);
+  };
   return (
     <div ref={containerRef} className={`${styles.navigation}`}>
       <nav>
-        <div className={styles.navigationLogo}>
-          <a href="#">
-            {" "}
-            <img src={avatar} alt="avatar" />
-          </a>
-        </div>
+        {!openMenu && (
+          <div className={styles.navigationLogo}>
+            <a href="#">
+              {" "}
+              <img src={avatar} alt="avatar" />
+            </a>
+          </div>
+        )}
+
         <div className={styles.navigationIcon}>
           {!openMenu && (
             <SlMenu
@@ -37,12 +45,11 @@ const DesktopModeNav = () => {
               className={styles.navigationIcon}
             />
           )}
+
           {openMenu && (
-            <SlArrowRight
-              onClick={addMenuHandller}
-              fill="#5a0ba9"
-              className={styles.navigationIcon}
-            />
+            <div className={styles.smallNavSideMenu}>
+              <SmallNavSideMenu onClick={closeMenuHandler} />{" "}
+            </div>
           )}
         </div>
 
@@ -92,7 +99,6 @@ const DesktopModeNav = () => {
         </ul>
       </nav>
       <LoginnedLeftSideNav />
-      {/* <LeftSideNavigation /> */}
     </div>
   );
 };
