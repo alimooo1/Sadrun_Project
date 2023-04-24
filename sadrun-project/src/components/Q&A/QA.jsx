@@ -9,8 +9,8 @@ export default function QA() {
     <section className={styles.QA}>
       <div className={styles.sectionName}>پیشنهاد و انتقادات</div>
       <div className={styles.mainQA}>
-        <img className={styles.QAPic} src={sectionPicture} />
         <FormQA />
+        <img className={styles.QAPic} src={sectionPicture} />
       </div>
     </section>
   );
