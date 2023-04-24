@@ -59,6 +59,7 @@
   padding: 0 1rem;
 }
 .myPrifileName {
+  @include typography($primary-font-family, 1rem, $primary-txt-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
