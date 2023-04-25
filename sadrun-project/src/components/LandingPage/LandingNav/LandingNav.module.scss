@@ -47,6 +47,9 @@ nav {
   cursor: pointer;
   @include size(2rem, 2rem);
   @include typography($primary-font-family, 2rem, #fff);
+  @include min-width ($breakpoint:medium){
+    display: none;
+  }
 }
 
 .navigationItems {
