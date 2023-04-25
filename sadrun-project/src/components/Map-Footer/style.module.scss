@@ -1,5 +1,6 @@
 @import "../../sass/mixins";
 @import "../../sass/variables";
+@import "../../sass/media.scss";
 
 .map_footer {
   width: 100%;
@@ -14,6 +15,12 @@
   position: relative;
   top: 40px;
   // background-color: red;
+  @include max-width(x-large) {
+    height: 300px;
+  }
+  @include max-width(large) {
+    height: 250px;
+  }
 }
 .map_popup {
   @include typography($primary-font-family, 0.8rem, rgba(0, 0, 0, 0.8));
@@ -71,11 +78,26 @@
 
 .info {
   display: flex;
-  @include typography(vazirmatn-Bold, 0.9rem, rgba(0, 0, 0, 0.8));
+  border: solid red;
+  @include typography(vazirmatn-Bold, 14.5px, rgba(0, 0, 0, 0.8));
+  @include max-width(x-large) {
+    @include typography(vazirmatn-Bold, 13px, rgba(0, 0, 0, 0.8));
+  }
+  @include max-width(large) {
+    @include typography(vazirmatn-Bold, 12px, rgba(0, 0, 0, 0.8));
+
+  }
 
   .about_us {
     display: flex;
     flex-direction: column;
+    border: solid blue;
+    gap: 3px;
+
+    // span{
+    //   border: solid;
+    //   text-align: right ;
+    // }
   }
   .contact_us {
     display: flex;
@@ -86,7 +108,13 @@
   }
   .phone_num {
     direction: ltr;
-    @include typography(Shabnam-Bold, 1.1rem, rgba(0, 0, 0, 0.8));
+    @include typography(Shabnam-Bold, 17.5px, rgba(0, 0, 0, 0.8));
+    @include max-width(x-large) {
+      @include typography(Shabnam-Bold, 15.5px, rgba(0, 0, 0, 0.8));
+    }
+    @include max-width(large) {
+      @include typography(Shabnam-Bold, 14.5px, rgba(0, 0, 0, 0.8));
+    }
   }
 }
 
@@ -106,24 +134,40 @@
     img {
       display: block;
       height: 30px;
+      @include max-width(large) {
+        height: 27px;
+      }
     }
   }
   .follow_us_text {
-    @include typography(vazirmatn-bold, 1rem, $text-accent-color);
+    @include typography(vazirmatn-bold, 16px, $text-accent-color);
     text-align: center;
+    @include max-width(large) {
+      @include typography(vazirmatn-bold, 13px, $text-accent-color);
+    }
   }
 }
 
 .enamad_pic {
-  // background-color: blue;
   display: flex;
   justify-content: flex-end;
-  // border: solid;
-  // background-color: #666;
+
+  @include max-width(x-large) {
+    align-items: center;
+  }
+
   img {
     display: inline-block;
     height: 140px;
     position: relative;
     left: -20px;
+    align-items: center;
+    @include max-width(x-large) {
+      height: 130px;
+      left: -30px;
+    }
+    @include max-width(large) {
+      height: 110px;
+    }
   }
 }
