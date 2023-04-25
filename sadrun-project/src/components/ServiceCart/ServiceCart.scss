@@ -18,7 +18,7 @@
 .service_carts {
   display: grid;
   gap: 2rem;
-  @include max-width(small){
+  @include max-width($breakpoint:small){
     width: 80%;
   }
   
@@ -42,12 +42,17 @@
 
 .cart {
   border-radius: 1rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-block: 10%;
+  display: grid;
+  grid-template-columns:1fr 70% ;
+  grid-template-rows: repeat(1,fr);
+  text-align: center;
+  padding:10% 1rem;
+   @include min-width($breakpoint: medium) {
+    grid-template-columns:1fr 75% ;
+    padding:8% 1rem;
+  }
    @include min-width($breakpoint: x-large) {
-    padding:2.2rem 1.6rem;
+    padding:2.2rem 1.4rem;
   }
   
 
@@ -94,21 +99,33 @@
       #9b59b6
     );
   }
-
+.cartImg{
+  @include size(4.5rem, 4.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
   img {
-    @include size(4.5rem, 4.5rem);
+    width: 100%;
   }
+  @include max-width($breakpoint: medium){
+    @include size(4rem, 4rem);
+  };
+
+}
+  
 
   span {
-    @include typography($secondary-font-family, 1.5rem, #fff);
+    @include typography($secondary-font-family, 1.4rem, #fff);
     font-weight: bold;
     margin-right: 5px;
 
     @include min-width($breakpoint: medium) {
-   @include typography($secondary-font-family, 1rem, #fff);
+   @include typography($secondary-font-family, 0.8rem, #fff);
   }
   @include min-width($breakpoint: large) {
-    @include typography($secondary-font-family, 1.3rem, #fff);
+    @include typography($secondary-font-family, 1.1rem, #fff);
   }
   @include min-width($breakpoint: x-large) {
     @include typography($secondary-font-family, 1.3rem, #fff);
@@ -121,6 +138,9 @@
 .path {
   @include size(38%, 75%);
   @include position(absolute, $top: -6rem, $left: 0rem);
+  @include max-width($breakpoint:small){
+    z-index: -88;
+  }
 }
 
 .girlFlowerSet {
@@ -150,6 +170,10 @@
   -moz-box-shadow: 0px 0px 5px 0px rgba(57, 57, 57, 0.16);
   border-radius: 7px;
   padding: 0.5rem 2rem;
+  fill: #fff;
+  // @include max-width($breakpoint:small){
+  //   z-index: 2;
+  // }
   text-align: center;
 
   h2 {

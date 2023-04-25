@@ -22,11 +22,11 @@ const serviceList = [
   },
   {
     title: "فرصت های شغلی",
-    img: exam,
+    img: opportunities,
   },
   {
     title: "مشاوره",
-    img: exam,
+    img: counseling,
   },
 ];
 
@@ -68,7 +68,9 @@ export default ServiceCard;
 const ServiceItem = (props) => {
   return (
     <div className="cart">
-      <img src={props.img} alt={props.title} />
+      <span className="cartImg">
+        <img src={props.img} alt={props.title} />
+      </span>
       <span>{props.title}</span>
     </div>
   );
