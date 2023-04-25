@@ -25,6 +25,7 @@
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
   @include min-width($breakpoint: medium) {
+    width: 55%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
@@ -42,13 +43,13 @@
 .cart {
   border-radius: 1rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding-block: 10%;
    @include min-width($breakpoint: x-large) {
     padding:2.2rem 1.6rem;
   }
-
+  
 
   &:nth-child(1) {
     background-image: linear-gradient(
