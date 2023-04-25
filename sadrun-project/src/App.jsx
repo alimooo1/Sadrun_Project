@@ -1,11 +1,7 @@
 import React from "react";
-import ServiceCart from "./components/ServiceCart/ServiceCard";
+
 function App() {
-  return (
-    <div className="App">
-      <ServiceCart />
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;
