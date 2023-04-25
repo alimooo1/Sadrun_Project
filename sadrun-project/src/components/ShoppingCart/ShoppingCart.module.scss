@@ -1,0 +1,20 @@
+.border{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 860px;
+    height: 460px;
+    box-shadow: 2px 2px 7.5px rgba(1, 1, 1, 0.2);
+    border-radius: 20px;
+}
+.conteiner{
+    background-color: rgba(15, 15, 15, 0.056);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width:800px;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}

@@ -1,0 +1,46 @@
+@import "../../../sass/fonts.scss";
+@import "../../../sass/mixins.scss";
+@import "../../../sass/variables.scss";
+.conteiner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 750px;
+    height: 72px;
+    border-radius: 20px;
+    background: #fff;
+    @include typography($primary-font-family, 13px, #434343);
+}
+.img_cart{
+    width: 80px;
+    // height: ;
+}
+.boxone{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    padding-right: 30px;
+}
+.boxtwo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    padding-left: 30px;
+}
+.boxthree{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    
+}
+.trash{
+    color: red;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    
+}
