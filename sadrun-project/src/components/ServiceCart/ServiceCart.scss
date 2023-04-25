@@ -12,10 +12,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .service_carts {
   display: grid;
+  gap: 2rem;
+  @include max-width(small){
+    width: 80%;
+  }
+  
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
   @include min-width($breakpoint: medium) {
@@ -30,8 +36,7 @@
     padding: 2rem;
   }
  
-  gap: 2rem;
-  width: 50%;
+  
 }
 
 .cart {
@@ -94,7 +99,7 @@
   }
 
   span {
-    @include typography($secondary-font-family, 1.8rem, #fff);
+    @include typography($secondary-font-family, 1.5rem, #fff);
     font-weight: bold;
     margin-right: 5px;
 
@@ -107,7 +112,7 @@
   @include min-width($breakpoint: x-large) {
     @include typography($secondary-font-family, 1.3rem, #fff);
      padding: 1rem 0.5rem;
-     //white-space: nowrap
+     white-space: nowrap
   }
   }
 }
@@ -155,8 +160,13 @@
 }
 
 .servicesCartTitle {
+  @include max-width(small){
+    width: 80%;
+    
+  }
+ 
   @include position(absolute, $top: -2rem, $right: 50%);
-  width: 50%;
+
   transform: translateX(50%);
   @include min-width($breakpoint: large) {
     @include position(absolute, $top: -3rem, $right: 15rem);
