@@ -1,0 +1,65 @@
+@import "../../sass/fonts.scss";
+@import "../../sass/variables.scss";
+
+@mixin text($size, $family) {
+  font-size: $size;
+  font-family: $family;
+}
+
+.container {
+  display: flex;
+
+  .dashboard {
+    width: 18.336rem;
+    height: 43.8rem;
+    // height: 35rem;
+    margin-right: 69px;
+    margin-top: 10px;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
+
+    .top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 12px;
+      margin-bottom: 55px;
+
+      .username {
+        margin-right: 25px;
+        @include text(18px, $primary-font-number-family);
+        color: #565656;
+      }
+    }
+
+    .row {
+      width: 100%;
+      display: flex;
+      padding-right: 43px;
+      //   margin-bottom: 40px;
+      padding-block: 20px;
+      transition: 0.1s all;
+
+      .icon {
+        margin-left: 23px;
+      }
+
+      .text {
+        @include text(18px, $primary-font-family);
+        color: #707070;
+      }
+
+      &:hover {
+        cursor: pointer;
+        // background-color: #f5f5f5;
+      }
+    }
+  }
+}
+
+.pickedItem {
+  filter: invert(13%) sepia(96%) saturate(7066%) hue-rotate(298deg)
+    brightness(89%) contrast(106%);
+}
