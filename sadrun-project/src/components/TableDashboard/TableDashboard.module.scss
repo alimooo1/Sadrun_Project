@@ -3,10 +3,11 @@
 @import "../../sass/fonts.scss";
 @import "../../sass/media.scss";
 
-.Countainer {
+.tableDashboardCountainer {
   max-width: 947px;
   padding: 0.8rem;
   margin: 2rem auto;
+  min-height: 70vh;
   box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
   -webkit-box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
   -moz-box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
