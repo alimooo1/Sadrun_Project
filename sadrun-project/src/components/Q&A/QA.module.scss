@@ -1,0 +1,46 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+@import "../../sass/media.scss";
+
+.QA {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .sectionName {
+    width: 230px;
+    height: 60px;
+    border: 1px solid rgb(218, 218, 218);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    @include typography($secondary-font-family, 20px, $text-accent-color);
+  }
+
+  .mainQA {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .QAPic {
+    // width: 850px;
+    width: 52.35%;
+  }
+
+  @include max-width("medium") {
+    .mainQA {
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .QAPic {
+      display: none;
+    }
+  }
+}

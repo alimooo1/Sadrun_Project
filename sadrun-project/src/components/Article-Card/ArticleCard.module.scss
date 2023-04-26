@@ -1,0 +1,147 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+@import "../../sass/media.scss";
+
+.conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  direction: rtl;
+  padding: 0 20px;
+}
+.head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.title {
+  width: 490px;
+  height: 120px;
+  box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  @include max-width(small){
+    width: 265px;
+    height: 80px;
+  }
+}
+.title h2 {
+  font-weight: bold;
+  @include typography($primary-font-family, 25px, #5a0ba9);
+  @include max-width(small){
+  @include typography($primary-font-family, 20px, #5a0ba9);
+
+  }
+}
+.heIcon {
+  position: relative;
+  right: 90px;
+  top: 30px;
+  @include max-width(small){
+    display: none;
+  }
+}
+.sheIcon {
+  position: relative;
+  left: 85px;
+  top: 30px;
+  @include max-width(small){
+    display: none;
+  }
+}
+.sheIcon_img {
+  height: 180px;
+}
+.heIcon_img {
+  height: 180px;
+}
+
+.conteiner_Article {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+  @include max-width(small){
+    flex-direction: column;
+  }
+}
+.news,
+.articles {
+  display: flex;
+  flex-direction: column;
+  width: 662px;
+  /* height: px; */
+  border-radius: 25px;
+  padding: 0 1rem;
+  background: #ffffff;
+  box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
+  @include max-width(small){
+    width: 100%;
+
+  }
+}
+.news_title,
+.articles_title {
+  border-radius: 14px;
+  background: #ffff;
+  width: 75px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
+  margin-bottom: 10px;
+  @include typography($primary-font-family, 15px, black);
+  @include max-width(small){
+    width: 70px;
+  height: 40px;
+  }
+}
+.btn {
+  border: 2px solid #67008f;
+  border-radius: 15px;
+  padding: 9px 23px;
+  align-self: flex-end;
+  cursor: pointer;
+  background-color: #ffff;
+  margin-bottom: 18px;
+  transition: all 0.3s;
+  @include typography($primary-font-family, 15px, #5a0ba9);
+  @include max-width(small){
+    padding: 7px 18px;
+    @include typography($primary-font-family, 13px, #5a0ba9);
+  }
+
+  &:hover {
+    background-color: $secondary-bg-color;
+  }
+}
+.Newsletters {
+  margin-top: 45px;
+}
+.add_Newsletters {
+  width: 500px;
+  height: 70px;
+  border-radius: 21px;
+  border: 1px solid #8e8d8d;
+  outline: none;
+  padding-right: 50px;
+  @include typography($primary-font-family, 17px, #67008f);
+  @include max-width(small){
+    width: 330px;
+    height: 60px;
+  @include typography($primary-font-family, 14px, #67008f);
+
+  }
+}
+.add_Newsletters::placeholder {
+  @include typography($primary-font-family, 17px, #67008f);
+  @include max-width(small){
+  @include typography($primary-font-family, 14px, #67008f);
+
+  }
+}
+.add_Newsletters:focus {
+  border: 2px solid #5a0ba9;
+}

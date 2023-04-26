@@ -1,0 +1,39 @@
+@import "../../sass/mixins.scss";
+@import "../../sass/variables.scss";
+@import "../../sass/media.scss";
+
+.news_item,
+.articles_item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-block: 8px;
+  cursor: pointer;
+  @include typography($primary-font-family,17px,rgba(0, 0, 0, 0.5) ) ;
+  @include max-width(small){
+    @include typography($primary-font-family,14px,rgba(0, 0, 0, 0.5) ) ;
+    gap: 20px;
+  }
+
+}
+.image_article {
+  width: 93px;
+  height: 66px;
+  overflow: hidden;
+  border-radius: 15px;
+   @include max-width(small){
+    width:92px;
+    height: 60px;
+  }
+}
+
+.image_article img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.7s;
+ 
+}
+
+.news_item:hover .image_article img {
+  transform: scale(1.2);
+}

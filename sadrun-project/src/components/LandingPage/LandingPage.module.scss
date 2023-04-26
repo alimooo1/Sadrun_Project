@@ -1,0 +1,97 @@
+@import "../../sass/mixins.scss";
+// @import "../../sass/global.scss";
+@import "../../sass/variables.scss";
+@import "../../sass/fonts.scss";
+@import '../../sass/media.scss';
+
+.container {
+  position: relative;
+  width: 100%;
+  height:110vh ;
+  overflow: hidden;
+  @include max-width(medium){
+    height:100% ;
+  }
+}
+
+.header {
+
+  width: 90%;
+  padding: 0.5rem;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  place-items: center;
+  max-width: 1140px;
+  margin-inline: auto;
+  background-color: #fff;
+  border-radius: 25px;
+  @include min-width(medium){
+    background-color: transparent;
+    grid-template-columns: repeat(2,1fr);
+    .girlDesk{
+        order: unset !important;
+    }
+
+  }
+
+  & > div {
+    flex: 1 0 400px;
+
+    h1 {
+      @include typography($secondary-font-family, 1.7rem, #434343);
+    }
+
+    p {
+      margin-top: 1.4rem;
+      @include typography($primary-font-family, 1rem, $primary-txt-color);
+    }
+
+    button {
+      margin-top: 4rem;
+      @include typography($primary-font-family, 1rem, #fff);
+      border-radius: 35px;
+      background-image: linear-gradient(
+        to right top,
+        #c003b2,
+        #a900b1,
+        #9100af,
+        #7705ac,
+        #5a0ba9
+      );
+      padding: 1rem 2.5rem;
+      outline: none;
+      border: none;
+
+      &:hover {
+        background-color: $text-accent-color;
+      }
+
+      &:active {
+        background-color: $text-accent-color;
+      }
+    }
+  }
+
+  .girlDesk {
+    @include size(90%, 31rem);
+    max-width: 500px;
+    order: -1;
+    margin: auto
+    // @include position(absolute, $top: 7.5rem, $left: 7rem);
+  }
+}
+
+.header1 {
+  @include size(91.7rem, 49.6rem);
+  @include position(absolute, $top: 0, $right: 0);
+  z-index: 0;
+  background-size: cover;
+  z-index: -2;
+}
+
+.header2 {
+  @include size(49rem, null);
+  @include position(absolute, $top: 0, $left: 0);
+  z-index: -1;
+}

@@ -1,0 +1,99 @@
+// button
+@mixin button-text(
+  $bg-color,
+  $text-color,
+  $padding,
+  $font-size,
+  $border-radius,
+  $hover-bg-color,
+  $active-bg-color
+) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: $padding;
+  font-size: $font-size;
+  border-radius: $border-radius;
+
+  &:hover {
+    background-color: $hover-bg-color;
+  }
+
+  &:active {
+    background-color: $active-bg-color;
+  }
+}
+
+// typography
+@mixin typography($font-family, $font-size, $text-color) {
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $text-color;
+}
+
+// cart
+@mixin cart($background-color, $border-color, $text-color, $padding) {
+  background-color: $background-color;
+  border: 1px solid $border-color;
+  color: $text-color;
+  padding: $padding;
+}
+
+// image
+@mixin image($width, $height, $border-radius, $position) {
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+  object-fit: cover;
+  position: $position;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+//icon
+@mixin icon($font-size, $color, $text-align) {
+  font-size: $font-size;
+  color: $color;
+  text-align: $text-align;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@mixin position(
+  $position,
+  $top: null,
+  $right: null,
+  $left: null,
+  $bottom: null
+) {
+  position: $position;
+
+  @if ($top !=null) {
+    top: $top;
+  }
+
+  @if ($right !=null) {
+    right: $right;
+  }
+
+  @if ($left !=null) {
+    left: $left;
+  }
+
+  @if ($bottom !=null) {
+    bottom: $bottom;
+  }
+}
+
+//link
+
+// @mixin link-style {
+//   color: $text-color;
+//   text-decoration: none;
+
+//   &:hover {
+//     color: $text-color;
+//   }
+// }

@@ -1,0 +1,35 @@
+@import "../../../sass/mixins.scss";
+@import "../../../sass/variables.scss";
+
+.formQA {
+  width: 550px;
+  height: 500px;
+  background-color: white;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 15px;
+  // position: absolute;
+  // left: 795px;
+  padding: 30px 20px;
+
+  .inputQA {
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgb(214, 211, 211);
+    border-radius: 15px;
+    outline: none;
+    margin-bottom: 10px;
+    text-align: right;
+    padding: 10px 15px;
+    @include typography($primary-font-family, 15px, $text-accent-color);
+
+    &::placeholder {
+      color: $text-accent-color;
+    }
+  }
+
+  .textareaQA {
+    @extend .inputQA;
+    height: 320px;
+    resize: none;
+  }
+}
