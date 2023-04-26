@@ -19,8 +19,15 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
           />
         </li>
 
-        {pageNumbers.map((number) => (
-          <li key={number} className={`${styles.pageItem}`}>
+        {pageNumbers.map((number, index) => (
+          <li
+            key={number}
+            className={
+              index + 1 === currentPage
+                ? `${styles.active} ${styles.pageItem}`
+                : styles.pageItem
+            }
+          >
             <a
               href="#"
               className={styles.pageLink}
