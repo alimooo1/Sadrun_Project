@@ -16,7 +16,7 @@ const TableDashboard = () => {
   const courses = [
     {
       id: Math.floor(Math.random()),
-      src: courseImage,
+      src: "/img.jpg",
       courseName: "maryam",
       courseMentorsName: "mahsa",
       courseSeasonName: "bahar",
