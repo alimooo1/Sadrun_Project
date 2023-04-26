@@ -9,6 +9,7 @@ import Layout404 from "./layouts/404-Layout/Layout404";
 import ContactUs from "./components/Contact-Us/ContactUs";
 import SingleBlogLayout from "./layouts/SingleBlog-Layout/SingleBlogLayout";
 import SuccessLayout from "./layouts/Success-Layout/SuccessLayout";
+import PaymentDetailLayout from "./layouts/PaymentDetail-Layout/PaymentDetailLayout";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/single-blog",
         element: <SingleBlogLayout />,
+      },
+      {
+        path: "/payment-detail",
+        element: <PaymentDetailLayout />,
       },
       {
         path: "/success",
