@@ -24,10 +24,15 @@
 }
 
 // typography
-@mixin typography($font-family, $font-size, $text-color) {
+@mixin typography($font-family, $font-size, $text-color, $is-important: null) {
   font-family: $font-family;
   font-size: $font-size;
   color: $text-color;
+  @if($is-important!=null){
+    font-family: $font-family !important;
+  font-size: $font-size !important;
+  color: $text-color !important;
+  }
 }
 
 // cart
