@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from "./BlogsComponent.module.scss"
-import vs from "../image/visual-studio-logo.png"
 function BlogsComponet({data}) {
     // 
   return (
@@ -9,7 +8,7 @@ function BlogsComponet({data}) {
                 
     <div className={styles.blog}>
             <div className={styles.image_blog}>
-               <img  src={vs} alt="dfsdff" />
+               <img  src={data.img} alt="a" />
             </div>
         <div>
             <p className={styles.title}>{data.title}</p>
