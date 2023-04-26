@@ -43,9 +43,15 @@ export default function MPCourses() {
             <img src={man_2} alt="" className={styles.man_graph_2} />
             <img src={hand} alt="" className={styles.hand_graph} />
           </div>
-          <img src={vsCodePic} alt="" />
-          <img src={angularPic} alt="" />
-          <img src={nestPic} alt="" />
+          <div className={styles.courses_pic}>
+            <img src={vsCodePic} alt="" />
+          </div>
+          <div className={styles.courses_pic}>
+            <img src={angularPic} alt="" />
+          </div>
+          <div className={styles.courses_pic}>
+            <img src={nestPic} alt="" />
+          </div>
           <button className={styles.btn}>بیشتر</button>
         </div>
       </div>
