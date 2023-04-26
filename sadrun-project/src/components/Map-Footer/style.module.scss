@@ -19,7 +19,13 @@
     height: 300px;
   }
   @include max-width(large) {
-    height: 250px;
+    height: 230px;
+  }
+  @include max-width(medium) {
+    height: 200px;
+  }
+  @include max-width(small) {
+    height: 170px;
   }
 }
 .map_popup {
@@ -39,6 +45,12 @@
   bottom: -20%;
   overflow: hidden;
   pointer-events: none;
+  @include max-width(medium) {
+    bottom: -18%;
+  }
+  @include max-width(small) {
+    bottom: -15%;
+  }
   img {
     width: 113%;
     position: relative;
@@ -55,6 +67,12 @@
   position: absolute;
   top: -12%;
   overflow: hidden;
+  @include max-width(medium) {
+    top: -10%;
+  }
+  @include max-width(small) {
+    top: -7%;
+  }
   img {
     width: 113%;
     position: relative;
@@ -73,31 +91,39 @@
 
   div {
     width: 33.33%;
+    @include max-width(medium) {
+      width: 50%;
+    }
+  }
+
+  @include max-width(medium) {
+    // flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 
 .info {
   display: flex;
-  border: solid red;
   @include typography(vazirmatn-Bold, 14.5px, rgba(0, 0, 0, 0.8));
   @include max-width(x-large) {
     @include typography(vazirmatn-Bold, 13px, rgba(0, 0, 0, 0.8));
   }
   @include max-width(large) {
     @include typography(vazirmatn-Bold, 12px, rgba(0, 0, 0, 0.8));
-
+  }
+  @include max-width(medium) {
+    padding-top: 20px;
+  }
+  @include max-width(small) {
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px 10px 0 0;
   }
 
   .about_us {
     display: flex;
     flex-direction: column;
-    border: solid blue;
     gap: 3px;
-
-    // span{
-    //   border: solid;
-    //   text-align: right ;
-    // }
   }
   .contact_us {
     display: flex;
@@ -124,6 +150,10 @@
   justify-content: center;
   padding-top: 15px;
   gap: 15px;
+  @include max-width(medium) {
+    order: 3;
+    width: 100% !important;
+  }
 
   .follow_us_logos {
     display: flex;
