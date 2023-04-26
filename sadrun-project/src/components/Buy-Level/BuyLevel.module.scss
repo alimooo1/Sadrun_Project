@@ -1,0 +1,67 @@
+@import "../../sass/fonts.scss";
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+
+.outsideContainer {
+  width: 80%;
+  margin: 0 auto;
+  height: 70px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .insideContainer {
+    width: 97%;
+    height: 50px;
+    background-color: #f6f6f6;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include typography($tertiary-font-family, 1rem, black);
+  }
+}
+
+.insideContainer {
+  .card,
+  .detail,
+  .finished {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .detail {
+    img {
+      width: 25px;
+    }
+  }
+
+  .finished {
+    img {
+      width: 38px;
+    }
+  }
+}
+
+.noColor {
+  filter: invert(69%) sepia(7%) saturate(74%) hue-rotate(335deg) brightness(84%)
+    contrast(92%) grayscale(100%);
+}
+
+.dashedLine {
+  width: 25%;
+}
+
+.coloredLine {
+  width: 25%;
+
+  hr {
+    height: 2px;
+    border: 0;
+    background: #c200bc;
+  }
+}

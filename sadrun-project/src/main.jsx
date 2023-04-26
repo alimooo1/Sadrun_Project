@@ -3,8 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./main.scss";
 import App from "./App";
 import Layout from "./layouts/Main-Layout/Layout";
-import QA from "./components/Q&A/QA";
+import LandingLayout from "./layouts/Landing-Layout/LandingLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout404 from "./layouts/404-Layout/Layout404";
+import ContactUs from "./components/Contact-Us/ContactUs";
+import SingleBlogLayout from "./layouts/SingleBlog-Layout/SingleBlogLayout";
+import SuccessLayout from "./layouts/Success-Layout/SuccessLayout";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +19,27 @@ const router = createBrowserRouter([
         index: true,
         element: <App />,
       },
+      {
+        path: "/contact",
+        element: <ContactUs />,
+      },
+      {
+        path: "/single-blog",
+        element: <SingleBlogLayout />,
+      },
+      {
+        path: "/success",
+        element: <SuccessLayout />,
+      },
     ],
+  },
+  {
+    path: "/landing",
+    element: <LandingLayout />,
+  },
+  {
+    path: "*",
+    element: <Layout404 />,
   },
 ]);
 

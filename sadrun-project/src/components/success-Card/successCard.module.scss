@@ -1,0 +1,77 @@
+@import "../../sass/fonts.scss";
+@import "../../sass/mixins.scss";
+@import "../../sass/variables.scss";
+@import "../../sass/media.scss";
+
+.box {
+  width: 420px;
+  height: 390px;
+  box-shadow: 2px 2px 7.5px rgba(87, 87, 87, 0.2);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  @include typography($primary-font-family, 20px, #434343);
+  @include max-width(small){
+    width: 90%;
+    padding-left:20px ;
+    padding-right:20px ;
+  }
+}
+.conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.conteinerTicks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  background-color: #c8e6c9;
+  border-radius: 100%;
+  margin-bottom: 25px;
+  @include max-width(small){
+    width: 70px;
+    height: 70px;
+  }
+  
+}
+.tick {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  bottom: 3px;
+}
+.title {
+  @include typography($primary-font-family, 20px, #434343);
+  font-weight: 800;
+  @include max-width(small){
+  @include typography($primary-font-family, 17px, #434343);
+  }
+}
+.conteinerText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.text {
+  @include typography($primary-font-family, 13px, #434343);
+  margin-bottom: 18px;
+}
+.btn {
+  padding: 10px 130px;
+  background-color: #36c54e;
+  border: none;
+  @include typography($primary-font-family, 0.8rem, #fff);
+  border-radius: 15px;
+  cursor: pointer;
+  @include max-width(small){
+    padding:10px 90px ;
+  }
+}

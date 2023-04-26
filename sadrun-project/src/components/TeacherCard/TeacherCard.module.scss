@@ -1,0 +1,203 @@
+@import "../../sass/mixins.scss";
+@import "../../sass/variables.scss";
+@import "../../sass/media.scss";
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  direction: rtl;
+  position: relative;
+  padding: 0 20px;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 90px;
+  box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
+  line-height: 40px;
+  margin-bottom: 60px;
+  border-radius: 25px;
+  @include max-width(small){
+    width: 250px;
+    height: 80px;
+  }
+
+  h2 {
+    font-weight: bold;
+    @include typography($primary-font-family, 30px, #5a0ba9);
+    @include max-width(small){
+    @include typography($primary-font-family, 22px, #5a0ba9);
+
+    }
+  }
+
+  p {
+    @include typography($primary-font-family, 18px, rgba(90, 11, 169, 0.6));
+    @include max-width(small){
+      @include typography($primary-font-family, 15px, #5a0ba9);
+  
+      }
+  }
+}
+
+.teacher_item {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
+  width: 650px;
+  height: 200px;
+  border-radius: 25px;
+  margin-bottom: 100px;
+  @include max-width(small){
+    width:100%;
+    height: 180px;
+  }
+}
+.teacher_imag {
+  width: 170px;
+  height: 170px;
+  position: relative;
+  left: 50px;
+  @include max-width(small){
+    width: 140px;
+    height: 140px;
+    left: 14px;
+
+  }
+}
+.teacher_text {
+  height: 150px;
+  width: 650px;
+
+  h2 {
+    margin-bottom: 10px;
+    position: relative;
+    font-weight: 600;
+    @include typography($primary-font-family, 25px, rgba(0, 0, 0, 0.8));
+    @include max-width(small){
+    @include typography($primary-font-family, 20px, rgba(0, 0, 0, 0.8));
+
+    }
+  }
+
+  .teacher_item_head {
+    margin-bottom: 10px;
+    position: relative;
+    @include typography($primary-font-family, 20px, rgba(0, 0, 0, 0.7));
+
+    @include max-width(small){
+    @include typography($primary-font-family, 17px, rgba(0, 0, 0, 0.7));
+
+    }
+  }
+
+  .teacher_item_text {
+    line-height: 20px;
+    @include typography($primary-font-family, 15px, rgba(0, 0, 0, 0.501961));
+
+    @include max-width(small){
+    @include typography($primary-font-family, 13px, rgba(0, 0, 0, 0.7));
+     text-align: justify ;
+    }
+  }
+}
+
+.icon_path {
+  position: absolute;
+  left: 0;
+  top: 138px;
+
+  @include max-width(small){
+    display: none;
+  }
+  @include max-width(large){
+    display: none;
+  }
+}
+.icon {
+  position: absolute;
+  z-index: 1;
+  width: 270px;
+  height: 200px;
+  left: 0;
+  top: -11px;
+}
+.path1 {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  left: 0;
+}
+
+.path2 {
+  position: absolute;
+  right: 1px;
+  bottom: -70px;
+  @include max-width(small){
+    display: none;
+  }
+  @include max-width(large){
+    display: none;
+  }
+}
+.path2_img {
+  width: 300px;
+  height: 293px;
+}
+.teachrs {
+  display: flex;
+  gap: 40px;
+  @include max-width(small){
+    flex-direction: column;
+  }
+}
+.teachers_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0px 3px 3px rgba(87, 87, 87, 0.160784);
+  border-radius: 25px;
+  width: 330px;
+  height: 120px;
+  gap: 58px;
+  @include typography($primary-font-family, 15px, rgba(0, 0, 0, 0.501961));
+
+  img {
+    width: 138px;
+    height: 130px;
+    position: relative;
+    bottom: 13px;
+    right: 15px;
+    @include max-width(small){
+      width: 128px;
+      height: 120px;
+    }
+  }
+  @include max-width(small){
+    width: 330px;
+
+  }
+}
+
+.teachers_item_text {
+  line-height: 45px;
+}
+.teachers_item_text :nth-child(odd) {
+  @include typography($primary-font-family, 18px, rgba(0, 0, 0, 0.782));
+  @include max-width(small){
+  @include typography($primary-font-family, 15px, rgba(0, 0, 0, 0.782));
+
+  }
+}
+
+.teachers_item_text :nth-child(even) {
+  @include typography($primary-font-family, 15px, rgba(0, 0, 0, 0.501961));
+  @include max-width(small){
+    @include typography($primary-font-family, 12px,gba(0, 0, 0, 0.501961));
+  
+    }
+}
