@@ -44,6 +44,14 @@
 }
 
 // image
+@mixin image($width, $height, $border-radius, $position) {
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+  object-fit: cover;
+  position: $position;
+}
+
 @mixin size($width, $height) {
   width: $width;
   height: $height;
@@ -83,3 +91,14 @@
     bottom: $bottom;
   }
 }
+
+//link
+
+// @mixin link-style {
+//   color: $text-color;
+//   text-decoration: none;
+
+//   &:hover {
+//     color: $text-color;
+//   }
+// }

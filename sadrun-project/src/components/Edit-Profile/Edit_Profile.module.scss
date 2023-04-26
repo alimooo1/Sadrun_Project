@@ -1,0 +1,66 @@
+@import "../../sass/mixins.scss";
+@import "../../sass/variables.scss";
+@import "../../sass/media.scss";
+
+.conteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+    height: 545px;
+    box-shadow: 0px 0px 3px rgba(87, 87, 87, 0.160784);
+    border-radius: 25px;
+    @include max-width(small){
+        display: flex;
+        width: 350px;
+        height: 100%;margin: auto;
+    }
+}
+.userImage_Conteiner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 30px;
+}
+.user_image{
+    width: 180px;
+    height: 180px;
+    @include max-width(small){
+        width: 120px;
+        height:120px ;
+    }
+    
+}
+.formConteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:280px; 
+    background: rgba(0,0,0,0.03 );
+    width: 950px;
+    border-radius:20px;
+    @include max-width(small){
+        width: 320px;
+        height:500px ;
+    }
+}
+.form{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    @include max-width(small){
+        flex-direction: column;
+        gap: 19px;
+    }
+}
+
+
+
+
+
+
+
+
