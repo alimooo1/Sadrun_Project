@@ -8,14 +8,14 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 750px;
+    width: 700px;
     height: 72px;
     border-radius: 20px;
     background: #fff;
     @include typography($primary-font-family, 13px, #434343);
     @include max-width(small){
-        width: 400px; 
-    @include typography($primary-font-family, 11px, #434343);
+        width: 95%; 
+    @include typography($primary-font-family, 9px, #434343);
     }
 }
 .img_cart{
@@ -29,9 +29,10 @@
     flex-direction: row;
     align-items: center;
     gap: 30px;
-    padding-right: 30px;
+    padding-right: 20px;
     @include max-width(small){
-        gap: 20px;
+        gap: 10px;
+        padding-right: 10px;
     }
 }
 .boxtwo{
@@ -39,16 +40,16 @@
     flex-direction: row;
     align-items: center;
     gap: 30px;
-    padding-left: 30px;
+    padding-left: 20px;
     @include max-width(small){
-        gap: 20px;
+        gap: 10px;
+        padding-left: 10px
     }
 }
 .price{
     @include typography($primary-font-number-family, 13px, #585656);
     @include max-width(small){
-    @include typography($primary-font-number-family, 11px, #585656);
-        
+    @include typography($primary-font-number-family, 11px, #585656); 
     }
 }
 .boxthree{
@@ -56,6 +57,10 @@
     flex-direction: row;
     align-items: center;
     gap: 5px;
+    @include max-width(small){
+        gap: 2px;
+    }
+
     
 }
 .trash{
