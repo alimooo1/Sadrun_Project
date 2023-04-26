@@ -86,7 +86,7 @@ const TableDashboard = () => {
     setisShownIcon(false);
   };
   return (
-    <div className={styles.Countainer}>
+    <div className={styles.tableDashboardCountainer}>
       <div className={styles.tableHeader}>
         <div className={styles.registeredCourseNumbers}>
           <span>دوره های ثبت شده: 26 تا 39 </span>
