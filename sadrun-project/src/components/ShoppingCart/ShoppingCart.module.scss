@@ -1,11 +1,21 @@
+@import "../../sass/variables.scss";
+@import "../../sass/fonts.scss";
+@import "../../sass/mixins.scss";
+@import "../../sass/media.scss";
+
 .border{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 860px;
-    height: 460px;
     box-shadow: 2px 2px 7.5px rgba(1, 1, 1, 0.2);
     border-radius: 20px;
+    padding: 30px 0;
+    @include max-width(small){
+        width: 440px; 
+        padding: 20px 0;
+        margin: 0 10px;
+    }
 }
 .conteiner{
     background-color: rgba(15, 15, 15, 0.056);
@@ -13,8 +23,14 @@
     flex-direction: column;
     gap: 20px;
     width:800px;
-    // height: 37rem;
+    padding: 30px 0;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
+    @include typography($primary-font-family, 13px, #434343);
+    @include max-width(small){
+        width: 430px; 
+        padding:  20px 0;
+    }
+
 }
