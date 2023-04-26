@@ -1,0 +1,12 @@
+@import "../../../sass/mixins";
+@import "../../../sass/variables";
+@import "../../../sass/media";
+
+.grid_courses{
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 40px;
+    padding: 10px;
+}
