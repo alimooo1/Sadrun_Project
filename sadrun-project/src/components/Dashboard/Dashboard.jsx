@@ -7,6 +7,7 @@ import icon3 from "./img/icon3.svg";
 import icon4 from "./img/icon4.svg";
 import icon5 from "./img/icon5.svg";
 import DashboardItem from "./DashboardItem";
+import { useNavigate } from "react-router-dom";
 
 const dashboardList = [
   {
@@ -18,13 +19,13 @@ const dashboardList = [
   {
     title: "ویرایش پروفایل",
     icon: icon2,
-    to: "/dashboard/profile/edit",
+    to: "/dashboard/edit-profile",
     picked: false,
   },
   {
     title: "دوره های من",
     icon: icon3,
-    to: "/dashboard/mycourses",
+    to: "/dashboard/my-courses",
     picked: false,
   },
   {
@@ -43,6 +44,7 @@ const dashboardList = [
 
 const dashboard = () => {
   const [menuItems, setMenuItems] = useState(dashboardList);
+  const navigate = useNavigate();
 
   const clickHandler = (item) => {
     dashboardList.forEach((item) => {
@@ -51,6 +53,7 @@ const dashboard = () => {
     const newList = [...dashboardList];
     newList[item].picked = true;
     setMenuItems(newList);
+    navigate(newList[item].to);
   };
 
   return (
@@ -66,7 +69,6 @@ const dashboard = () => {
             return (
               <DashboardItem
                 title={item.title}
-                to={item.to}
                 icon={item.icon}
                 picked={item.picked}
                 clickHandler={() => clickHandler(index)}
