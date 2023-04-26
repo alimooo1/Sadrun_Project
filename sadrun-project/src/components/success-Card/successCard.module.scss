@@ -1,6 +1,7 @@
 @import "../../sass/fonts.scss";
 @import "../../sass/mixins.scss";
 @import "../../sass/variables.scss";
+@import "../../sass/media.scss";
 
 .box {
   width: 420px;
@@ -12,12 +13,18 @@
   justify-content: space-around;
   align-items: center;
   @include typography($primary-font-family, 20px, #434343);
+  @include max-width(small){
+    width: 90%;
+    padding-left:20px ;
+    padding-right:20px ;
+  }
 }
 .conteiner {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 .conteinerTicks {
   display: flex;
@@ -28,6 +35,11 @@
   background-color: #c8e6c9;
   border-radius: 100%;
   margin-bottom: 25px;
+  @include max-width(small){
+    width: 70px;
+    height: 70px;
+  }
+  
 }
 .tick {
   position: relative;
@@ -38,6 +50,9 @@
 .title {
   @include typography($primary-font-family, 20px, #434343);
   font-weight: 800;
+  @include max-width(small){
+  @include typography($primary-font-family, 17px, #434343);
+  }
 }
 .conteinerText {
   display: flex;
@@ -56,4 +71,7 @@
   @include typography($primary-font-family, 0.8rem, #fff);
   border-radius: 15px;
   cursor: pointer;
+  @include max-width(small){
+    padding:10px 90px ;
+  }
 }
