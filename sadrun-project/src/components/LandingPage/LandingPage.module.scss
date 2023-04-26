@@ -1,5 +1,4 @@
 @import "../../sass/mixins.scss";
-// @import "../../sass/global.scss";
 @import "../../sass/variables.scss";
 @import "../../sass/fonts.scss";
 @import '../../sass/media.scss';
@@ -92,6 +91,9 @@
 
 .header2 {
   @include size(49rem, null);
+  @include max-width(medium){
+    @include size(52rem, null);
+  }
   @include position(absolute, $top: 0, $left: 0);
   z-index: -1;
 }
