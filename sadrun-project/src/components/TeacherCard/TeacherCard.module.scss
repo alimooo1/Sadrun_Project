@@ -98,6 +98,7 @@
   .teacher_item_text {
     line-height: 20px;
     @include typography($primary-font-family, 15px, rgba(0, 0, 0, 0.501961));
+    padding-left: 17px;
 
     @include max-width(small){
     @include typography($primary-font-family, 13px, rgba(0, 0, 0, 0.7));
