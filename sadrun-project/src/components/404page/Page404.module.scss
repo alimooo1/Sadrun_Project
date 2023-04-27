@@ -1,7 +1,7 @@
 @import "../../sass/fonts.scss";
 @import "../../sass/mixins.scss";
 @import "../../sass/variables.scss";
-
+@import "../../sass/media.scss";
 .container {
   display: flex;
   flex-direction: column;
@@ -13,6 +13,10 @@
     width: 34rem;
     height: 19.591rem;
     // margin-top: 80px;
+    @include max-width(small){
+      width: 21rem;
+    }
+    
   }
 
   .btn {
@@ -27,6 +31,10 @@
     &:hover {
       box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
         rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+    @include max-width(small){
+      width: 12rem;
+    @include typography($primary-font-family, 15px, #ffffff);
     }
   }
 }
