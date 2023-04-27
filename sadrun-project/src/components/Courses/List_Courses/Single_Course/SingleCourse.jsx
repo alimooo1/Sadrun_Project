@@ -43,7 +43,7 @@ export default function SingleCourse({
             <span className={styles.icon_title}>مدت زمان دوره:</span>
             <span className={styles.duration}>{duration}</span>
           </div>
-          <StarRating width={13} initialValue={3} voteNum={90} />
+          <StarRating width={13} initialValue={3} voteNum={90313} />
           <span className={styles.price}>{price}</span>
         </div>
       </div>

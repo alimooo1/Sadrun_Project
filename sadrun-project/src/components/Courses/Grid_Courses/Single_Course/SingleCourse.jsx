@@ -12,7 +12,7 @@ export default function SingleCourse({ title, pic, teacherName, price, allCapaci
       <div className={styles.info}>
         <div className={styles.right}>
           <span className={styles.teacher_name}>{teacherName}</span>
-          <StarRating width={11} initialValue={3} voteNum={90}/>
+          <StarRating width={11} initialValue={3} voteNum={90313}/>
           <span className={styles.price}>{price}</span>
         </div>
 
