@@ -6,7 +6,10 @@ export default function DetailsBill() {
 		<div className={styles.DetailsBill_card_conteiner}>
 			<div className={styles.DetailsBill_card}>
 				
-				<form className={styles.form}><h2>جزئیات صورت حساب</h2>
+				<form className={styles.form}>
+					
+					<h2>جزئیات صورت حساب</h2>
+					
 					<div className={styles.form_div1}>
 						<div >
 							<label className={styles.flex} from="name">
