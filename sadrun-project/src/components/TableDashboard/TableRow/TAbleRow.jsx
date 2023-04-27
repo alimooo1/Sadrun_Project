@@ -7,8 +7,9 @@ const TAbleRow = (props) => {
   return (
     <div className={styles.tableRow}>
       <ul className={styles.courseItems}>
-        <li>
+        <li className={styles.courseItem}>
           <img
+            className={styles.courseImage}
             src={props.courseImage}
             alt="courseImage"
             onError={(c) => {
@@ -16,12 +17,12 @@ const TAbleRow = (props) => {
             }}
           />
         </li>
-        <li>{props.courseName}</li>
-        <li>{props.courseMentorsName}</li>
-        <li>{props.courseSeasonName}</li>
-        <li>{props.courseStartDate}</li>
-        <li>{props.courseEndDate}</li>
-        <li>{props.coursePrice}</li>
+        <li className={styles.courseItem}>{props.courseName}</li>
+        <li className={styles.courseItem}>{props.courseMentorsName}</li>
+        <li className={styles.courseItem}>{props.courseSeasonName}</li>
+        <li className={styles.courseItem}>{props.courseStartDate}</li>
+        <li className={styles.courseItem}>{props.courseEndDate}</li>
+        <li className={styles.courseItem}>{props.coursePrice}</li>
       </ul>
     </div>
   );

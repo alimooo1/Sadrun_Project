@@ -89,9 +89,9 @@ const TableDashboard = () => {
   return (
     <div className={styles.tableDashboardCountainer}>
       <div className={styles.tableHeader}>
-        <div className={styles.registeredCourseNumbers}>
-          <span>دوره های ثبت شده: 26 تا 39 </span>
-        </div>
+        <span className={styles.registeredCourseNumbers}>
+          دوره های ثبت شده: 26 تا 39{" "}
+        </span>
         <div className={styles.inputSearchCountainer}>
           {isShownIcon && (
             <span className={styles.icon}>
@@ -140,7 +140,9 @@ const TableDashboard = () => {
         ) : (
           <p className={styles.notFoundText}>دوره درسی موردنظر یافت نشد !</p>
         )}
-        <Pagination currentPage={2} totalPages={7} />
+        {filteredCourses.length > 0 && (
+          <Pagination currentPage={2} totalPages={7} />
+        )}
       </div>
     </div>
   );

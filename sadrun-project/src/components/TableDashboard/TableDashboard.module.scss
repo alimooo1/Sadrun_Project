@@ -6,23 +6,35 @@
 .tableDashboardCountainer {
   max-width: 947px;
   padding: 0.8rem;
-  margin: 2rem auto;
+  margin: 1.3rem auto;
   min-height: 70vh;
   box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
   -webkit-box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
   -moz-box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
   border-radius: 10px;
+  @include max-width(medium){
+    box-shadow: none;
+    min-height: unset;
+  }
 }
 
 .tableHeader {
   display: flex;
   width: 100%;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem;
   justify-content: space-between;
   border-radius: 10px;
+  @include max-width (medium){
+    display: none;
+  }
   .registeredCourseNumbers {
-    span {
-      @include typography($secondary-font-family, 1.2rem, $primary-txt-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include typography($secondary-font-family, 0.8rem, $primary-txt-color);
+    @include max-width(medium){
+      
+    @include typography($secondary-font-family, 0.5rem, $primary-txt-color);
     }
   }
   .inputSearchCountainer {
@@ -30,17 +42,20 @@
     .input {
       background-color: #eee6f6;
       width: 100%;
-      padding: 0.7rem;
+      padding-block: 0.5rem;
+      padding-inline:1rem 1.6rem;
       box-sizing: border-box;
       border: none;
       border-radius: 25px;
       outline: none;
-      padding-left: 2.2rem;
-      @include typography($primary-font-family, 0.7rem, $text-accent-color);
+      
+      @include typography($primary-font-family, 0.9rem, $text-accent-color);
       &::placeholder {
-        @include typography($primary-font-family, 0.7rem, $text-accent-color);
+        @include typography($primary-font-family, 0.9rem, $text-accent-color);
+        //padding-right: 0.8rem;
       }
       &::-webkit-input-placeholder {
+
         @include typography(
           $primary-font-family,
           0.7rem,
@@ -48,13 +63,32 @@
           important
         );
       }
+      @include max-width(medium){
+        padding-block: 0.3rem;
+      padding-inline:0.8rem 1.2rem;
+        @include typography($primary-font-family, 0.5rem, $text-accent-color);
+         &::placeholder {
+        @include typography($primary-font-family, 0.5rem, $text-accent-color);
+        //padding-right: 0.8rem;
+      }
+      &::-webkit-input-placeholder {
+
+        @include typography(
+          $primary-font-family,
+          0.5rem,
+          $text-accent-color,
+          important
+        );
+      }
+
+      }
     }
     .icon {
-      @include position(absolute, $top: 0.7rem, $left: 1rem);
-      font-size: 1.7rem;
-      color: $text-accent-color;
-      span {
-        @include typography($secondary-font-family, 1rem, $primary-txt-color);
+      @include position(absolute, $top: 0.6rem, $left: 0.7rem);
+      @include typography($secondary-font-family, 1rem, $text-accent-color);
+      @include max-width(medium){
+      @include position(absolute, $top: 0.5rem, $left: 0.7rem);
+      @include typography($secondary-font-family, 0.8rem, $text-accent-color);
       }
     }
   }
@@ -65,10 +99,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
+  margin: 0.6rem;
   box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
   -webkit-box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
   -moz-box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
+  @include max-width(medium){
+    margin: 0.1rem;
+  }
 }
 
 .tablrRowTitle {
@@ -79,21 +116,24 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   width: 100%;
-  margin: 0.8rem 1rem;
+  margin: 0.56rem 0.6rem;
   padding: 0.5rem 0.7rem;
   @include max-width(medium) {
     grid-template-columns: repeat(5, 1fr);
+    // margin: 0.56rem 0.6rem;
+     padding: 0.3rem 0;
   }
   li {
     list-style: none;
-    padding: 1rem 1.2rem;
-    @include typography($secondary-font-family, 1.2rem, #434343);
+    padding: 0.5rem 0.6rem;
+    @include typography($secondary-font-family, 0.85rem, #434343);
     display: flex;
     justify-content: center;
     align-items: center;
     @include max-width(medium) {
+      @include typography($secondary-font-family, 0.5rem, #434343);
       &:nth-child(1),
-       &:nth-child(6){
+      &:nth-child(6) {
         display: none;
       }
     }
@@ -107,14 +147,14 @@
 
 .notFoundText {
   background-color: #fff;
-  @include typography($secondary-font-family, 1.5rem, $primary-txt-color);
+  @include typography($secondary-font-family, 0.9rem, $primary-txt-color);
   border-radius: 6px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin:8rem 1rem;
-  padding: 1.2rem 1.8rem;
+  margin: 8rem 1rem;
+  padding: 0.75rem 1.1rem;
   box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
   -webkit-box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
   -moz-box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
