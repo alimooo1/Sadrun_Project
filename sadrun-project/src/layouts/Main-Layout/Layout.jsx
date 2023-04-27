@@ -6,15 +6,15 @@ import Footer from "../../components/Footer/Footer";
 export default function Layout() {
   return (
     <>
-      <header>
+      {/* <header>
         <Navigation />
-      </header>
+      </header> */}
       <main>
         <Outlet />
       </main>
-      <footer>
+      {/* <footer>
         <Footer />
-      </footer>
+      </footer> */}
     </>
   );
 }

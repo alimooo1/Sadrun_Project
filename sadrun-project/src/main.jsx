@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./main.scss";
+import './global.css';
 import App from "./App";
 import Layout from "./layouts/Main-Layout/Layout";
 import LandingLayout from "./layouts/Landing-Layout/LandingLayout";
@@ -13,6 +14,9 @@ import PaymentDetailLayout from "./layouts/PaymentDetail-Layout/PaymentDetailLay
 import DashboardLayout from "./layouts/Dashboard-Layout/DashboardLAyout";
 import EditProfile from "./components/Edit-Profile/Edit_Profile";
 import TableDashboard from "./components/TableDashboard/TableDashboard";
+import Login from './components/Login & signup/components/Login'
+import Signup from './components/Login & signup/components/Signup'
+import Forget from './components/Login & signup/components/Forgetfulnes'
 
 const router = createBrowserRouter([
   {
@@ -62,6 +66,18 @@ const router = createBrowserRouter([
   {
     path: "/landing",
     element: <LandingLayout />,
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/forget",
+    element: <Forget />,
   },
   {
     path: "*",

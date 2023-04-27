@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "vazirmatn";
+  src: url("../../assets/webfonts/Vazirmatn-Regular.woff2");
+}
+.button-container {
+  background-color: #36c54e;
+  border-radius: 17px;
+  font-size: 18px;
+  color: #fff;
+  font-family: "vazirmatn";
+
+  &.form-sign-up-button {
+    background-color: #4285f4;
+    color: white;
+  }
+  &:hover {
+    background-color:#33b148;
+    
+  }
+
+  &.payment-button {
+    width: 415px;
+    height: 69px;
+    font-size: 20px;
+    border-radius: 16px;
+  }
+}

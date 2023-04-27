@@ -23,7 +23,7 @@ const LandingPage = () => {
           </p>
           <button className={styles.headerbutton}>شروع یادگیری</button>
         </div>
-        <img className={styles.girlDesk} src={girlDesk} alt="" />
+        <img className={styles.girlDesk} src={girlDesk} alt="girl" />
       </div>
     </div>
   );
