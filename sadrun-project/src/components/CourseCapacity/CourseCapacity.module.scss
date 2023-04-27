@@ -10,8 +10,7 @@
   -webkit-box-shadow: 0px 0px 5px 0px rgba(57, 57, 57, 0.16);
   -moz-box-shadow: 0px 0px 5px 0px rgba(57, 57, 57, 0.16);
   align-items: center;
-  max-width: 35rem;
-  margin: 5rem;
+  width: 100%;
   border-radius: 10px;
 }
 
@@ -29,7 +28,7 @@
 
   &:nth-child(1) {
     p {
-      @include typography($secondary-font-family, 2rem, #434343);
+      @include typography($secondary-font-family, 20px, #434343);
     }
 
     padding: 1rem;
@@ -40,13 +39,13 @@
     padding: 1rem;
 
     p {
-      @include typography($primary-font-family, 1.5rem, $primary-txt-color);
+      @include typography($primary-font-family, 18px, $primary-txt-color);
     }
 
     span {
       @include typography(
         $secondary-font-number-family,
-        1.5rem,
+        18px,
         $primary-txt-color
       );
     }
@@ -56,13 +55,13 @@
     padding: 1rem;
 
     p {
-      @include typography($primary-font-family, 1.5rem, $primary-txt-color);
+      @include typography($primary-font-family,18px, $primary-txt-color);
     }
 
     span {
       @include typography(
         $secondary-font-number-family,
-        1.5rem,
+        18px,
         $primary-txt-color
       );
     }

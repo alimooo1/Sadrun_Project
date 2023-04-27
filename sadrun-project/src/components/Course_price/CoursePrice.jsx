@@ -29,7 +29,7 @@ export default function CoursePrice({ coursPrice, courseDiscount, date }) {
       </div>
       <div>
         <span className={styles.time_left}>مهلت استفاده از تخفیف</span>
-        <Countdown timestampMs={"2024-00-00"} />
+        <Countdown timestampMs={date} />
       </div>
       <button className={styles.button}>ثبت نام در دوره</button>
     </div>
