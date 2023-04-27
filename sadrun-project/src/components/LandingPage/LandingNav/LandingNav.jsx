@@ -11,6 +11,7 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { ImList2 } from "react-icons/im";
 import { RiCustomerServiceFill } from "react-icons/ri";
 import { MdOutlineModelTraining } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const LandingNav = (props) => {
   // menu display state
@@ -58,37 +59,38 @@ const LandingNav = (props) => {
               <span className={styles.navigationItemIcon}>
                 <AiFillHome />
               </span>
-              <a href="#">خانه</a>
+              <Link to='/landing'>خانه</Link>
             </li>
             <li>
               <span className={styles.navigationItemIcon}>
                 <MdOutlineModelTraining />
               </span>
-              <a href="#">آموزش</a>
+              <Link to='#'>آموزش</Link>
             </li>
             <li>
               <span className={styles.navigationItemIcon}>
                 <FaBars />
               </span>
-              <a href="#">بلاگ</a>
+              <Link to='#'>بلاگ</Link>
             </li>
             <li>
               <span className={styles.navigationItemIcon}>
                 <RiCustomerServiceFill />
               </span>
-              <a href="#">خدمات</a>
+              <Link to='#'>خدمات</Link>
             </li>
             <li>
               <span className={styles.navigationItemIcon}>
                 <ImList2 />
               </span>
-              <a href="#">دوره ها </a>
+              <Link to='#'>دوره ها </Link>
+
             </li>
             <li>
               <span className={styles.navigationItemIcon}>
                 <BsFillTelephoneFill />
               </span>
-              <a href="#">تماس با ما </a>
+              <Link to='#'> تماس با ما </Link>
             </li>
           </div>
         </ul>
