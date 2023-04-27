@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 0 80px;
+
+  .bottomPart {
+    display: flex;
+    justify-content: space-between;
+  }
+}
