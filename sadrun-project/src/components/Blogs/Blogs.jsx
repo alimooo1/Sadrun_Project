@@ -12,7 +12,7 @@ export default function Blogs() {
   return (
     <div className={styles.container}>
       <div className={styles.title}>
-        <h2>دوره ها</h2>
+        <h2>بلاگ ها</h2>
       </div>
       <div className={styles.row}>
         <div className={styles.layout_icons}>
