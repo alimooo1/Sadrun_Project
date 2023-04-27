@@ -3,7 +3,7 @@ import styles from "./DetailsBill.module.scss";
 
 export default function DetailsBill() {
 	return (
-		<div>
+		<div className={styles.DetailsBill_card_conteiner}>
 			<div className={styles.DetailsBill_card}>
 				
 				<form className={styles.form}><h2>جزئیات صورت حساب</h2>
