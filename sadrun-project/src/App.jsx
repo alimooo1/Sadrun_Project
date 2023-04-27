@@ -1,9 +1,7 @@
 import React from "react";
-import Courses from './components/Courses/Courses';
+
 function App() {
-  return <div className="App">
-    <Courses/>
-  </div>;
+  return <div className="App"></div>;
 }
 
 export default App;
