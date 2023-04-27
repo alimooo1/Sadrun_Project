@@ -14,29 +14,33 @@
   width: 100%;
   background-color: #fff;
   border-radius: 16px;
-  margin: 0.6rem 1rem;
+  margin: 0.4rem 0.6rem;
      @include max-width(medium) {
     grid-template-columns: repeat(5, 1fr);
+    margin: 0.3rem 0.5rem;
     
   }
 
   
 
-  li {
+  .courseItem {
     list-style: none;
-    padding: 1rem 0.6rem;
-    @include typography($primary-font-family, 1.2rem, $primary-txt-color);
+    padding: 0.5rem ;
+    @include typography($primary-font-family, 0.9rem, $primary-txt-color);
     display: flex;
     justify-content: center;
     align-items: center;
     @include max-width(medium) {
+    @include typography($primary-font-family, 0.5rem, $primary-txt-color);
+    padding: 0.5rem 0;
     &:nth-child(1),
     &:nth-child(6) {
       display: none;
     }
   }
   }
-  img {
-    width: 5rem;
+  .courseImage {
+    width: 4.5rem ;
+
   }
 }

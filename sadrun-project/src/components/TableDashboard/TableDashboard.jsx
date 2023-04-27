@@ -3,6 +3,7 @@ import styles from "./TableDashboard.module.scss";
 import TableRow from "./TableRow/TableRow";
 import courseImage from "./images/testImage.svg";
 import { FaSistrix } from "react-icons/fa";
+import Pagination from "../Pagination/Pagination";
 const TableDashboard = () => {
   // Creating a state variable called searchQuery and a function to update it
   const [searchQuery, setSearchQuery] = useState("");
@@ -88,9 +89,9 @@ const TableDashboard = () => {
   return (
     <div className={styles.tableDashboardCountainer}>
       <div className={styles.tableHeader}>
-        <div className={styles.registeredCourseNumbers}>
-          <span>دوره های ثبت شده: 26 تا 39 </span>
-        </div>
+        <span className={styles.registeredCourseNumbers}>
+          دوره های ثبت شده: 26 تا 39{" "}
+        </span>
         <div className={styles.inputSearchCountainer}>
           {isShownIcon && (
             <span className={styles.icon}>
@@ -119,7 +120,6 @@ const TableDashboard = () => {
             <li>قیمت </li>
           </ul>
         </div>
-
         {/* Mapping  the filteredCourses array */}
         {filteredCourses.length > 0 ? (
           filteredCourses.map((courseItem) => {
@@ -139,6 +139,9 @@ const TableDashboard = () => {
           })
         ) : (
           <p className={styles.notFoundText}>دوره درسی موردنظر یافت نشد !</p>
+        )}
+        {filteredCourses.length > 0 && (
+          <Pagination currentPage={2} totalPages={7} />
         )}
       </div>
     </div>
