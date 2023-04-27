@@ -1,13 +1,15 @@
 @import "../../sass/mixins";
 @import "../../sass/variables";
+@import "../../sass/media.scss";
 
 .footer {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  padding: 32px 0 32px 0;
-  bottom: 0;
+  // position: absolute;
+  // padding: 32px 0 32px 0;
+  // bottom: 0;
   width: 100%;
+  z-index: -10;
 }
 .graph {
   width: 100%;
@@ -16,6 +18,12 @@
   z-index: -1;
   overflow: hidden;
   pointer-events: none;
+  @include max-width(medium) {
+    bottom: -18%;
+  }
+  @include max-width(small) {
+    bottom: -15%;
+  }
   img {
     width: 113%;
     position: relative;
@@ -34,16 +42,39 @@
 
   div {
     width: 33.33%;
+    @include max-width(medium) {
+      width: 50%;
+    }
+  }
+
+  @include max-width(medium) {
+    // flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 
 .info {
   display: flex;
-  @include typography(vazirmatn-Bold, 0.9rem, rgba(0, 0, 0, 0.8));
+  @include typography(vazirmatn-Bold, 14.5px, rgba(0, 0, 0, 0.8));
+  @include max-width(x-large) {
+    @include typography(vazirmatn-Bold, 13px, rgba(0, 0, 0, 0.8));
+  }
+  @include max-width(large) {
+    @include typography(vazirmatn-Bold, 12px, rgba(0, 0, 0, 0.8));
+  }
+  @include max-width(medium) {
+    padding-top: 20px;
+  }
+  @include max-width(small) {
+    flex-direction: column;
+    gap: 10px;
+    padding: 35px 10px 0 0;
+  }
 
   .about_us {
     display: flex;
     flex-direction: column;
+    gap: 3px;
   }
   .contact_us {
     display: flex;
@@ -54,7 +85,13 @@
   }
   .phone_num {
     direction: ltr;
-    @include typography(Shabnam-Bold, 1.1rem, rgba(0, 0, 0, 0.8));
+    @include typography(Shabnam-Bold, 17.5px, rgba(0, 0, 0, 0.8));
+    @include max-width(x-large) {
+      @include typography(Shabnam-Bold, 15.5px, rgba(0, 0, 0, 0.8));
+    }
+    @include max-width(large) {
+      @include typography(Shabnam-Bold, 14.5px, rgba(0, 0, 0, 0.8));
+    }
   }
 }
 
@@ -64,6 +101,10 @@
   justify-content: center;
   padding-top: 15px;
   gap: 15px;
+  @include max-width(medium) {
+    order: 3;
+    width: 100% !important;
+  }
 
   .follow_us_logos {
     display: flex;
@@ -74,24 +115,40 @@
     img {
       display: block;
       height: 30px;
+      @include max-width(large) {
+        height: 27px;
+      }
     }
   }
   .follow_us_text {
-    @include typography(vazirmatn-bold, 1rem, $text-accent-color);
+    @include typography(vazirmatn-bold, 16px, $text-accent-color);
     text-align: center;
+    @include max-width(large) {
+      @include typography(vazirmatn-bold, 13px, $text-accent-color);
+    }
   }
 }
 
 .enamad_pic {
-  // background-color: blue;
   display: flex;
   justify-content: flex-end;
-  // border: solid;
-  // background-color: #666;
+
+  @include max-width(x-large) {
+    align-items: center;
+  }
+
   img {
     display: inline-block;
     height: 140px;
     position: relative;
     left: -20px;
+    align-items: center;
+    @include max-width(x-large) {
+      height: 130px;
+      left: -30px;
+    }
+    @include max-width(large) {
+      height: 110px;
+    }
   }
 }

@@ -1,0 +1,46 @@
+@import "../../../sass/variables.scss";
+@import "../../../sass/mixins.scss";
+@import "../../../sass/fonts.scss";
+@import '../../../sass/media.scss';
+
+ .tableRow {
+  display: flex;
+  width: 100%;
+}
+
+.courseItems {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 100%;
+  background-color: #fff;
+  border-radius: 16px;
+  margin: 0.4rem 0.6rem;
+     @include max-width(medium) {
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0.3rem 0.5rem;
+    
+  }
+
+  
+
+  .courseItem {
+    list-style: none;
+    padding: 0.5rem ;
+    @include typography($primary-font-family, 0.9rem, $primary-txt-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include max-width(medium) {
+    @include typography($primary-font-family, 0.5rem, $primary-txt-color);
+    padding: 0.5rem 0;
+    &:nth-child(1),
+    &:nth-child(6) {
+      display: none;
+    }
+  }
+  }
+  .courseImage {
+    width: 4.5rem ;
+
+  }
+}

@@ -1,0 +1,80 @@
+@import "../../../../sass/mixins";
+@import "../../../../sass/variables";
+@import "../../../../sass/media";
+
+.singleBlog {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 15px;
+  gap: 5px;
+  border-radius: 17.5px;
+  width: 100%;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 0px 6px rgba(87, 87, 87, 0.160784);
+
+  .poster {
+    width: 360px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 0px 10px 10px;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .title {
+      @include typography(Vazirmatn-bold, 21px, rgba(0, 0, 0, 0.9));
+    }
+
+    .description {
+      @include typography(Vazirmatn-Regular, 15.5px, #707070);
+    }
+  }
+
+  .tags {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  .icon_box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .icon_title {
+    @include typography($primary-font-family, 12px, #707070);
+  }
+
+  .btn {
+    @include typography($primary-font-family, 12px, #5a0ba9);
+    background-color: #fff;
+    border: solid 2px #5a0ba9;
+    border-radius: 17.5px;
+    padding: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+
+    &:hover {
+      @include typography($primary-font-family, 12px, #fff);
+      background-color: #5a0ba9;
+    }
+    &:active {
+      background-color: #4a0b8a;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+@import "../../sass/fonts.scss";
+
+@mixin display($display, $flex-direction, $justify-content) {
+  display: $display;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+
+  .card {
+    width: 22.8rem;
+    height: 32.5rem;
+    // margin-top: 20px;
+    // margin-left: 20px;
+    padding: 0px 20px;
+    border-radius: 20px;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
+
+    .titel {
+      margin-top: 16px;
+      @include typography($secondary-font-family, 25px, #434343);
+    }
+
+    .form {
+      width: 20rem;
+      height: rem;
+      padding: 0px;
+      display: flex;
+      border-radius: 10px;
+      align-items: center;
+      padding-left: 10px;
+      justify-content: space-between;
+      box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
+      -webkit-box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
+      -moz-box-shadow: 0px 0px 6px 0px rgba(87, 87, 87, 0.16);
+
+      input {
+        font-size: 14px;
+        width: 77.5%;
+        height: 100%;
+        border: none;
+        outline: none;
+        padding: 16px 16px 16px 0px;
+        border-radius: 10px;
+      }
+
+      button {
+        background-color: #9326b4;
+        padding: 0px 4px 0px 4px;
+        border: none;
+        color: #ffffff;
+        border-radius: 10px;
+        width: 4rem;
+        height: 2rem;
+        @include typography($primary-font-family, 10px, #ffffff);
+      }
+    }
+
+    .line {
+      width: 20.1rem;
+    }
+
+    .paymentInformatin1 {
+      @include display(flex, row, space-between);
+    }
+
+    .paymentInformatin2 {
+      @include display(flex, row, space-between);
+    }
+
+    .paymentInformatin3 {
+      @include display(flex, row, space-between);
+    }
+
+    .paymentInformatin4 {
+      @include display(flex, row, space-between);
+    }
+
+    .payText {
+      @include typography($primary-font-family, 17px, #707070);
+    }
+
+    .payNumber {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      .payNumber_p1 {
+        @include typography($primary-font-number-family, 23px, #666666);
+      }
+
+      .payNumber_p2 {
+        @include typography($primary-font-family, 14px, #666666);
+      }
+
+      .payNumber_p3 {
+        @include typography($primary-font-number-family, 23px, #c200bc);
+      }
+
+      .payNumber_p4 {
+        @include typography($primary-font-family, 14px, #c200bc);
+      }
+    }
+
+    .btn {
+      width: 20rem;
+      height: 3.8rem;
+      border: none;
+      border-radius: 16px;
+      background-color: #36c54e;
+      cursor: pointer;
+      transition: 0.3s all;
+      @include typography($primary-font-family, 17px, #ffffff);
+
+      &:hover {
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+          rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+          rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+      }
+    }
+  }
+}
