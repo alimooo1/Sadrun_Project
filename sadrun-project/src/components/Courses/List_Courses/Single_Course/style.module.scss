@@ -1,0 +1,121 @@
+@import "../../../../sass/mixins";
+@import "../../../../sass/variables";
+@import "../../../../sass/media";
+
+.singleCourse {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 15px;
+  gap: 5px;
+  border-radius: 17.5px;
+  width: 100%;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 0px 6px rgba(87, 87, 87, 0.160784);
+
+  .poster {
+    width: 360px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 0px 10px 10px;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .title {
+      @include typography(Vazirmatn-bold, 21px, rgba(0, 0, 0, 0.9));
+    }
+
+    .description {
+      @include typography(Vazirmatn-Regular, 15.5px, #707070);
+    }
+  }
+
+  .tags {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .icon_box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .icon_title {
+    @include typography($primary-font-family, 12px, #707070);
+  }
+
+  .teacher_name {
+    @include typography($primary-font-family, 12px, #707070);
+  }
+
+  .duration {
+    @include typography("Shabnam-Bold", 12.5px, #707070);
+    &:after {
+      content: "\00A0 ساعت";
+      @include typography($primary-font-family, 12px, #707070);
+    }
+  }
+
+  .price {
+    @include typography("Shabnam-Bold", 17.5px, #36c54e);
+    background-color: #fff;
+    border: solid 2px #36c54e;
+    border-radius: 17.5px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+
+    &:after {
+      content: "\00A0 تومان";
+      @include typography($primary-font-family, 14px, #36c54e);
+    }
+    &:hover {
+      @include typography("Shabnam-Bold", 17.5px, #fff);
+      background-color: #36c54e;
+      &:after {
+        @include typography($primary-font-family, 14px, #fff);
+      }
+    }
+
+    &:active {
+      background-color: #1c8a2e;
+    }
+  }
+  .capacity {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 17.5px;
+    box-shadow: 0px 0px 6px rgba(87, 87, 87, 0.160784);
+    @include typography("Shabnam-Bold", 17.5px, #707070);
+    width: 36px;
+    padding: 10px 0;
+    img {
+      width: 20px;
+    }
+    .all_capacity {
+      background-color: rgba(0, 0, 0, 0.03);
+      width: 100%;
+      text-align: center;
+      padding: 3px 0;
+    }
+  }
+}
