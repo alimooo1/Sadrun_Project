@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout404 from "./layouts/404-Layout/Layout404";
 import ContactUs from "./components/Contact-Us/ContactUs";
 import SingleBlogLayout from "./layouts/SingleBlog-Layout/SingleBlogLayout";
+import SingleCourseLayout from "./layouts/SingleCourse-Layout/SingleCourseLayout";
 import SuccessLayout from "./layouts/Success-Layout/SuccessLayout";
 import PaymentDetailLayout from "./layouts/PaymentDetail-Layout/PaymentDetailLayout";
 import DashboardLayout from "./layouts/Dashboard-Layout/DashboardLAyout";
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/single-blog",
         element: <SingleBlogLayout />,
+      },
+      {
+        path: "/single-course",
+        element: <SingleCourseLayout />,
       },
       {
         path: "/payment-detail",
