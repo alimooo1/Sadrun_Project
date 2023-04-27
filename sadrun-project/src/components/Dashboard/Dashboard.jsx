@@ -7,14 +7,14 @@ import icon3 from "./img/icon3.svg";
 import icon4 from "./img/icon4.svg";
 import icon5 from "./img/icon5.svg";
 import DashboardItem from "./DashboardItem";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 
 const dashboardList = [
   {
     title: "پیشخوان",
     icon: icon1,
     to: "/dashboard",
-    picked: true,
+    picked: false,
   },
   {
     title: "ویرایش پروفایل",
@@ -45,6 +45,12 @@ const dashboardList = [
 const dashboard = () => {
   const [menuItems, setMenuItems] = useState(dashboardList);
   const navigate = useNavigate();
+  const currentAddress = useLocation().pathname;
+  dashboardList.forEach((item) => {
+    if (item.to === currentAddress) {
+      item.picked = true;
+    }
+  });
 
   const clickHandler = (item) => {
     dashboardList.forEach((item) => {
