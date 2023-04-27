@@ -1,0 +1,41 @@
+@import "../../../sass/mixins.scss";
+@import "../../../sass/variables.scss";
+.blog{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    // width: 385px;
+    direction: rtl;
+    padding-bottom: 1rem;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.image_blog{
+
+  width: 120px;
+  height: 74px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.image_blog{
+    img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.7s;
+}
+}
+.blog:hover .image_blog img {
+    transform: scale(1.2);
+  }
+.title{
+    font-weight: bold;
+    margin-bottom: 9px;
+    @include typography($primary-font-family, 15px,rgba(0, 0, 0, 0.701961) );
+
+
+}
+.text{
+    @include typography($primary-font-family, 13px,#707070 );
+    
+}

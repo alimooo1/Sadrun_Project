@@ -1,5 +1,6 @@
 @import "../../sass/variables";
 @import "../../sass/mixins";
+@import "../../sass/media.scss";
 
 $btnColor: #6c63ff;
 $white: #ffffff;
@@ -11,13 +12,13 @@ $white: #ffffff;
 }
 
 .container {
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  // overflow: hidden;
 
   .header {
     width: 22rem;
@@ -60,12 +61,16 @@ $white: #ffffff;
 
   .CategoryCard {
     width: 60rem;
-    height: 33rem;
+    // height: 33rem;
     display: flex;
     position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include max-width("medium") {
+      width: 30rem;
+    }
 
     .items {
       display: flex;
@@ -88,6 +93,10 @@ $white: #ffffff;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        @include max-width("medium") {
+          width: 10rem;
+        }
 
         .div-img {
           width: 100%;
@@ -168,6 +177,10 @@ $white: #ffffff;
     position: absolute;
     top: 8rem;
     left: -3.5rem;
+
+    @include max-width("medium") {
+      display: none;
+    }
   }
 }
 

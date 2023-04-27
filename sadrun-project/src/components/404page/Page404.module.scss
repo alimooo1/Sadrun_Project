@@ -1,27 +1,40 @@
 @import "../../sass/fonts.scss";
 @import "../../sass/mixins.scss";
 @import "../../sass/variables.scss";
+@import "../../sass/media.scss";
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
 
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .img{
-        width: 34rem;
-        height: 19.591rem;
-        margin-top: 80px;
+  .img {
+    width: 34rem;
+    height: 19.591rem;
+    // margin-top: 80px;
+    @include max-width(small){
+      width: 21rem;
     }
+    
+  }
 
-    .btn{
-        width: 17rem;
-        height: 3.2rem;
-        border: none;
-        border-radius: 20px;
-        background-color: #A644C1;
-        @include typography($primary-font-family, 18px, #FFFFFF);
+  .btn {
+    width: 17rem;
+    height: 3.2rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #a644c1;
+    transition: 0.3s all;
+    @include typography($primary-font-family, 18px, #ffffff);
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }
+    @include max-width(small){
+      width: 12rem;
+    @include typography($primary-font-family, 15px, #ffffff);
+    }
+  }
 }
-
-

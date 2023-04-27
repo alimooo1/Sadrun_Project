@@ -1,19 +1,23 @@
 @import "../../../../sass/variables.scss";
 @import "../../../../sass/mixins.scss";
+@import '../../../../sass/media.scss';
 
 .inputContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  transition: 1s all;
   @include size(2.2rem, 2.2rem);
+  @include max-width(medium){
+    display: none;
+  }
 }
 
 .expanded {
   width: 20rem;
   background-color: #eee6f6;
   border-radius: 25px;
+  transition: 1s all;
 }
 
 .input {
@@ -28,6 +32,7 @@
   background-color: transparent;
   outline: none;
   @include typography($primary-font-family, 0.8rem, black);
+  
 }
 
 .visible {
@@ -35,6 +40,9 @@
 }
 
 .icon {
+   display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.3rem;
   border-radius: 100%;
   background-color: #eee6f6;
@@ -43,13 +51,16 @@
   height: 100%;
   text-align: center;
   color: $text-accent-color;
+  
 }
 
 .expanded .icon {
   display: none;
+  
 }
-span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// span {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+  
+// }

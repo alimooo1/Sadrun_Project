@@ -1,0 +1,72 @@
+@import "../../../sass/fonts.scss";
+@import "../../../sass/mixins.scss";
+@import "../../../sass/variables.scss";
+@import "../../../sass/media.scss";
+
+.conteiner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 700px;
+    height: 72px;
+    border-radius: 20px;
+    background: #fff;
+    @include typography($primary-font-family, 13px, #434343);
+    @include max-width(small){
+        width: 95%; 
+    @include typography($primary-font-family, 9px, #434343);
+    }
+}
+.img_cart{
+    width: 83px;
+    @include max-width(small){
+        width: 72px;
+    }
+}
+.boxone{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    padding-right: 20px;
+    @include max-width(small){
+        gap: 10px;
+        padding-right: 10px;
+    }
+}
+.boxtwo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    padding-left: 20px;
+    @include max-width(small){
+        gap: 10px;
+        padding-left: 10px
+    }
+}
+.price{
+    @include typography($primary-font-number-family, 13px, #585656);
+    @include max-width(small){
+    @include typography($primary-font-number-family, 11px, #585656); 
+    }
+}
+.boxthree{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    @include max-width(small){
+        gap: 2px;
+    }
+
+    
+}
+.trash{
+    color: red;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    
+}
