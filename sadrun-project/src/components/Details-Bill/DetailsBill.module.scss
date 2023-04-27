@@ -46,12 +46,15 @@ flex-direction: column;
 }
 .form label{
 margin-bottom: 10px;
+color: $primary-txt-color;
+@include  typography($primary-font-family,15px,$primary-txt-color);
 }
 .form h2{
-color: $primary-txt-color;}
-.form label {
 color: $primary-txt-color;
+@include  typography($primary-font-family,18px,$primary-txt-color);
+
 }
+
 .form_div1{
 display: flex;
 gap: 1rem;
