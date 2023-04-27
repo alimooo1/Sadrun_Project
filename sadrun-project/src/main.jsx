@@ -13,6 +13,9 @@ import PaymentDetailLayout from "./layouts/PaymentDetail-Layout/PaymentDetailLay
 import DashboardLayout from "./layouts/Dashboard-Layout/DashboardLAyout";
 import EditProfile from "./components/Edit-Profile/Edit_Profile";
 import TableDashboard from "./components/TableDashboard/TableDashboard";
+import BillDetailLayout from "./layouts/BillDetail-Layout/BillDetailLayout";
+import Blogs from "./components/Blogs/Blogs";
+import Courses from "./components/Courses/Courses";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +25,14 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <App />,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs />,
+      },
+      {
+        path: "/courses",
+        element: <Courses />,
       },
       {
         path: "/contact",
@@ -38,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "/success",
         element: <SuccessLayout />,
+      },
+      {
+        path: "/bill-detail",
+        element: <BillDetailLayout />,
       },
       {
         path: "/dashboard",
