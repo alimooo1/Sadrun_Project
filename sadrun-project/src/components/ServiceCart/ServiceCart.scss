@@ -16,25 +16,41 @@
 
 .service_carts {
   display: grid;
+  gap: 2rem;
+  @include max-width($breakpoint: small) {
+    width: 80%;
+  }
+
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
   @include min-width($breakpoint: medium) {
+    width: 55%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
   @include min-width($breakpoint: large) {
-    width: 40%;
+    width: 50%;
   }
-  gap: 2rem;
-  // width: 50%;
+  @include min-width($breakpoint: x-large) {
+    width: 45%;
+    padding: 2rem;
+  }
 }
 
 .cart {
   border-radius: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-block: 10%;
+  display: grid;
+  grid-template-columns: 1fr 70%;
+  grid-template-rows: repeat(1, fr);
+  text-align: center;
+  padding: 10% 1rem;
+  @include min-width($breakpoint: medium) {
+    grid-template-columns: 1fr 75%;
+    padding: 8% 1rem;
+  }
+  @include min-width($breakpoint: x-large) {
+    padding: 2.2rem 1.4rem;
+  }
 
   &:nth-child(1) {
     background-image: linear-gradient(
@@ -79,38 +95,69 @@
       #9b59b6
     );
   }
-
-  img {
-    @include size(7rem, 7rem);
+  .cartImg {
+    @include size(4.5rem, 4.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    img {
+      width: 100%;
+    }
+    @include max-width($breakpoint: medium) {
+      @include size(4rem, 4rem);
+    }
   }
 
   span {
-    @include typography($secondary-font-family, 2rem, #fff);
+    @include typography($secondary-font-family, 1.4rem, #fff);
     font-weight: bold;
-    margin-right: 15px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include min-width($breakpoint: medium) {
+      @include typography($secondary-font-family, 0.8rem, #fff);
+    }
+    @include min-width($breakpoint: large) {
+      @include typography($secondary-font-family, 1.1rem, #fff);
+    }
+    @include min-width($breakpoint: x-large) {
+      @include typography($secondary-font-family, 1.3rem, #fff);
+      padding: 1rem 0.5rem;
+      white-space: nowrap;
+    }
   }
 }
 
 .path {
-  @include size(35%, 65%);
-  @include position(absolute, $top: -12rem, $left: 0rem);
+  @include size(38%, 75%);
+  @include position(absolute, $top: -6rem, $left: 0rem);
+  @include max-width($breakpoint: small) {
+    z-index: -88;
+  }
 }
 
 .girlFlowerSet {
   display: none;
-  @include size(21.5rem, 23rem);
+  @include size(14rem, 14.5rem);
   @include position(absolute, $bottom: -5rem, $left: 0);
+
   @include min-width($breakpoint: large) {
     display: block;
+    @include size(16rem, 18rem);
   }
 }
 
 .boy {
   display: none;
   @include position(absolute, $top: -1.3rem, $right: 0);
-  @include size(21.5rem, 23rem);
+  @include size(14rem, 14.5rem);
   @include min-width($breakpoint: large) {
     display: block;
+    @include size(16rem, 17rem);
   }
 }
 
@@ -120,25 +167,32 @@
   -moz-box-shadow: 0px 0px 5px 0px rgba(57, 57, 57, 0.16);
   border-radius: 7px;
   padding: 0.5rem 2rem;
+  fill: #fff;
+  // @include max-width($breakpoint:small){
+  //   z-index: 2;
+  // }
   text-align: center;
 
   h2 {
-    @include typography($secondary-font-family, 2.5rem, $text-accent-color);
+    @include typography($secondary-font-family, 2rem, $text-accent-color);
   }
   p {
-    @include typography($primary-font-family, 1.5rem, rgba(90, 11, 169, 0.6));
+    @include typography($primary-font-family, 1.2rem, rgba(90, 11, 169, 0.6));
   }
 }
 
 .servicesCartTitle {
-  
-  @include position(absolute, $top: 0rem, $right: 50%);
-  transform: translateX(50%);
+  @include max-width(small) {
+    width: 80%;
+  }
 
+  @include position(absolute, $top: -2rem, $right: 50%);
+
+  transform: translateX(50%);
   @include min-width($breakpoint: large) {
-    @include position(absolute, $top: -1.1rem, $right: 20.5rem);
+    @include position(absolute, $top: -3rem, $right: 15rem);
     transform: translateX(0);
-    
+    width: 15%;
   }
 }
 

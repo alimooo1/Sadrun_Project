@@ -1,0 +1,107 @@
+@import "../../sass/mixins.scss";
+@import "../../sass/variables.scss";
+@import "../../sass/media.scss";
+.conteiner {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  // margin-top: 100px;
+  @include max-width(small){
+    flex-direction: column;
+    align-items: center;
+    gap:50px ;
+  }
+}
+.informatinoBox {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+.formBox {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+.informatino_conteiner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+}
+.informatino {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 200px;
+}
+.informatino_img {
+  width: 20px;
+  height: 20px;
+}
+.informatino_text :nth-child(odd) {
+  font-size: 15px;
+  @include typography($primary-font-family, 15px, black);
+}
+.informatino_text :nth-child(even) {
+  @include typography($primary-font-family, 12px, rgba(0, 0, 0, 0.4));
+}
+
+.form_conteiner {
+  box-shadow: 2px 2px 7.5px rgba(87, 87, 87, 0.2);
+  border-radius: 25px;
+  height: 460px;
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  p {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+    @include typography($primary-font-family, 19px, black);
+  }
+}
+
+.form {
+  padding-inline: 25px;
+  display: flex;
+  flex-direction: column;
+
+  input,
+  textarea {
+    outline: none;
+    border: 1px solid #9f0099;
+    border-radius: 12px;
+    padding-block: 10px;
+    padding-right: 12px;
+    margin-bottom: 15px;
+    @include typography($primary-font-family, 12px, black);
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  textarea {
+    resize: none;
+  }
+}
+
+.btn {
+  border-radius: 12px;
+  border: none;
+  background: #36c54e;
+  padding: 9px;
+  margin-top: 30px;
+  transition: 0.3s all;
+  @include typography($primary-font-family, 12px, #fff);
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+      rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+      rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  }
+}

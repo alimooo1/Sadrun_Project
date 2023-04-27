@@ -1,0 +1,70 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+@import "../../sass/fonts.scss";
+@import "../../sass/media.scss";
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-block: 20px;
+  @include max-width(medium) {
+    margin-block: 10px;
+  }
+
+  .rightIcon,
+  .leftIcon {
+    color: $primary-txt-color;
+    font-size: 0.9rem;
+    cursor: pointer;
+      @include max-width(medium){
+    font-size: 0.6rem;
+  }
+  }
+  .pageItem {
+    margin-right: 10px;
+    list-style: none;
+    &:nth-child(1),
+    &:last-child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include max-width(medium) {
+        margin-right: 5px;
+      }
+    }
+
+    &.active {
+      a {
+        @include typography($primary-font-number-family, 0.7rem, #000);
+        display: flex;
+        flex-direction: column;
+        &::after {
+          content: "\00a0";
+          background-color: black;
+          height: 3px;
+          width: 100%;
+          border-radius: 3px;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      padding: 5px 10px;
+      @include typography(
+        $secondary-font-number-family,
+        0.9rem,
+        $primary-txt-color
+      );
+      text-decoration: none;
+      @include max-width(medium) {
+        padding: 4px;
+        @include typography(
+          $secondary-font-number-family,
+          0.4rem,
+          $primary-txt-color
+        );
+      }
+    }
+  }
+}
