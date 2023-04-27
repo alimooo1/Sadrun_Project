@@ -1,9 +1,7 @@
 import React from "react";
-import Blogs from './components/Blogs/Blogs';
+
 function App() {
-  return <div className="App">
-  <Blogs/>
-  </div>;
+  return <div className="App"></div>;
 }
 
 export default App;
