@@ -1,40 +1,38 @@
 @import "../../sass/mixins.scss";
 @import "../../sass/variables.scss";
 @import "../../sass/fonts.scss";
-@import '../../sass/media.scss';
+@import "../../sass/media.scss";
 
 .container {
   position: relative;
   width: 100%;
-  height:110vh ;
+  height: 110vh;
   overflow: hidden;
-  @include max-width(medium){
-    height:100% ;
+  @include max-width(medium) {
+    height: 100%;
   }
 }
 
 .header {
-
   width: 90%;
   padding: 0.5rem;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(1,1fr);
+  grid-template-columns: repeat(1, 1fr);
   place-items: center;
   max-width: 1140px;
   margin-inline: auto;
   background-color: #fff;
   border-radius: 25px;
-  @include min-width(medium){
+  @include min-width(medium) {
     background-color: transparent;
-    grid-template-columns: repeat(2,1fr);
-    .girlDesk{
-        order: unset !important;
+    grid-template-columns: repeat(2, 1fr);
+    .girlDesk {
+      order: unset !important;
     }
-
   }
 
-  & > div {
+  .landingContent {
     flex: 1 0 400px;
 
     h1 {
@@ -46,7 +44,7 @@
       @include typography($primary-font-family, 1rem, $primary-txt-color);
     }
 
-    button {
+    .headerbutton {
       margin-top: 4rem;
       @include typography($primary-font-family, 1rem, #fff);
       border-radius: 35px;
@@ -61,9 +59,14 @@
       padding: 1rem 2.5rem;
       outline: none;
       border: none;
+      cursor: pointer;
+      transition: all 0.3s;
 
       &:hover {
         background-color: $text-accent-color;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+          rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+          rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
       }
 
       &:active {
@@ -76,7 +79,7 @@
     @include size(90%, 31rem);
     max-width: 500px;
     order: -1;
-    margin: auto
+    margin: auto;
     // @include position(absolute, $top: 7.5rem, $left: 7rem);
   }
 }
@@ -91,7 +94,7 @@
 
 .header2 {
   @include size(49rem, null);
-  @include max-width(medium){
+  @include max-width(medium) {
     @include size(52rem, null);
   }
   @include position(absolute, $top: 0, $left: 0);

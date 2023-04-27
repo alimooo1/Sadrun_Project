@@ -13,7 +13,7 @@ const LandingPage = () => {
       <img className={styles.header1} src={header1} alt="" />
       <img className={styles.header2} src={header2} alt="" />
       <div className={styles.header}>
-        <div>
+        <div className={styles.landingContent}>
           <h1 className={styles.headertitle}>پژوهشگاه سپهر</h1>
           <p className={styles.headertext}>
             پژوهشگاه سپهر با هدف تولید و انتشار محتوای با کیفیت اموزشی و همچنین
