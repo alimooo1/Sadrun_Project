@@ -15,22 +15,27 @@ const Navigation = () => {
             </a>
           </div>
           <li className={styles.navigationItem}>
-            <a href="#">خانه</a>
+            <Link to='/landing'>خانه</Link>
+          
           </li>
           <li>
-            <a href="#">آموزش</a>
+            <Link to='#'>آموزش</Link>
+          
           </li>
           <li>
-            <a href="#">بلاگ</a>
+           <Link to='#'>بلاگ</Link>
+          
           </li>
           <li>
-            <a href="#">خدمات</a>
+            <Link to='#'>خدمات</Link>
+          
           </li>
           <li>
-            <a href="#">دوره ها </a>
+            <Link to='#'>دوره ها </Link>
+  
           </li>
           <li>
-            <a href="#">تماس با ما </a>
+            <Link to='#'>تماس با ما </Link>
           </li>
         </ul>
       </nav>

@@ -37,7 +37,7 @@ const dashboardList = [
   {
     title: "خروج",
     icon: icon5,
-    to: "/logout",
+    to: "/login",
     picked: false,
   },
 ];
