@@ -1,0 +1,12 @@
+@import "../../../sass/mixins";
+@import "../../../sass/variables";
+@import "../../../sass/media";
+
+.list_blogs{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 10px;
+}

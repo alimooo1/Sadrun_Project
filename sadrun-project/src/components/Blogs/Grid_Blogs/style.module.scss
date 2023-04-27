@@ -1,0 +1,22 @@
+@import "../../../sass/mixins";
+@import "../../../sass/variables";
+@import "../../../sass/media";
+
+.grid_blogs {
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 40px;
+  padding: 10px;
+
+  @include max-width(x-large) {
+    grid-template-columns: auto auto auto;
+  }
+  @include max-width(large) {
+    grid-template-columns: auto auto;
+  }
+  @include max-width(medium) {
+    grid-template-columns: auto;
+  }
+}

@@ -1,0 +1,69 @@
+@import "../../../../sass/mixins";
+@import "../../../../sass/variables";
+@import "../../../../sass/media";
+
+.singleBlog {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px;
+  gap: 5px;
+  border-radius: 17.5px;
+  width: 100%;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0px 0px 6px rgba(87, 87, 87, 0.160784);
+
+  .poster {
+    width: 100%;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 15px;
+
+    .title {
+      @include typography(Vazirmatn-bold, 17.5px, rgba(0, 0, 0, 0.9));
+    }
+
+    .description {
+      @include typography(Vazirmatn-Regular, 12px, #707070);
+    }
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 0 15px;
+  }
+
+  .icon_box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .icon_title {
+    @include typography($primary-font-family, 10px, #707070);
+  }
+
+  .btn {
+    @include typography($primary-font-family, 10px, #5a0ba9);
+    background-color: #fff;
+    border: solid 2px #5a0ba9;
+    border-radius: 17.5px;
+    padding: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+
+    &:hover {
+      @include typography($primary-font-family, 10px, #fff);
+      background-color: #5a0ba9;
+    }
+    &:active {
+      background-color: #4a0b8a;
+    }
+  }
+}
