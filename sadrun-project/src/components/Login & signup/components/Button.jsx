@@ -7,7 +7,7 @@ const Button = ({ type, variant, className, id, onClick, children }) => {
         variant={variant}
         className={className}
         id={id}
-        onClick={onclick}
+        onClick={onClick}
       >
         {children}
       </button>

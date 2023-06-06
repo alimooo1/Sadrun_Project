@@ -1,0 +1,45 @@
+@import "../../../sass/variables.scss";
+
+.parent{
+    width: 98%;
+    height: 98%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    font-family: $tertiary-font-family
+}
+.header{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.textHeader{
+    margin-top: 10px;
+    color: #434343;
+    font-size: 22px;
+}
+.form{
+    width: 97%;
+    padding: 10px;
+}
+.button{
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    background-color: #36c54e;
+    color: #fff;
+    font-size: 18px;
+    font-family: $tertiary-font-family
+}
+.link{
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    color: #C200BC;
+    font-weight: bold;
+}

@@ -12,6 +12,7 @@ import {
   nationalCodeValidation,
   passwordValidation,
 } from "./utils/validation";
+import styles from './signupfrom.module.scss'
 
 const initialFormInputs = {
   name: "",
@@ -88,19 +89,15 @@ const SignupForm = () => {
 
   //@Dev reset sing up inptus
   return (
-    <div className="w-full overflow-hidden rounded-xl shadow-xl" 
-        data-aos="fade-left"
-        data-aos-anchor="#example-anchor"
-        data-aos-duration="1500" >
-      <div className="container mx-auto flex justify-center items-center rounded-xl bg-white h-[570px] shadow-xl border">
-        <div className="flex flex-col items-center justify-center rounded-2xl ">
-          <div className="pt-[26px]">
+        <div className={styles.parent}>
+          <div className={styles.header}>
             <img className="w-10 mt-2" src={signup} alt="signup icon" />
+            
+            <h1 className={styles.textHeader}>
+              ثبت نام
+            </h1>
           </div>
-          <h1 className="font-vazirmatn text-lg text-center mb-[10px]">
-            ثبت نام
-          </h1>
-          <form className="w-[380px] font-vazirmatn max-sm:flex max-sm:justify-center max-sm:flex-col max-sm:items-center" onSubmit={handleSubmit}>
+          <form className={styles.form} onSubmit={handleSubmit}>
             <Input
               placeholder="نام و نام خانوادگی"
               type="text"
@@ -148,17 +145,15 @@ const SignupForm = () => {
 
             <DateInput name="date" value={date} placeholder="تاریخ تولد" />
 
-            <Button className='w-[380px] max-sm:w-[350px] h-8 rounded-lg bg-[#36c54e] text-white' buttonType={"form-sign-up-button"}>ثبت نام</Button>
+            <Button className={styles.button} buttonType={"form-sign-up-button"}>ثبت نام</Button>
           </form>
           <Link
             to="/login"
-            className="text-sm font-vazirmatn mt-2 mb-4 text-[#C200BC]"
+            className={styles.link}
           >
             ورود به حساب کاربری
           </Link>
         </div>
-      </div>
-    </div>
   );
 };
 

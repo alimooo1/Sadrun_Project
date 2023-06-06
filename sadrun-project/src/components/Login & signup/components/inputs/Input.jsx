@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import styles from './styles.module.scss'
 
 const Input = ({ errorMessage, ...otherProps }) => {
   const [showError, setShowError] = useState(false);
@@ -12,13 +13,13 @@ const Input = ({ errorMessage, ...otherProps }) => {
   return (
     <>
       <input
-        className="form-input"
+        className={styles.form_input}
         onFocus={() => setShowError(false)}
         {...otherProps}
       />
-      <div className="w-full h-[25px] flex items-center justify-start text-right pr-5">
+      <div className={styles.errorMessage}>
         {showError ? (
-          <span className="text-red-500 font-vazirmatn text-[13px]">
+          <span className={styles.span}>
             {errorMessage}
           </span>
         ) : (
