@@ -1,4 +1,4 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -105,4 +105,4 @@ input::-webkit-datetime-edit-year-field:not([aria-valuenow]),
 input::-webkit-datetime-edit-month-field:not([aria-valuenow]),
 input::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
   color: transparent;
-}
+} */
