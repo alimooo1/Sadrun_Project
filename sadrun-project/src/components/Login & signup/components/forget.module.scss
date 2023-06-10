@@ -4,14 +4,15 @@
 .container {
   background: linear-gradient(to right, #66008c, #9f0099);
   width: 100%;
-  height: 100vh;
-  display: block;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
   overflow: hidden;
   font-family: $primary-font-family;
 }
 .white {
   width: 111.5%;
-  height: 103%;
+  height: 103vh;
   position: fixed;
   top: -1vh;
   left: -3%;
@@ -34,8 +35,10 @@
   align-items: center;
   background-color: #fff;
   border-radius: 15px;
-  position: absolute;
-  top: 29vh;
+  position: relative;
+  z-index: 2;
+  top: 8vh;
+  margin-bottom: 8vh;
   right: 8.5%;
   box-shadow: 0px 0px 10px rgba(87, 87, 87, 0.4);
   transition: 0.5s;
@@ -114,24 +117,6 @@
   color: #c200bc;
 }
 
-// @media screen and (max-width: 600px) {
-//   .container {
-//     background: #ffffff;
-//     width: 100%;
-//     height: 100vh;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   }
-//   .box_lock {
-//     position: static;
-//     width: 370px;
-//     height: 450px;
-//   }
-//   .lock {
-//     display: none;
-//   }
-// }
 
 @include max-width(large) {
   .forget {
@@ -141,7 +126,8 @@
     width: 450px;
     padding: 35px 0;
     gap: 15px;
-    top: 25vh;
+    top: 0vh;
+    margin: 20px 0;
     right: 6%;
   }
 }
@@ -188,9 +174,9 @@
     background: #ffffff;
     width: 100%;
     height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
   .box_lock {
     position: static;

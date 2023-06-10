@@ -3,15 +3,16 @@
 
 .container {
   background: linear-gradient(to right, #66008c, #9f0099);
-  overflow: hidden;
-  display: block;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
   font-family: $primary-font-family;
 }
 .white {
   width: 111.5%;
-  height: 103%;
+  height: 103vh;
   position: fixed;
   top: -1vh;
   left: -3%;
@@ -34,9 +35,11 @@
   align-items: center;
   background-color: #fff;
   border-radius: 15px;
-  position: absolute;
-  top: 18vh;
+  position: relative;
+  z-index: 2;
+  top: 5vh;
   right: 8.5%;
+  margin-bottom: 5vh;
   box-shadow: 0px 0px 10px rgba(87, 87, 87, 0.4);
   transition: 0.5s;
 }
@@ -134,21 +137,22 @@
     width: 450px;
     padding: 35px 0;
     gap: 15px;
-    top: 18vh;
+    top: 0vh;
+    margin: 20px 0;
     right: 6%;
   }
-
 }
 
 @include max-width(medium) {
-   .container {
+  .container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     overflow-y: auto;
     padding-top: 20px;
   }
-  .login, .white {
+  .login,
+  .white {
     display: none;
   }
   .boxLogin {
@@ -181,9 +185,9 @@
     background: #ffffff;
     width: 100%;
     height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
   .boxLogin {
     position: static;
@@ -194,9 +198,3 @@
     display: none;
   }
 }
-
-// ===> xsmall: 320px;
-// ===> small: 576px;
-// ===> medium: 768px;
-// ===> large: 1024px;
-// ===> extra-large: 1300px;

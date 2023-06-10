@@ -32,7 +32,9 @@ const Login = () => {
 
           <div className={styles.checkbox_parent}>
             <input id="chekbox" className={styles.checkbox} type="checkbox" />
-            <label for="chekbox" className={styles.checkbox_text}>مرا به خاطر بسپار</label>
+            <label for="chekbox" className={styles.checkbox_text}>
+              مرا به خاطر بسپار
+            </label>
           </div>
         </div>
 
