@@ -1,45 +1,103 @@
 @import "../../../sass/variables.scss";
+@import "../../../sass/media.scss";
 
-.parent{
-    width: 98%;
-    height: 98%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    font-family: $tertiary-font-family
+.parent {
+  width: 500px;
+  padding: 15px 0;
+  margin: 20px 0;
+  position: relative;
+  z-index: 2;
+  right: 8.5%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  font-family: $tertiary-font-family;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(87, 87, 87, 0.4);
 }
-.header{
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+.header {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 25px;
 }
-.textHeader{
-    margin-top: 10px;
-    color: #434343;
-    font-size: 22px;
+.formpic {
+  width: 60px;
+  position: relative;
+  left: 10px;
 }
-.form{
-    width: 97%;
-    padding: 10px;
+.textHeader {
+  color: #434343;
+  font-size: 22px;
 }
-.button{
-    width: 100%;
-    height: 35px;
-    border: none;
-    border-radius: 10px;
-    background-color: #36c54e;
-    color: #fff;
+.form {
+  width: 90%;
+}
+.button {
+  font-family: $primary-font-family;
+  width: 100%;
+  height: 50px;
+  background-color: #36c54e;
+  border-radius: 15px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.button:hover {
+  background-color: #22b03a;
+}
+.button:active {
+  background-color: #1c9931;
+}
+.link {
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  color: #c200bc;
+  font-weight: bold;
+}
+
+@include max-width(large) {
+  .parent {
+    width: 450px;
+    padding: 10px 0;
+    right: 6%;
+  }
+  .formpic {
+    width: 40px;
+  }
+  .textHeader{
     font-size: 18px;
-    font-family: $tertiary-font-family
+  }
 }
-.link{
-    font-size: 14px;
-    text-decoration: none;
-    margin-top: 4px;
-    margin-bottom: 8px;
-    color: #C200BC;
-    font-weight: bold;
+
+@include max-width(medium) {
+  .parent {
+    width: 400px;
+    padding: 20px 0;
+    gap: 10px;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+  .button {
+    height: 40px;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+}
+
+@include max-width(small) {
+  .parent {
+    position: static;
+    width: 85%;
+  }
 }

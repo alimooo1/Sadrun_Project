@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import signup from "../assets/SVGs/images/signup.png";
+import form from "../assets/SVGs/images/form.png";
 import Input from "./inputs/Input";
 import Button from "./button/Button";
 import DateInput from "./inputs/DateInput";
@@ -91,7 +91,7 @@ const SignupForm = () => {
   return (
         <div className={styles.parent}>
           <div className={styles.header}>
-            <img className="w-10 mt-2" src={signup} alt="signup icon" />
+            <img className={styles.formpic} src={form} alt="signup icon" />
             
             <h1 className={styles.textHeader}>
               ثبت نام
