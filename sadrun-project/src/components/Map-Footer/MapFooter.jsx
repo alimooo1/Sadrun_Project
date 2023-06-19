@@ -13,6 +13,7 @@ import instagram_logo from "./assets/instagram.svg";
 import telegram_logo from "./assets/telegram.svg";
 import twitter_logo from "./assets/twitter.svg";
 import youtube_logo from "./assets/youtube.svg";
+import { Link } from "react-router-dom";
 
 export default function MapFooter() {
   const mapStyle = { width: "100%", height: "100%", zIndex: "0" };
@@ -65,9 +66,13 @@ export default function MapFooter() {
         <div className={styles.row}>
           <div className={styles.info}>
             <div className={styles.about_us}>
-              <span>بلاگ</span>
+              <Link to={"/blogs"}>
+                <span>بلاگ</span>
+              </Link>
               <span>درباره ما</span>
-              <span>تماس با ما</span>
+              <Link to={"/contact-us"}>
+                <span>تماس با ما</span>
+              </Link>
               <span>همکاری با ما</span>
               <span>سوالات متداول</span>
             </div>

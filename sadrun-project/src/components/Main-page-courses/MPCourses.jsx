@@ -9,6 +9,7 @@ import nestPic from "./assets/nest.png";
 import man_1 from "./assets/man-1.svg";
 import man_2 from "./assets/man-2.svg";
 import hand from "./assets/hand.svg";
+import { Link } from "react-router-dom";
 
 export default function MPCourses() {
   return (
@@ -33,7 +34,9 @@ export default function MPCourses() {
             </div>
             <div className={styles.left_box}>
               <span>آرمین اسلامی</span>
-              <button className={styles.btn}>مشاهده دوره</button>
+              <Link to={"/single-course"}>
+                <button className={styles.btn}>مشاهده دوره</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -52,7 +55,9 @@ export default function MPCourses() {
           <div className={styles.courses_pic}>
             <img src={nestPic} alt="" />
           </div>
-          <button className={styles.btn}>بیشتر</button>
+          <Link to={"/courses"}>
+            <button className={styles.btn}>بیشتر</button>
+          </Link>
         </div>
       </div>
     </div>

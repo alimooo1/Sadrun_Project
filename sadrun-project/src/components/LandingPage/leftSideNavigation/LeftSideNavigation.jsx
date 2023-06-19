@@ -22,8 +22,8 @@ function CreateBtnComponent() {
             openUser ? styles.isRegisterContainerOpen : ""
           }`}
         >
-          <NavBtn className={styles.register} btnTitle={"ثبت نام "} />
-          <NavBtn className={styles.input} btnTitle={"ورود"} />
+          <NavBtn className={styles.register} btnTitle={"ثبت نام "} to={"/signup"}/>
+          <NavBtn className={styles.input} btnTitle={"ورود"} to={"/login"}/>
         </div>
 
         <NavBtn

@@ -124,6 +124,10 @@
     display: flex;
     flex-direction: column;
     gap: 3px;
+
+    span {
+      cursor: pointer;
+    }
   }
   .contact_us {
     display: flex;

@@ -4,6 +4,7 @@ import styles from "./ArticleCard.module.scss";
 import heIcon from "./images/heicon.svg";
 import sheIcon from "./images/sheicon.svg";
 import ArticleCards from "../Article-Cards/ArticleCards";
+import { Link } from "react-router-dom";
 
 function CreateArticleCard() {
   return (
@@ -38,7 +39,9 @@ function CreateArticleCard() {
           <ArticleCards />
           <hr />
           <ArticleCards />
-          <button className={styles.btn}>بیشتر</button>
+          <Link to={"/blogs"}>
+            <button className={styles.btn}>بیشتر</button>
+          </Link>
         </div>
       </div>
       <div className={styles.Newsletters}>

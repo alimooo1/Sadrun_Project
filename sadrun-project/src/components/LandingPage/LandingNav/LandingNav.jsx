@@ -71,7 +71,7 @@ const LandingNav = (props) => {
               <span className={styles.navigationItemIcon}>
                 <FaBars />
               </span>
-              <Link to='#'>بلاگ</Link>
+              <Link to='/blogs'>بلاگ</Link>
             </li>
             <li>
               <span className={styles.navigationItemIcon}>
@@ -83,14 +83,14 @@ const LandingNav = (props) => {
               <span className={styles.navigationItemIcon}>
                 <ImList2 />
               </span>
-              <Link to='#'>دوره ها </Link>
+              <Link to='/courses'>دوره ها </Link>
 
             </li>
             <li>
               <span className={styles.navigationItemIcon}>
                 <BsFillTelephoneFill />
               </span>
-              <Link to='#'> تماس با ما </Link>
+              <Link to='/contact-us'> تماس با ما </Link>
             </li>
           </div>
         </ul>

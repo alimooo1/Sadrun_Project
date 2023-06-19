@@ -4,6 +4,7 @@ import header1 from "./landingPageImages/header1x.svg";
 import header2 from "./landingPageImages/header2.svg";
 import girlDesk from "./landingPageImages/girlDesk.svg";
 import LandingNav from "./LandingNav/LandingNav";
+import { Link } from "react-router-dom";
 
 // import landingBackGround from './landingPageImages/landingBackgroundImage.svg'
 const LandingPage = () => {
@@ -21,7 +22,9 @@ const LandingPage = () => {
             بتوانیم با راه کار های نوین و استفاده از پتانسیل فضای مجازی ایجاد
             فرصت کنیم برای افرادی که خواهان پیشرفت خود و کشورشان هستند
           </p>
-          <button className={styles.headerbutton}>شروع یادگیری</button>
+          <Link to={"/courses"}>
+            <button className={styles.headerbutton}>شروع یادگیری</button>
+          </Link>
         </div>
         <img className={styles.girlDesk} src={girlDesk} alt="girl" />
       </div>
