@@ -2,6 +2,10 @@
 @import "../../../../sass/variables";
 @import "../../../../sass/media";
 
+.singleCourseLink {
+  text-decoration: none;
+}
+
 .singleCourse {
   display: flex;
   flex-direction: column;
@@ -12,6 +16,15 @@
   justify-content: center;
   background-color: white;
   box-shadow: 0px 0px 6px rgba(87, 87, 87, 0.160784);
+  cursor: pointer;
+
+  &:hover .price {
+    color: white;
+    background-color: #36c54e;
+    &:after {
+      color: white;
+    }
+  }
 
   .poster {
     width: 100%;
@@ -53,13 +66,6 @@
     &:after {
       content: "\00A0 تومان";
       @include typography($primary-font-family, 8px, #36c54e);
-    }
-    &:hover {
-      @include typography("Shabnam-Bold", 14px, #fff);
-      background-color: #36c54e;
-      &:after {
-        @include typography($primary-font-family, 8px, #fff);
-      }
     }
 
     &:active {
