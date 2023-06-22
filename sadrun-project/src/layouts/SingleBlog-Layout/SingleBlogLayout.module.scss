@@ -1,12 +1,11 @@
 .container {
-  padding: 0 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  padding-top: 30px;
+  align-items: flex-start;
 
   .rightSide {
-    width: 100%;
     display: flex;
     justify-content: flex-start;
-    // padding-right: 50px;
   }
 }
