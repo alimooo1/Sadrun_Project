@@ -68,6 +68,7 @@
     cursor: pointer;
     transition: 0.3s;
     text-align: center;
+    text-decoration: none;
 
     &:hover {
       @include typography($primary-font-family, 12px, #fff);

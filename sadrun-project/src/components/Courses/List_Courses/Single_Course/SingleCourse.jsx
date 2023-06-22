@@ -18,7 +18,7 @@ export default function SingleCourse({
   duration,
 }) {
   return (
-    <Link to="/single-blog" className={styles.singleCourseLink}>
+    <Link to="/single-course" className={styles.singleCourseLink}>
       <div className={styles.singleCourse}>
         <img className={styles.poster} src={pic} />
 

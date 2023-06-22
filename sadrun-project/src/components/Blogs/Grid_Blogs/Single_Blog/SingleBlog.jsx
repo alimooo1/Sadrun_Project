@@ -2,6 +2,7 @@ import React from "react";
 import "../../../../sass/fonts.scss";
 import styles from "./style.module.scss";
 import { AiFillTag } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 export default function SingleBlog({ title, pic, tag, description }) {
   return (
@@ -16,7 +17,9 @@ export default function SingleBlog({ title, pic, tag, description }) {
           <AiFillTag color="#707070" size={15} />
           <span className={styles.icon_title}>{tag}</span>
         </div>
-        <button className={styles.btn}>ادامه مطلب</button>
+        <Link to="/single-blog" className={styles.btn}>
+          ادامه مطلب
+        </Link>
       </div>
     </div>
   );
